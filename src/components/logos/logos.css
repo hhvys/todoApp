@@ -1,0 +1,39 @@
+svg {
+    fill: #b9b9b9;
+    cursor: pointer;
+}
+
+.footer svg {
+    margin: 5px;
+}
+
+.footer svg:hover {
+    font-weight: bold;
+    fill: black;
+}
+
+svg.inbox {
+    fill: rgb(43, 141, 236);
+}
+
+li .edit-tab svg {
+    display: none;
+}
+
+li.active .edit-tab svg {
+    display: initial;
+    margin-left: 5px;
+}
+
+li.active .edit-tab svg:hover {
+    font-weight: bold;
+    fill: black;
+}
+
+.header-tab svg {
+    fill: white;
+}
+
+.tab-name svg {
+    margin-right: 10px;
+}
