@@ -4,24 +4,24 @@ import Tab from './Tab';
 import './tabList.css';
 
 const tabList = (tabs, activeTab, onTabClick, collapsedSideBar, onEditClick) => {
+	const starredTodo = tabs
+		.map(tab => ({
+			...tab,
+			todos: tab.todos.filter(todo => todo.star && !todo.completed)
+		}))
+		.reduce((tot, tab) => (
+			tot + tab.todos.length
+		), 0);
+	if(starredTodo === 0 && activeTab === 1)
+		onTabClick(0, collapsedSideBar);
 	return tabs.map(tab => (
 		<Tab active={tab.tabId === activeTab}
 			totalTodos={
-				tab.tabId === 1 ?
-
-					tabs
-						.map(tab => ({
-							...tab,
-							todos: tab.todos.filter(todo => todo.star && !todo.completed)
-						}))
-						.reduce((tot, tab) => (
-							tot + tab.todos.length
-						), 0) :
-
+				tab.tabId === 1 ? starredTodo :
 					tab
-						.todos
-						.filter(todo => !todo.completed)
-						.length
+					.todos
+					.filter(todo => !todo.completed)
+					.length
 			}
 			tabName={tab.tabName}
 			key={tab.tabId}

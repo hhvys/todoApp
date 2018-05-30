@@ -30,6 +30,14 @@ li.active .edit-tab svg:hover {
     fill: black;
 }
 
+.edit-tab {
+    display: flex;
+}
+
+.collapsed .edit-tab {
+    display: none;
+}
+
 .header-tab svg {
     fill: white;
 }

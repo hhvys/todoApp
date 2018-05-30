@@ -172,8 +172,13 @@ li.todo.active {
     background-color: #E2F2FD;
 }
 
+.todo-content-wrapper {
+    width: 90%;
+}
+
 li.todo .todo-content {
     padding-left: 10px;
+    width: 100%;
 }
 
 .todo-content .todo-text {

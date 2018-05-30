@@ -9,20 +9,20 @@ const mapStateToProps = (state) => ({
 });
 
 const getClass = (modalActive, collapsedSideBar) => {
-	let className="main-content full-size";
-	if(modalActive)
-		className= className + " modal-active";
-	if(collapsedSideBar)
-		className=className + " collapsed";
+	let className = "main-content full-size";
+	if (modalActive)
+		className = className + " modal-active";
+	if (collapsedSideBar)
+		className = className + " collapsed";
 	return className;
 };
 
 let MainContent = ({modalActive, collapsedSideBar}) => {
 	return (
-		<div className= {getClass(modalActive, collapsedSideBar)}
+		<div className={getClass(modalActive, collapsedSideBar)}
 		>
-			<SideBar />
-			<Content />
+			<SideBar/>
+			<Content/>
 		</div>
 	);
 };

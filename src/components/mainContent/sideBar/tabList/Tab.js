@@ -7,36 +7,37 @@ import Star from "../../../logos/Star";
 import '../../../logos/logos.css';
 
 const renderSymbol = (tabId) => {
-	switch(tabId) {
+	switch (tabId) {
 		case 0:
-			return <Inbox/>
+			return <Inbox/>;
 		case 1:
-			return <Star style={{fill: '#db4c3f'}}/>
+			return <Star style={{fill: '#db4c3f'}}/>;
 		default:
-			return <ListSymbol/>
+			return <ListSymbol/>;
 	}
-	// tabId === 0 ?
-	// 	<Inbox/> :
-	// 	<ListSymbol/>
 };
 
-const Tab = ({tabId, activeTab, active, totalTodos, tabName, onTabClick, onEditClick}) => (
-	
-	<li className={active ? 'active' : ''} 
-		onClick={onTabClick}
-	>
-		<div className="tab-name">
-		{renderSymbol(tabId)}
-		{tabName}</div>
-		<div className="edit-tab">
-			{(totalTodos > 0) && totalTodos}
-			<Pencil 
-				tabId={activeTab}
-				onEditClick={onEditClick}
-			/>
-		</div>
-	</li>
-);
+const Tab = ({tabId, activeTab, active, totalTodos, tabName, onTabClick, onEditClick}) => {
+	if (tabId === 1 && totalTodos === 0)
+		return <div></div>;
+	return (
+		<li className={`d-flex align-items-center justify-content-between full-size ${active ? 'active ' : ''}`}
+				onClick={onTabClick}
+		>
+			<div className="tab-name d-flex align-items-center full-height">
+				<div className="full-height">{renderSymbol(tabId)}</div>
+				<div className="txt-overflow">{tabName}</div>
+			</div>
+			<div className="edit-tab full-height align-items-center justify-content-center">
+				{(totalTodos > 0) && totalTodos}
+				<Pencil
+					tabId={activeTab}
+					onEditClick={onEditClick}
+				/>
+			</div>
+		</li>
+	);
+};
 
 Tab.propTypes = {
 	active: PropTypes.bool.isRequired,

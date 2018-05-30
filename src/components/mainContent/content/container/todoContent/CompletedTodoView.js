@@ -91,7 +91,7 @@ class CompletedTodoView extends React.Component {
 					<li className={className + "todo pl-3 d-flex justify-content-between"} key={todo.todoId} onClick={() => onTodoClick(activeTab, todo.todoId)}>
 						<div className="d-flex align-items-center">
 							<CheckedCheckBox onClick={() => onCheck(activeTab, todo.todoId)}/>
-							<div className="d-flex todo-content flex-column">
+							<div className="d-flex txt-overflow todo-content flex-column">
 								<div className="todo-text">
 									{todo.text}
 								</div>

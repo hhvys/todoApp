@@ -1,7 +1,7 @@
 import React from 'react';
 
-const SearchSymbol = () => (
-	<svg className="search rtl-flip" width="20px" height="20px" viewBox="0 0 20 20" version="1.1">
+const SearchSymbol = (props) => (
+	<svg {...props} className="search rtl-flip" width="20px" height="20px" viewBox="0 0 20 20" version="1.1">
 		<g stroke="none" strokeWidth="1" fillRule="evenodd">
 			<g>
 				<path

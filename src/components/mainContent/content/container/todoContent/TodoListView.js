@@ -49,9 +49,9 @@ const todoList = (todos, onCheck, activeTab, onStar, sortBy, onTodoClick) => (
 				return (
 					<li ref={node => liNode=node} className={className + "todo pl-3 d-flex justify-content-between"} onClick={() => onTodoClick(activeTab, todo.todoId)}
 						key={todo.todoId}>
-						<div className="d-flex align-items-center">
+						<div className="todo-content-wrapper d-flex align-items-center">
 							<CheckBox onClick={() => handleClick(onCheck, activeTab, todo.todoId)}/>
-							<div className="todo-content">{todo.text}</div>
+							<div className="todo-content txt-overflow">{todo.text}</div>
 						</div>
 						<div className="pr-3">
 							{renderStar(todo.star, onStar, activeTab, todo.todoId)}

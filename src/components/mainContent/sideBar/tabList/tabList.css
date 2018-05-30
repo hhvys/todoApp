@@ -8,42 +8,30 @@
     overflow-x: hidden;
 }
 
+.tab-name {
+    width: 80%;
+}
+
 .tab-list ul {
     cursor: pointer;
 }
 
 .tab-list li {
     height: 38px;
-    display: flex;
-    align-items: center;
     padding-left: 10px;
-    justify-content: space-between;
     font-weight: 400;
 }
 
 .tab-list li .tab-name {
     font-size: 15px;
-    display: flex;
-    align-items: center;
     color: #262626;
 }
 
-
-
 .tab-list li .edit-tab {
-    margin-right: 10px;
+    color: #bdbcbb;
     font-weight: 500;
     font-size: 12px;
-    color: #bdbcbb;
-    display: flex;
-    align-items: flex-end;
-}
-
-
-
-.tab-list li div {
-    display: flex;
-    align-items: center;
+    width: 20%;
 }
 
 .tab-list li.active div {
