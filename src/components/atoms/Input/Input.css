@@ -1,0 +1,14 @@
+input {
+    background-color: inherit;
+    border: none;
+    padding-left: 20px;
+    font-size: 16px;
+    flex: 12;
+    border-radius: 5px;
+    color: inherit;
+}
+
+input::placeholder {
+    color: #FFFFFF;
+    opacity: 0.6;
+}
