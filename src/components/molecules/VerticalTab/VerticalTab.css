@@ -1,5 +1,5 @@
 .div__vertical__tab {
-    background-color: #F7F7F7;
+    background-color: inherit;
     cursor: pointer;
 }
 
@@ -24,9 +24,10 @@
 .div__vertical__tab .footer-content {
     font-size: 12px;
     font-weight: 500;
+    color: #bdbcbb;
 }
 
 .div__vertical__tab .end-symbol:hover {
     font-weight: bold;
-    fill: 'red';
+    fill: red;
 }

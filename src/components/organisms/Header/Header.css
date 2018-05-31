@@ -1,0 +1,14 @@
+.div__header {
+    left: 280px;
+    z-index: 50;
+}
+
+.div__header .dorpdown-icons {
+    margin-right: 280px;
+}
+
+.div__header .header-content {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+}

@@ -5,8 +5,8 @@ import * as defaultStyles from './defaultSymbolStyles';
 class Symbol extends React.Component {
 
 	static defaultProps = {
-		height: '20px',
-		width: '20px',
+		height: 20,
+		width: 20,
 	};
 
 	constructor(props) {

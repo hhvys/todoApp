@@ -1,17 +1,17 @@
-.create-list {
-    position: fixed;
-    bottom: 0;
-    padding-left: 10px;
-    color: #328ad6;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    border-top: 1px solid #e0e0df;
-    width: 300px;
-    cursor: pointer;
-}
+/*.create-list {*/
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    /*padding-left: 10px;*/
+    /*color: #328ad6;*/
+    /*font-size: 24px;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*border-top: 1px solid #e0e0df;*/
+    /*width: 300px;*/
+    /*cursor: pointer;*/
+/*}*/
 
-.create-list div {
-    font-size: 15px;
-    margin-left: 10px;
-}
+/*.create-list div {*/
+    /*font-size: 15px;*/
+    /*margin-left: 10px;*/
+/*}*/
