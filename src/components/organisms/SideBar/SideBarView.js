@@ -3,6 +3,7 @@ import './SideBar.css';
 import SearchBar from "../../molecules/SearchBar/SearchBar";
 import VerticalTabContainer from "../VerticalTabContainer/VerticalTabContainer";
 import VerticalTab from "../../molecules/VerticalTab/VerticalTab";
+import {PLUS} from '../../atoms/logos/constants';
 
 const container = [
 	{
@@ -41,38 +42,52 @@ const container = [
 
 class SideBar extends React.Component {
 
+	componentWillReceiveProps(newProps) {
+
+	}
+
 	render() {
-		const {className, ...props} = this.props;
+		console.log(this.props);
+		const {
+			className,
+			onSearchChange,
+			...props
+		} = this.props;
 		return (
 			<div
 				className={`div__sidebar ${className ? className : ''} d-flex flex-column align-items-center justify-content-center`}
 				{...props}>
+
 				<SearchBar
-					onChange={() => console.log('changed')}
+					onInputChange={
+						(query) => onSearchChange(query)
+					}
 					style={{
 						height: 45,
 						minHeight: 45,
 						backgroundColor: '#5B795A'
 					}}/>
-				<VerticalTabContainer container={container}
-															style={{
-																backgroundColor: '#F7F7F7',
-																width: 280,
-																overflowY: 'auto',
-																overflowX: 'hidden',
-																flex: 1
-															}}/>
-				<VerticalTab headerSymbol={"plus"}
-										 mainContent={"Create List"}
-										 style={{
-											 height: 42,
-											 minHeight: 42,
-											 backgroundColor: '#F7F7F7',
-											 borderTop: '1px solid #e0e0df',
-											 color: '#328ad6',
-											 fontWeight: 'bold',
-											 fill: '#328ad6'
-										 }}/>
+
+				{/*<VerticalTabContainer*/}
+					{/*style={{*/}
+						{/*backgroundColor: '#F7F7F7',*/}
+						{/*width: 280,*/}
+						{/*overflowY: 'auto',*/}
+						{/*overflowX: 'hidden',*/}
+						{/*flex: 1*/}
+					{/*}}/>*/}
+
+				{/*<VerticalTab headerSymbol={PLUS}*/}
+										 {/*mainContent={"Create List"}*/}
+										 {/*style={{*/}
+											 {/*height: 42,*/}
+											 {/*minHeight: 42,*/}
+											 {/*backgroundColor: '#F7F7F7',*/}
+											 {/*borderTop: '1px solid #e0e0df',*/}
+											 {/*color: '#328ad6',*/}
+											 {/*fontWeight: 'bold',*/}
+											 {/*fill: '#328ad6'*/}
+										 {/*}}/>*/}
 			</div>
 		);
 	}

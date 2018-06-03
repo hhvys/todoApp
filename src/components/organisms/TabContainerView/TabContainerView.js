@@ -24,23 +24,22 @@ import VerticalTab from "../../molecules/VerticalTab/VerticalTab";
 // ];
 
 
-class VerticalTabContainer extends React.Component {
+class TabContainerView extends React.Component {
 
-	renderVerticalTab = (container) => {
+	renderVerticalTab = ({
+												 activeTab,
+												 tabs,
+												 onClick,
+												 onHeaderSymbolClick,
+												 onFooterSymbolClick,
+												 headerSymbol,
+												 footerSymbol,
+												 footerContent,
+												 ...props
+											 }) => {
 		return (
-			container.map(tab => {
-				const {
-					onClick,
-					onHeaderSymbolClick,
-					onFooterSymbolClick,
-					headerSymbol,
-					footerSymbol,
-					footerContent,
-					mainContent,
-					active,
-					...props
-				} = tab;
-				console.log({...props});
+			tabs.map(tab => {
+
 				return (
 					<VerticalTab
 						onClick={onClick}
@@ -49,8 +48,13 @@ class VerticalTabContainer extends React.Component {
 						headerSymbol={headerSymbol}
 						footerSymbol={footerSymbol}
 						footerContent={footerContent}
-						mainContent={mainContent}
-						active={active}
+						mainContent={tab.tabName}
+						active={activeTab === tab.tabId}
+						headerProps={{
+							style: {
+								fill: '#b9b9b9'
+							}
+						}}
 						{...props}
 					/>
 				);
@@ -59,13 +63,14 @@ class VerticalTabContainer extends React.Component {
 	};
 
 	render() {
-		const {container, ...restProps} = this.props;
+		const {tabs, ...restProps} = this.props;
+		console.log(tabs);
 		return (
 			<div className={" flex-column justify-content-start align-items-center"} {...restProps}>
-				{this.renderVerticalTab(container)}
+				{this.renderVerticalTab(this.props)}
 			</div>
 		);
 	}
 }
 
-export default VerticalTabContainer;
+export default TabContainerView;
