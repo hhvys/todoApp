@@ -24,6 +24,7 @@ const VerticalTab = ({
 											 footerProps,
 											 active,
 											 hover,
+											 extraContent,
 											 ...props
 										 }) => (
 	<div
@@ -34,8 +35,17 @@ const VerticalTab = ({
 			<Symbol className={"start-symbol"} onClick={onHeaderSymbolClick} symbolType={headerSymbol} {...headerProps}/>
 		</div>
 
-		<div className={"d-flex align-items-center main-content full-height txt-overflow ml-2"}>
-			{mainContent}
+		<div className={"content d-flex flex-column justify-content-center "}>
+			<div className={"main-content d-flex align-items-center txt-overflow ml-2"}>
+				{mainContent}
+			</div>
+			{extraContent ?
+				(<div className={"extra-content d-flex align-items-center ml-2"}>
+					{extraContent}
+				</div>) :
+				null
+			}
+
 		</div>
 
 		<div className={"footer full-height d-flex align-items-center justify-content-between"}>

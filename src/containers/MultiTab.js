@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import MultiTabView from '../components/organisms/MultiTabView/MultiTabView';
-import {addStarredTodo, changeActiveTab, toggleStarTodo, toggleTodo} from "../actions/actionCreaters";
+import {addStarredTodo, changeActiveTab, searchQuery, toggleStarTodo, toggleTodo} from "../actions/actionCreaters";
 
 const mapStateToProps = (state) => {
 
@@ -18,7 +18,10 @@ const mapDispatchToProps = (dispatch) => {
 	return {
 		onFooterSymbolClick: (tabId, todoId) => dispatch(toggleStarTodo(tabId, todoId)),
 		onHeaderSymbolClick: (tabId, todoId) => dispatch(toggleTodo(tabId, todoId)),
-		onButtonClick: (tabId) => dispatch(changeActiveTab(tabId)),
+		onButtonClick: (tabId) => {
+			dispatch(changeActiveTab(tabId));
+			dispatch(searchQuery(''));
+		},
 		onInputSubmit: (value) => {
 			dispatch(addStarredTodo(value));
 		}

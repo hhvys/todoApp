@@ -5,74 +5,9 @@ import {
 	TOGGLE_TODO,
 	DELETE_TAB,
 	COPY_TAB,
-	STAR_TOGGLE_TODO, ADD_STARRED_TODO, ACTIVE_TODO
+	STAR_TOGGLE_TODO, ADD_STARRED_TODO, ACTIVE_TODO, TOGGLE_VISIBILITY_FILTER
 } from '../actions/actionTypes';
-
-const todos = (state = [], action) => {
-	switch (action.type) {
-		case ADD_TODO:
-			return (
-				[
-					...state,
-					{
-						todoId: action.todoId,
-						text: action.text,
-						completed: false,
-						star: false,
-						completedTime: undefined,
-						createdTime: new Date(),
-						active: false
-					}
-				]);
-		case ADD_STARRED_TODO:
-			return (
-				[
-					...state,
-					{
-						todoId: action.todoId,
-						text: action.text,
-						completed: false,
-						star: true,
-						completedTime: undefined,
-						createdTime: new Date(),
-						active: false
-					}
-				]);
-		case TOGGLE_TODO:
-			return state.map(todo => (
-				todo.todoId === action.todoId ?
-					{
-						...todo,
-						completed: !todo.completed,
-						completedTime: new Date()
-					} :
-					todo
-			));
-		case STAR_TOGGLE_TODO:
-			return state.map(todo => (
-				todo.todoId === action.todoId ?
-					{
-						...todo,
-						star: !todo.star
-					} :
-					todo
-			));
-		case ACTIVE_TODO:
-			return state.map(todo => (
-				todo.todoId === action.todoId ?
-					{
-						...todo,
-						active: true
-					} :
-					{
-						...todo,
-						active: false
-					}
-			));
-		default:
-			return state;
-	}
-};
+import todos from './todos';
 
 const initialState = [
 	{
@@ -95,7 +30,8 @@ function tabs(state = initialState, action) {
 				{
 					tabId: action.tabId,
 					tabName: action.tabName,
-					todos: []
+					todos: [],
+					showCompletedTodo: true
 				}
 			];
 		case CHANGE_TAB_NAME:
@@ -125,6 +61,15 @@ function tabs(state = initialState, action) {
 		case DELETE_TAB:
 			return state.filter(tab =>
 				tab.tabId !== action.tabId);
+		case TOGGLE_VISIBILITY_FILTER:
+			return state.map(tab => (
+				tab.tabId === action.tabId ?
+					{
+						...tab,
+						showCompletedTodo: !tab.showCompletedTodo
+					} :
+					tab
+			));
 		case ADD_TODO:
 		case ADD_STARRED_TODO:
 		case TOGGLE_TODO:

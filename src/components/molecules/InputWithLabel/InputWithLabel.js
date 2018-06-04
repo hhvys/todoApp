@@ -4,7 +4,9 @@ import Input from "../../atoms/Input/Input";
 
 const handleKeyUp = (e, onSubmit) => {
 	if (e.nativeEvent.keyCode === 13) {
-		onSubmit(e.nativeEvent.target.value)
+		const inputValue = e.nativeEvent.target.value.trim();
+		if(inputValue)
+			onSubmit(inputValue);
 		e.nativeEvent.target.value = '';
 	}
 };

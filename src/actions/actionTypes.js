@@ -2,7 +2,6 @@
  * General Actions
  */
 
-export const TOGGLE_VISIBILITY_FILTER = 'TOGGLE_VISIBILITY_FILTER';
 export const CHANGE_ACTIVE_TAB = 'CHANGE_ACTIVE_TAB';
 export const TOGGLE_SIDEBAR = 'TOGGLE_SIDEBAR';
 export const TOGGLE_MODAL = 'TOGGLE_MODAL';
@@ -18,6 +17,7 @@ export const ADD_TAB = 'ADD_TAB';
 export const CHANGE_TAB_NAME = 'CHANGE_TAB_NAME';
 export const DELETE_TAB = 'DELETE_TAB';
 export const COPY_TAB = 'COPY_TAB';
+export const TOGGLE_VISIBILITY_FILTER = 'TOGGLE_VISIBILITY_FILTER';
 
 /*
  * Todo Actions

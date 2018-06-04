@@ -3,7 +3,7 @@ import {Provider} from 'react-redux'
 import {render} from 'react-dom';
 import App from './containers/App';
 import React from 'react';
-import './css/index.css';
+import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './resources/Lato.css';
 import todoApp from './reducers';

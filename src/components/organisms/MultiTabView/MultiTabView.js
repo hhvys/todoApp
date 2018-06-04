@@ -100,7 +100,7 @@ class MultiTabView extends React.Component {
 		tabs = tabs.filter(tab => tab.todos.length);
 
 		if(tabs.length === 0)
-			return (<NotFound/>)
+			return (<NotFound/>);
 
 		return tabs.map(tab => (
 			<div key={tab.tabId}>

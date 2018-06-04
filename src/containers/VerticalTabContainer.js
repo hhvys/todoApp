@@ -3,9 +3,6 @@ import TabContainerView from '../components/organisms/TabContainerView/TabContai
 import {changeActiveTab, searchQuery, toggleEdit, toggleModal} from "../actions/actionCreaters";
 
 const mapStateToProps = (state) => {
-
-	const container = {};
-
 	return {
 		tabs: state.tabs,
 		activeTab: state.activeTab,

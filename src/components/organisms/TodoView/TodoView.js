@@ -8,6 +8,43 @@ import {SORT_BY} from "../../../actions/actionTypes";
 
 class TodoView extends React.Component {
 
+	constructor(props) {
+		super(props);
+		this.state = {
+			currentTime: new Date()
+		};
+	}
+
+	componentDidMount() {
+		this.interval = setInterval(() => {
+			this.setState({
+				currentTime: new Date()
+			});
+		}, 65000);
+	}
+
+	componentWillUnmount() {
+		clearInterval(this.interval);
+	}
+
+
+	getCompletionTime = (completedTime) => {
+		let timeDiff = Math.abs(this.state.currentTime - Date.parse(completedTime)) / 1000;
+
+		switch (true) {
+			case (timeDiff < 60):
+				return 'A few seconds ago';
+			case (timeDiff < 120):
+				return 'A minute ago';
+			case (timeDiff < 3600):
+				return Math.ceil((timeDiff - 60) / 60).toString() + ' minutes ago';
+			case (timeDiff < 7200):
+				return 'An hour ago';
+			default:
+				return Math.ceil((timeDiff - 3600) / 3600).toString() + ' hours ago';
+		}
+	};
+
 	renderVerticalTab = ({
 												 todos,
 												 activeTab,
@@ -53,8 +90,8 @@ class TodoView extends React.Component {
 												 }}
 												 footerProps={{
 													 style: {
-														 marginRight: 10
-													 }
+														 marginRight: 10,
+												 }
 												 }}
 												 mainContent={todo.text}
 												 style={{
@@ -62,11 +99,12 @@ class TodoView extends React.Component {
 													 backgroundColor: '#F7F7F7',
 													 borderRadius: '5px',
 													 height: 46,
-													 opacity: completed ? 0.4 : 1
+													 opacity: completed ? 0.6 : 1
 												 }}
 
 												 onFooterSymbolClick={() => onFooterSymbolClick(activeTab, todo.todoId)}
 												 onHeaderSymbolClick={() => onHeaderSymbolClick(activeTab, todo.todoId)}
+												 extraContent={completed ? this.getCompletionTime(todo.completedTime) : null}
 						/>
 					);
 				})
@@ -112,7 +150,7 @@ class TodoView extends React.Component {
 
 				<Button className={"mt-3"}
 								text={showCompleted ? "HIDE COMPLETED TO-DOS" : "SHOW COMPLETED TO-DOS"}
-								onClick={onButtonClick}/>
+								onClick={() => onButtonClick(activeTab)}/>
 
 				<div className={"completed-todos mt-3"}>
 					{showCompleted && this.renderVerticalTab({
@@ -121,7 +159,7 @@ class TodoView extends React.Component {
 						onFooterSymbolClick,
 						onHeaderSymbolClick,
 						completed: true,
-						sortBy
+						sortBy,
 					})}
 				</div>
 

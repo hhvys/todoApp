@@ -25,10 +25,16 @@
     width: 30px;
 }
 
-.div__vertical__tab .main-content {
+.div__vertical__tab .content {
     flex: 1;
-    line-height: 38px;
-    vertical-align: middle;
+    /*line-height: 38px;*/
+    /*vertical-align: middle;*/
+    height: 100%;
+}
+
+.div__vertical__tab .extra-content {
+    font-size: 10px;
+    color: #262626;
 }
 
 .div__vertical__tab .footer {

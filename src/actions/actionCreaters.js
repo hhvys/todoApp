@@ -17,9 +17,10 @@ export function toggleEdit() {
 	}
 }
 
-export function toggleVisibilityFilter() {
+export function toggleVisibilityFilter(tabId) {
 	return {
-		type: actionTypes.TOGGLE_VISIBILITY_FILTER
+		type: actionTypes.TOGGLE_VISIBILITY_FILTER,
+		tabId
 	};
 }
 

@@ -6,39 +6,6 @@ import {PLUS, LIST_SYMBOL, PENCIL} from '../../atoms/logos/constants';
 import VerticalTabContainer from '../../../containers/VerticalTabContainer';
 import CollapsedSideBar from "../CollapsedSideBar/CollapsedSideBar";
 
-const container = [
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		// footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		active: true,
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		footerContent: 4
-	},
-];
 
 
 class SideBarView extends React.Component {
@@ -83,13 +50,18 @@ class SideBarView extends React.Component {
 					<VerticalTab headerSymbol={PLUS}
 											 mainContent={"Create List"}
 											 onClick={onCreateClick}
+											 headerProps={{
+											 	style: {
+											 		fill: '#328ad6'
+												}
+											 }}
 											 style={{
 												 height: 42,
 												 minHeight: 42,
 												 backgroundColor: '#F7F7F7',
 												 borderTop: '1px solid #e0e0df',
 												 color: '#328ad6',
-												 fontWeight: 'bold',
+												 fontWeight: 500,
 												 fill: '#328ad6'
 											 }}/>
 				</div>

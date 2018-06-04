@@ -6,11 +6,13 @@ const mapStateToProps = (state) => {
 	const todos = state.tabs
 		.find(tab => tab.tabId === state.activeTab)
 		.todos;
-	console.log(todos);
 	return ({
 		todos,
 		activeTab: state.activeTab,
-		showCompleted: state.showCompletedTodo,
+		showCompleted: state
+			.tabs
+			.find(tab => tab.tabId === state.activeTab)
+			.showCompletedTodo,
 		sortBy: state.sortBy,
 		collapsed: state.collapsedSideBar
 	});
@@ -20,7 +22,7 @@ const mapDispatchToProps = (dispatch) => {
 	return ({
 		onHeaderSymbolClick: (tabId, todoId) => dispatch(toggleTodo(tabId, todoId)),
 		onFooterSymbolClick: (tabId, todoId) => dispatch(toggleStarTodo(tabId, todoId)),
-		onButtonClick: () => dispatch(toggleVisibilityFilter()),
+		onButtonClick: (tabId) => dispatch(toggleVisibilityFilter(tabId)),
 		onInputSubmit: (tabId, value) => dispatch(addTodo(tabId, value))
 	});
 };

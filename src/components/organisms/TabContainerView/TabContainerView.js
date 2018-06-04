@@ -21,17 +21,20 @@ class TabContainerView extends React.Component {
 				footerContent = tab.todos
 					.filter(todo => !todo.completed)
 					.length;
-				if(tab.tabId === STARRED_ID) {
+				if (tab.tabId === STARRED_ID) {
 					footerContent = tabs.reduce((totalStarred, tab) => {
 						const tabStarred = tab.todos.reduce((starred, todo) => starred + (todo.star && !todo.completed), 0);
 						return totalStarred + tabStarred;
 					}, 0);
-					if(footerContent === 0)
+					if (footerContent === 0)
 						return null;
 				}
 				return (
 					<VerticalTab
 						key={tab.tabId}
+						style={{
+							height: 38
+						}}
 						onClick={() => onClick(tab.tabId)}
 						onHeaderSymbolClick={onHeaderSymbolClick}
 						onFooterSymbolClick={() => onFooterSymbolClick(tab.tabId)}
@@ -46,17 +49,22 @@ class TabContainerView extends React.Component {
 						footerContent={
 							footerContent > 0 && footerContent
 						}
+						footerProps={{
+							style: {
+							}
+						}}
 						mainContent={tab.tabName}
 						active={activeTab === tab.tabId}
 						headerProps={{
 							style: {
 								fill: tab.tabId === INBOX_ID ?
-									'blue' :
+									'rgb(50, 138, 214)' :
 									tab.tabId === STARRED_ID ?
 										'red' :
 										'#b9b9b9'
 							}
 						}}
+
 					/>
 				);
 			})
