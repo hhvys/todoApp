@@ -2,13 +2,27 @@ import React from 'react';
 import './InputWithLabel.css';
 import Input from "../../atoms/Input/Input";
 
-const InputWithLabel = ({label, placeholder, onInputChange, ...props}) => (
+const handleKeyUp = (e, onSubmit) => {
+	if (e.nativeEvent.keyCode === 13) {
+		onSubmit(e.nativeEvent.target.value)
+		e.nativeEvent.target.value = '';
+	}
+};
+
+const InputWithLabel = ({
+													label,
+													placeholder,
+													onInputChange,
+													onSubmit,
+													...props
+												}) => (
 	<div {...props}
 			 className={`div__input__label full-width d-flex align-items-center justify-content-center`}>
 		<label className={`add-symbol full-height d-flex align-items-center justify-content-center`}>{label}</label>
-		<Input onInputChange={onInputChange} placeholder={placeholder}/>
-		{/*<input className={`add-todo full-height d-flex align-items-center justify-content-center`} placeholder={placeholder}*/}
-					 {/*onChange={onInputChange}/>*/}
+		<Input onInputChange={() => {}}
+					 onKeyUp={(e) => handleKeyUp(e, onSubmit)}
+					 placeholder={placeholder}
+		/>
 	</div>
 );
 

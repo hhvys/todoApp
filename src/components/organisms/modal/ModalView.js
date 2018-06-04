@@ -1,5 +1,5 @@
 import React from 'react';
-import AddListForm from './addListForm';
+import AddListForm from './addListForm/index';
 
 const ModalView = ({active, editEnabled, activeTab}) => (
 	<div className={(active || editEnabled) ? "modal active" : "modal"}>

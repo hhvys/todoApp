@@ -3,17 +3,16 @@ import './VerticalTab.css';
 import Symbol from "../../atoms/logos/Symbol";
 
 function renderFooter(footerSymbol, onFooterSymbolClick, footerProps) {
-	if (footerSymbol)
-		return (
-			<div className={"footer-symbol full-height d-flex align-items-center justify-content-center"}>
-				<Symbol className={"end-symbol"} onClick={onFooterSymbolClick} symbolType={footerSymbol}
-								style={{fill: '#262626'}} {...footerProps}/>
-			</div>
-		);
-	return '';
+	return footerSymbol ? (
+		<div className={"footer-symbol full-height d-flex align-items-center justify-content-center"}>
+			<Symbol className={"end-symbol"} onClick={onFooterSymbolClick} symbolType={footerSymbol}
+							style={{fill: '#262626'}} {...footerProps}/>
+		</div>
+	) : null;
 }
 
 const VerticalTab = ({
+											 className,
 											 onClick,
 											 onFooterSymbolClick,
 											 onHeaderSymbolClick,
@@ -21,19 +20,21 @@ const VerticalTab = ({
 											 footerSymbol,
 											 footerContent,
 											 mainContent,
+											 headerProps,
 											 footerProps,
 											 active,
+											 hover,
 											 ...props
 										 }) => (
 	<div
-		className={`div__vertical__tab full-width d-flex align-items-center justify-content-center ${active ? 'active' : ''}`}
+		className={`${className ? className : ''} div__vertical__tab full-width d-flex align-items-center justify-content-center ${active ? 'active' : ''}`}
 		onClick={onClick} {...props}>
 
 		<div className={"header full-height d-flex align-items-center justify-content-center"}>
-			<Symbol className={"start-symbol"} onClick={onHeaderSymbolClick} symbolType={headerSymbol}/>
+			<Symbol className={"start-symbol"} onClick={onHeaderSymbolClick} symbolType={headerSymbol} {...headerProps}/>
 		</div>
 
-		<div className={"d-flex align-items-center main-content full-height txt-overflow"}>
+		<div className={"d-flex align-items-center main-content full-height txt-overflow ml-2"}>
 			{mainContent}
 		</div>
 

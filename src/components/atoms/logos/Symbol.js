@@ -1,6 +1,7 @@
 import React from 'react';
 import * as svgPaths from './svgPaths';
 import * as defaultStyles from './defaultSymbolStyles';
+import {STARRED} from "./constants";
 
 class Symbol extends React.Component {
 
@@ -22,16 +23,19 @@ class Symbol extends React.Component {
 	};
 
 	render() {
-		const {
+		let {
+			style,
 			symbolType,
 			height,
 			width,
 			...restProps
 		} = this.props;
-		console.log({...restProps});
+		if (symbolType === STARRED)
+			[height, width] = [44, 22];
 		return (
 			<svg className={"d-flex justify-content-center"}
-					 style={this.getDefaultStyles(symbolType)} viewBox={`0 0 ${width} ${height}`} height={height} width={width} {...restProps}>
+					 style={{...this.getDefaultStyles(symbolType), ...style}} viewBox={`0 0 ${width} ${height}`} height={height}
+					 width={width} {...restProps}>
 				{this.getSymbol(symbolType)}
 			</svg>
 

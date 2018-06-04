@@ -1,28 +1,7 @@
 import React from 'react';
 import VerticalTab from "../../molecules/VerticalTab/VerticalTab";
-
-// const container = [
-// 	{
-// 		onClick: () => console.log('clicked'),
-// 		onHeaderSymbolClick: () => console.log('headerClicked'),
-// 		onFooterSymbolClick: () => console.log('footerClicked'),
-// 		headerSymbol: 'listSymbol',
-// 		footerSymbol: 'pencil',
-// 		mainContent: 'tab1',
-// 		height: 38
-// 	},
-// 	{
-// 		onClick: () => console.log('clicked'),
-// 		onHeaderSymbolClick: () => console.log('headerClicked'),
-// 		onFooterSymbolClick: () => console.log('footerClicked'),
-// 		headerSymbol: 'listSymbol',
-// 		footerSymbol: 'pencil',
-// 		mainContent: 'tab1',
-// 		height: 38,
-// 		active: true
-// 	},
-// ];
-
+import {INBOX_ID, STARRED_ID} from "../../../actions/actionTypes";
+import {INBOX, STAR} from "../../atoms/logos/constants";
 
 class TabContainerView extends React.Component {
 
@@ -34,28 +13,50 @@ class TabContainerView extends React.Component {
 												 onFooterSymbolClick,
 												 headerSymbol,
 												 footerSymbol,
-												 footerContent,
-												 ...props
+												 footerContent
 											 }) => {
+
 		return (
 			tabs.map(tab => {
-
+				footerContent = tab.todos
+					.filter(todo => !todo.completed)
+					.length;
+				if(tab.tabId === STARRED_ID) {
+					footerContent = tabs.reduce((totalStarred, tab) => {
+						const tabStarred = tab.todos.reduce((starred, todo) => starred + (todo.star && !todo.completed), 0);
+						return totalStarred + tabStarred;
+					}, 0);
+					if(footerContent === 0)
+						return null;
+				}
 				return (
 					<VerticalTab
-						onClick={onClick}
+						key={tab.tabId}
+						onClick={() => onClick(tab.tabId)}
 						onHeaderSymbolClick={onHeaderSymbolClick}
-						onFooterSymbolClick={onFooterSymbolClick}
-						headerSymbol={headerSymbol}
-						footerSymbol={footerSymbol}
-						footerContent={footerContent}
+						onFooterSymbolClick={() => onFooterSymbolClick(tab.tabId)}
+						headerSymbol={
+							tab.tabId === INBOX_ID ?
+								INBOX :
+								tab.tabId === STARRED_ID ?
+									STAR :
+									headerSymbol
+						}
+						footerSymbol={activeTab === tab.tabId && footerSymbol}
+						footerContent={
+							footerContent > 0 && footerContent
+						}
 						mainContent={tab.tabName}
 						active={activeTab === tab.tabId}
 						headerProps={{
 							style: {
-								fill: '#b9b9b9'
+								fill: tab.tabId === INBOX_ID ?
+									'blue' :
+									tab.tabId === STARRED_ID ?
+										'red' :
+										'#b9b9b9'
 							}
 						}}
-						{...props}
 					/>
 				);
 			})
@@ -63,10 +64,9 @@ class TabContainerView extends React.Component {
 	};
 
 	render() {
-		const {tabs, ...restProps} = this.props;
-		console.log(tabs);
+		const {style} = this.props;
 		return (
-			<div className={" flex-column justify-content-start align-items-center"} {...restProps}>
+			<div className={" flex-column justify-content-start align-items-center"} style={style}>
 				{this.renderVerticalTab(this.props)}
 			</div>
 		);

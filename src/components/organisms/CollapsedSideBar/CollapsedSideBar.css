@@ -1,6 +1,6 @@
 .div__collapsed__sidebar {
     width: 42px;
-    /*overflow: auto;*/
+    height: 100vh;
 }
 
 .div__collapsed__sidebar .list-toggle {

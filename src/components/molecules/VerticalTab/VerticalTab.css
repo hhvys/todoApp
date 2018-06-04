@@ -3,6 +3,20 @@
     cursor: pointer;
 }
 
+.div__vertical__tab.dropdown {
+    height: 31px;
+    width: 246px;
+    color: white;
+}
+
+    .div__vertical__tab.dropdown .start-symbol {
+        fill: white;
+    }
+
+.div__vertical__tab.dropdown:hover {
+    background-color: #769475;
+}
+
 .div__vertical__tab.active {
     background-color: #E1EEFA;
 }
@@ -29,5 +43,4 @@
 
 .div__vertical__tab .end-symbol:hover {
     font-weight: bold;
-    fill: red;
 }

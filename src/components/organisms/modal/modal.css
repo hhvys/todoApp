@@ -93,4 +93,9 @@
 
 .modal-content .footer .delete {
     align-self: center;
+    display: flex;
+}
+
+.modal-content .footer .delete.hide {
+    display: none;
 }

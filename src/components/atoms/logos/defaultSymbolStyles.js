@@ -1,5 +1,5 @@
 
-export const checkBox = {
+export const CHECK_BOX = {
 	fillRule: "evenodd",
 	clipRule: "evenodd",
 	strokeLinecap: "round",
@@ -8,7 +8,7 @@ export const checkBox = {
 	stroke: "rgba(0,0,0,0.35)"
 };
 
-export const checkedCheckBox = {
+export const CHECKED_CHECK_BOX = {
 	fillRule: "evenodd",
 	clipRule: "evenodd",
 	strokeLinecap: "round",
@@ -17,7 +17,7 @@ export const checkedCheckBox = {
 	stroke: "rgba(0,0,0,0.35)"
 };
 
-export const starred = {
+export const STARRED = {
 	height: 44,
 	width: 22,
 	fill: "#d74e48",

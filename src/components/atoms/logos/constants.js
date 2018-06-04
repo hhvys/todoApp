@@ -1,0 +1,15 @@
+export const THREE_DOTS = 'THREE_DOTS';
+export const CHECK_BOX = 'CHECK_BOX';
+export const CHECKED_CHECK_BOX = 'CHECKED_CHECK_BOX';
+export const TRASH = 'TRASH';
+export const DUPLICATE = 'DUPLICATE';
+export const INBOX = 'INBOX';
+export const LIST_SYMBOL = 'LIST_SYMBOL';
+export const PENCIL = 'PENCIL';
+export const SEARCH_SYMBOL = 'SEARCH_SYMBOL';
+export const SORT = 'SORT';
+export const SORT_CREATION = 'SORT_CREATION';
+export const STAR = 'STAR';
+export const STARRED = 'STARRED';
+export const LIST_TOGGLE = 'LIST_TOGGLE';
+export const PLUS = 'PLUS';

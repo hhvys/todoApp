@@ -1,20 +1,20 @@
 import React from 'react';
-import SideBar from "./organisms/SideBar/SideBar";
-import Header from "./organisms/Header/Header";
-import TodoView from './organisms/TodoView/TodoView';
+import SideBar from '../containers/SideBar';
+import Header from "../containers/Header";
+import TodoContainer from '../containers/TodoContainer';
+import Modal from './organisms/modal';
+import MultiTab from '../containers/MultiTab';
 
-// const App = () => (
-// 	<div className="full-size">
-// 		<Modal />
-// 		<MainContent />
-// 	</div>
-// );
-
-const App = () => (
+const App = ({multiView}) => (
 	<div className="full-size">
 		<SideBar className={"full-height fixed"} style={{width: 280}}/>
 		<Header style={{backgroundColor: '#678865'}}/>
-		<TodoView/>
+		{
+			multiView ?
+				<MultiTab/> :
+				<TodoContainer/>
+		}
+		<Modal/>
 	</div>
 );
 

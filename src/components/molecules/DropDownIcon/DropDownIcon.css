@@ -1,8 +1,15 @@
 .div__dd__icon {
     background-color: inherit;
+    cursor: pointer;
 }
+
+.div__dd__icon:hover {
+    background-color: #769475;
+}
+
 
 .div__dd__icon .icon-text {
     font-size: 10px;
     color: white;
+    font-weight: 500;
 }

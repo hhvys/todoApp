@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Delete from '../../logos/Delete';
-import '../../logos/logos.css';
-import Duplicate from '../../logos/Duplicate';
+// import Delete from '../../../logos/Delete';
+import '../../../logos/logos.css';
+// import Duplicate from '../../logos/Duplicate';
 import './addForm.css';
+import Symbol from "../../../atoms/logos/Symbol";
+import {DUPLICATE, TRASH} from "../../../atoms/logos/constants";
 
 class AddForm extends React.Component {
 
@@ -78,8 +80,8 @@ class AddForm extends React.Component {
 							"delete hide" :
 							"delete"
 					}>
-						<Delete onClick={this.handleDelete}/>
-						<Duplicate onClick={this.handleDuplicate}/>
+						<Symbol symbolType={TRASH} onClick={this.handleDelete}/>
+						<Symbol symbolType={DUPLICATE} onClick={this.handleDuplicate}/>
 					</div>
 					<div>
 						<button className="save"

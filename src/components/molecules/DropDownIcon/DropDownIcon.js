@@ -27,7 +27,7 @@ class DropDownIcon extends React.Component {
 
 				<div className={"icon-symbol full-height d-flex align-items-center justify-content-center"}>
 					<Symbol symbolType={iconSymbol}
-									style={{fill: 'white'}}/>
+									style={{fill: 'white', marginTop: 10}}/>
 				</div>
 
 				<div className={"icon-text full-height d-flex align-items-center justify-content-center"}>

@@ -1,0 +1,8 @@
+.div__not__found {
+    background: rgba(0,0,0,0.4);
+    height: 200px;
+    width: 30%;
+    border-radius: 10px;
+    top: 30%;
+    left: 40%;
+}

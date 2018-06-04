@@ -1,7 +1,7 @@
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 import {render} from 'react-dom';
-import App from './components/App';
+import App from './containers/App';
 import React from 'react';
 import './css/index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';

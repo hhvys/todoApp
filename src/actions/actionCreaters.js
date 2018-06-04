@@ -11,6 +11,12 @@ export function searchQuery(query) {
 	}
 }
 
+export function toggleEdit() {
+	return {
+		type: actionTypes.TOGGLE_EDIT
+	}
+}
+
 export function toggleVisibilityFilter() {
 	return {
 		type: actionTypes.TOGGLE_VISIBILITY_FILTER
@@ -36,12 +42,6 @@ export function toggleModal() {
 	}
 }
 
-export function toggleEdit() {
-	return {
-		type: actionTypes.TOGGLE_EDIT
-	}
-}
-
 export function addTab(tabName) {
 	nextId++;
 	storeNextId();
@@ -60,7 +60,6 @@ export function deleteTab(tabId) {
 }
 
 export function changeTabName(tabId, tabName) {
-	console.log(tabId, tabName);
 	return {
 		type: actionTypes.CHANGE_TAB_NAME,
 		tabId,
@@ -79,12 +78,12 @@ export function addTodo(tabId, text) {
 	}
 }
 
-export function addStarredTodo(tabId, text) {
+export function addStarredTodo(text) {
 	nextId++;
 	storeNextId();
 	return {
 		type: actionTypes.ADD_STARRED_TODO,
-		tabId,
+		tabId: 0,
 		todoId: nextId,
 		text
 	}
@@ -117,6 +116,7 @@ export function copyTab(fromId) {
 }
 
 export function toggleStarTodo(tabId, todoId) {
+	// debugger;
 	return {
 		type: actionTypes.STAR_TOGGLE_TODO,
 		tabId,

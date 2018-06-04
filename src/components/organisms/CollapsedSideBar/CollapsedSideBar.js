@@ -1,270 +1,32 @@
 import React from 'react';
 import './CollapsedSideBar.css';
 import Symbol from "../../atoms/logos/Symbol";
-import Button from "../../atoms/Button/Button";
-import CheckBox from "../../logos/CheckBox";
-
-const container = [
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		// footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		active: true,
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		// footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		active: true,
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		// footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		active: true,
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		// footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		active: true,
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		// footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		active: true,
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		// footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		active: true,
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		// footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		active: true,
-		footerContent: 4
-	},
-	{
-		onClick: () => console.log('clicked'),
-		onHeaderSymbolClick: () => console.log('headerClicked'),
-		onFooterSymbolClick: () => console.log('footerClicked'),
-		headerSymbol: 'listSymbol',
-		footerSymbol: 'pencil',
-		mainContent: 'tab1',
-		style: {height: 38},
-		footerContent: 4
-	},
-];
+import {INBOX, LIST_TOGGLE, PLUS, THREE_DOTS} from "../../atoms/logos/constants";
 
 
 class CollapsedSideBar extends React.Component {
 
-	renderListSymbols = (container) => {
-		return (
-			container.map(tab => {
-				const {
-					headerSymbol,
-					style
-				} = tab;
-				return (
-					<div className={"full-width d-flex align-items-center justify-content-center"} style={style}>
-						<Symbol symbolType={headerSymbol} style={{fill: '#b9b9b9'}}/>
-					</div>
-				);
-			})
-
-		);
-	};
-
 	render() {
-		const {className, ...props} = this.props;
+		const {className, collapseSideBar, ...props} = this.props;
 		return (
 			<div
 				className={`div__collapsed__sidebar ${className ? className : ''} fixed d-flex flex-column align-items-center justify-content-start`}
 				{...props}>
 				<div className={"list-toggle full-width d-flex align-items-center justify-content-center"}>
-					<Symbol symbolType={"listToggle"}/>
+					<Symbol symbolType={LIST_TOGGLE} onClick={collapseSideBar} />
 				</div>
 
 				<div className={"tab-list full-width d-flex flex-column align-items-center justify-content-start"}>
 					<div className={"full-width d-flex align-items-center justify-content-center"}>
-						<Symbol symbolType={"threeDots"}/>
+						<Symbol symbolType={INBOX} onClick={collapseSideBar} style={{fill: '#328ad6'}}/>
 					</div>
 					<div className={"full-width d-flex align-items-center justify-content-center"}>
-						<Symbol symbolType={"threeDots"}/>
+						<Symbol symbolType={THREE_DOTS} onClick={collapseSideBar} style={{fill: '#328ad6'}}/>
 					</div>
 				</div>
 
 				<div className={"create-list full-width d-flex align-items-center justify-content-center"}>
-					<Symbol symbolType={"plus"} style={{fill: '#328ad6'}}/>
+					<Symbol symbolType={PLUS} style={{fill: '#328ad6'}} onClick={collapseSideBar}/>
 				</div>
 			</div>
 		);

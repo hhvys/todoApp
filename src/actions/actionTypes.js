@@ -6,10 +6,10 @@ export const TOGGLE_VISIBILITY_FILTER = 'TOGGLE_VISIBILITY_FILTER';
 export const CHANGE_ACTIVE_TAB = 'CHANGE_ACTIVE_TAB';
 export const TOGGLE_SIDEBAR = 'TOGGLE_SIDEBAR';
 export const TOGGLE_MODAL = 'TOGGLE_MODAL';
-export const TOGGLE_EDIT = 'TOGGLE_EDIT';
 export const CHANGE_SORT = 'CHANGE_SORT';
 export const TOGGLE_DROPDOWN = 'TOGGLE_DROPDOWN';
 export const SEARCH_QUERY = 'SEARCH_QUERY';
+export const TOGGLE_EDIT = 'TOGGLE_EDIT';
 
 /*
  * Tab Actions
@@ -29,11 +29,14 @@ export const STAR_TOGGLE_TODO = 'STAR_TOGGLE_TODO';
 export const ACTIVE_TODO = 'ACTIVE_TODO';
 
 /*
-* Sort Actions
-* */
+	* Sort Actions
+	* */
 
 export const SORT_BY = {
 	SORT_ALPHA: 'SORT_ALPHA',
 	SORT_CREATION: 'SORT_CREATION',
 	SORT_PRIORITY: 'SORT_PRIORITY'
 };
+
+export const INBOX_ID = 0;
+export const STARRED_ID = 1;

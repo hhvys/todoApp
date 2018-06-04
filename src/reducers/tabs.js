@@ -40,22 +40,22 @@ const todos = (state = [], action) => {
 				]);
 		case TOGGLE_TODO:
 			return state.map(todo => (
-				todo.todoId === action.todoId ? 
-						{
-							...todo,
-							completed: !todo.completed,
-							completedTime: new Date()
-						} : 
-						todo
+				todo.todoId === action.todoId ?
+					{
+						...todo,
+						completed: !todo.completed,
+						completedTime: new Date()
+					} :
+					todo
 			));
 		case STAR_TOGGLE_TODO:
 			return state.map(todo => (
-				todo.todoId === action.todoId ? 
-						{
-							...todo,
-							star: !todo.star
-						} : 
-						todo
+				todo.todoId === action.todoId ?
+					{
+						...todo,
+						star: !todo.star
+					} :
+					todo
 			));
 		case ACTIVE_TODO:
 			return state.map(todo => (
@@ -72,7 +72,7 @@ const todos = (state = [], action) => {
 		default:
 			return state;
 	}
-}
+};
 
 const initialState = [
 	{
@@ -100,17 +100,17 @@ function tabs(state = initialState, action) {
 			];
 		case CHANGE_TAB_NAME:
 			return state.map(tab => (
-				tab.tabId === action.tabId ? 
-						{
-							tabId: tab.tabId, 
-							tabName: 
-							action.tabName, 
-							todos: tab.todos
-						} : 
-						tab
+				tab.tabId === action.tabId ?
+					{
+						tabId: tab.tabId,
+						tabName:
+						action.tabName,
+						todos: tab.todos
+					} :
+					tab
 			));
 		case COPY_TAB:
-			let fromTab = 
+			let fromTab =
 				state.find(tab => tab.tabId === action.fromId);
 			return (
 				[
@@ -123,20 +123,20 @@ function tabs(state = initialState, action) {
 				]
 			);
 		case DELETE_TAB:
-			return state.filter(tab => 
-						tab.tabId !== action.tabId);
+			return state.filter(tab =>
+				tab.tabId !== action.tabId);
 		case ADD_TODO:
 		case ADD_STARRED_TODO:
 		case TOGGLE_TODO:
 		case STAR_TOGGLE_TODO:
 		case ACTIVE_TODO:
 			return state.map(tab => (
-						tab.tabId === action.tabId ? 
-									{
-										...tab,
-										todos: todos(tab.todos, action)		
-									} : tab
-					));
+				tab.tabId === action.tabId ?
+					{
+						...tab,
+						todos: todos(tab.todos, action)
+					} : tab
+			));
 		default:
 			return state;
 	}

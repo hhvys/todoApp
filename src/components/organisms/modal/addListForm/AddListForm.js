@@ -5,8 +5,8 @@ import {
 	changeTabName,
 	changeActiveTab,
 	deleteTab,
-	copyTab
-} from '../../../actions/actionCreaters';
+	copyTab, searchQuery
+} from '../../../../actions/actionCreaters';
 import {connect} from 'react-redux';
 import AddForm from './AddForm';
 
@@ -37,6 +37,7 @@ const mapDispatchToProps = (dispatch) => {
 		},
 		onDelete: (tabId) => {
 			dispatch(changeActiveTab(0));
+			dispatch(searchQuery(''));
 			dispatch(deleteTab(tabId));
 		},
 		onDuplicate: (tabId) => {
