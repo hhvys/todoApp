@@ -2,13 +2,16 @@ import {connect} from 'react-redux';
 import SideBarView from '../components/organisms/SideBar/SideBarView';
 import {searchQuery, toggleModal, toggleSideBar} from "../actions/actionCreaters";
 import {changeActiveTab} from "../actions/actionCreaters";
+import {getTabs} from "../reducers/tabs";
+import {getActiveTab} from "../reducers/activeTab";
+import {getCollapsedSideBar} from "../reducers/collapsedSideBar";
 
 const mapStateToProps = (state) => {
 
 	return {
-		activeTab: state.activeTab,
-		tabs: state.tabs,
-		collapsed: state.collapsedSideBar
+		activeTab: getActiveTab(state),
+		tabs: getTabs(state),
+		collapsed: getCollapsedSideBar(state)
 	};
 
 };

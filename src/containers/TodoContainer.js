@@ -1,20 +1,25 @@
 import {connect} from 'react-redux';
 import TodoView from '../components/organisms/TodoView/TodoView';
 import {addTodo, toggleStarTodo, toggleTodo, toggleVisibilityFilter} from "../actions/actionCreaters";
+import {getTabs} from "../reducers/tabs";
+import {getActiveTab} from "../reducers/activeTab";
+import {getSortBy} from "../reducers/sortBy";
+import {getCollapsedSideBar} from "../reducers/collapsedSideBar";
 
 const mapStateToProps = (state) => {
-	const todos = state.tabs
-		.find(tab => tab.tabId === state.activeTab)
+	const tabs = getTabs(state);
+	const activeTab = getActiveTab(state);
+	const todos = tabs
+		.find(tab => tab.tabId === activeTab)
 		.todos;
 	return ({
 		todos,
-		activeTab: state.activeTab,
-		showCompleted: state
-			.tabs
-			.find(tab => tab.tabId === state.activeTab)
+		activeTab,
+		showCompleted: tabs
+			.find(tab => tab.tabId === activeTab)
 			.showCompletedTodo,
-		sortBy: state.sortBy,
-		collapsed: state.collapsedSideBar
+		sortBy: getSortBy(state),
+		collapsed: getCollapsedSideBar(state)
 	});
 };
 

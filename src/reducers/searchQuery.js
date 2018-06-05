@@ -9,4 +9,8 @@ function searchQuery (state = '', action) {
 	}
 }
 
+export function getSearchQuery(state) {
+	return state.searchQuery;
+}
+
 export default searchQuery;

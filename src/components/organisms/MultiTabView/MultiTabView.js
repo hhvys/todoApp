@@ -3,7 +3,7 @@ import Button from "../../atoms/Button/Button";
 import './MultiTabView.css';
 import {CHECK_BOX, CHECKED_CHECK_BOX} from "../../atoms/logos/constants";
 import VerticalTab from '../../molecules/VerticalTab/VerticalTab';
-import {SORT_BY} from "../../../actions/actionTypes"
+import {INBOX_ID, SORT_BY} from "../../../actions/actionTypes"
 import {STARRED, STAR} from "../../atoms/logos/constants";
 import InputWithLabel from '../../molecules/InputWithLabel/InputWithLabel';
 import NotFound from '../../molecules/NotFound/NotFound';
@@ -73,7 +73,7 @@ class MultiTabView extends React.Component {
 		);
 	};
 
-	renderStarred({
+	renderTabs({
 									tabs,
 									onFooterSymbolClick,
 									onHeaderSymbolClick,
@@ -93,11 +93,14 @@ class MultiTabView extends React.Component {
 				.map(tab => ({
 					...tab,
 					todos: tab
-						.todos
-						.filter(todo => todo.star && !todo.completed)
+						.starredTodos
+						.filter(todo => !todo.completed)
 				}));
 
 		tabs = tabs.filter(tab => tab.todos.length);
+
+		if(tabs.length === 0 && searchQuery.length === 0)
+			onButtonClick(INBOX_ID);
 
 		if(tabs.length === 0)
 			return (<NotFound/>);
@@ -144,7 +147,7 @@ class MultiTabView extends React.Component {
 						/> :
 						null
 				}
-				{this.renderStarred({
+				{this.renderTabs({
 					tabs,
 					sortBy,
 					onHeaderSymbolClick,

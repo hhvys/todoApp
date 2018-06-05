@@ -45,13 +45,17 @@ class TabContainerView extends React.Component {
 									STAR :
 									headerSymbol
 						}
-						footerSymbol={activeTab === tab.tabId && footerSymbol}
+
+						footerSymbol={activeTab === tab.tabId &&
+						activeTab !== INBOX_ID &&
+						activeTab !== STARRED_ID &&
+						footerSymbol}
+
 						footerContent={
 							footerContent > 0 && footerContent
 						}
 						footerProps={{
-							style: {
-							}
+							style: {}
 						}}
 						mainContent={tab.tabName}
 						active={activeTab === tab.tabId}

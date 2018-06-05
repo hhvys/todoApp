@@ -9,4 +9,8 @@ function sortBy(state = SORT_BY.SORT_CREATION, action) {
 	}
 }
 
+export function getSortBy(state) {
+	return state.sortBy;
+}
+
 export default sortBy;

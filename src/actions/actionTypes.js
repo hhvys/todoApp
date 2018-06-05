@@ -8,7 +8,6 @@ export const TOGGLE_MODAL = 'TOGGLE_MODAL';
 export const CHANGE_SORT = 'CHANGE_SORT';
 export const TOGGLE_DROPDOWN = 'TOGGLE_DROPDOWN';
 export const SEARCH_QUERY = 'SEARCH_QUERY';
-export const TOGGLE_EDIT = 'TOGGLE_EDIT';
 
 /*
  * Tab Actions

@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import Delete from '../../../logos/Delete';
-import '../../../logos/logos.css';
-// import Duplicate from '../../logos/Duplicate';
+import '../../../atoms/logos/logos.css';
 import './addForm.css';
 import Symbol from "../../../atoms/logos/Symbol";
 import {DUPLICATE, TRASH} from "../../../atoms/logos/constants";
@@ -15,14 +13,12 @@ class AddForm extends React.Component {
 	}
 
 	componentWillReceiveProps(newProps) {
-		console.log(newProps);
 		this.setState({
-			input: newProps.editEnabled ? newProps.tabName : ''
+			input: newProps.tabId ? newProps.tabName : ''
 		});
 	}
 
 	componentDidUpdate() {
-		console.log('updated');
 		this.input.focus();
 	}
 
@@ -41,12 +37,12 @@ class AddForm extends React.Component {
 
 	handleDelete = (e) => {
 		this.cancel(e);
-		this.props.onDelete(this.props.activeTab);
+		this.props.onDelete(this.props.tabId);
 	};
 
 	handleDuplicate = (e) => {
 		this.cancel(e);
-		this.props.onDuplicate(this.props.activeTab)
+		this.props.onDuplicate(this.props.tabId)
 	};
 
 	onPressEnter = (e) => {
@@ -70,13 +66,13 @@ class AddForm extends React.Component {
 					/>
 				</div>
 				<div className={
-					!this.props.editEnabled ?
+					!this.props.tabId ?
 						"footer d-flex justify-content-end" :
 						"footer d-flex justify-content-between"
 				}
 				>
 					<div className={
-						!this.props.editEnabled ?
+						!this.props.tabId ?
 							"delete hide" :
 							"delete"
 					}>
@@ -107,23 +103,19 @@ class AddForm extends React.Component {
 
 	cancel = (e) => {
 		e.preventDefault();
-		this.props.onCancel(this.props.editEnabled);
+		this.props.onCancel(this.props.tabId);
 		this.input.value = '';
 		this.save.classList.remove('active');
 	};
 
 	saveTab = (e) => {
 		e.preventDefault();
-		console.log(this.input.value);
 		if (this.input.value.trim()) {
 			this.props.onSave(
-				this.props.activeTab,
-				this.input.value.trim(),
-				this.props.editEnabled
+				this.props.tabId,
+				this.input.value.trim()
 			);
-			this.props.onCancel(
-				this.props.editEnabled
-			);
+			this.props.onCancel();
 		}
 		this.input.value = '';
 		this.save.classList.remove('active');

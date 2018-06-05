@@ -1,9 +1,6 @@
 import {
 	ADD_TODO,
-	ADD_STARRED_TODO,
-	TOGGLE_TODO,
-	STAR_TOGGLE_TODO,
-	ACTIVE_TODO
+	ADD_STARRED_TODO, STAR_TOGGLE_TODO,
 } from "../actions/actionTypes";
 
 const todos = (state = [], action) => {
@@ -12,61 +9,28 @@ const todos = (state = [], action) => {
 			return (
 				[
 					...state,
-					{
-						todoId: action.todoId,
-						text: action.text,
-						completed: false,
-						star: false,
-						completedTime: undefined,
-						createdTime: new Date(),
-						active: false
-					}
+					action.todoId
 				]);
 		case ADD_STARRED_TODO:
 			return (
 				[
 					...state,
-					{
-						todoId: action.todoId,
-						text: action.text,
-						completed: false,
-						star: true,
-						completedTime: undefined,
-						createdTime: new Date(),
-						active: false
-					}
+					action.todoId
 				]);
-		case TOGGLE_TODO:
-			return state.map(todo => (
-				todo.todoId === action.todoId ?
-					{
-						...todo,
-						completed: !todo.completed,
-						completedTime: new Date()
-					} :
-					todo
-			));
 		case STAR_TOGGLE_TODO:
-			return state.map(todo => (
-				todo.todoId === action.todoId ?
-					{
-						...todo,
-						star: !todo.star
-					} :
-					todo
-			));
-		case ACTIVE_TODO:
-			return state.map(todo => (
-				todo.todoId === action.todoId ?
-					{
-						...todo,
-						active: true
-					} :
-					{
-						...todo,
-						active: false
-					}
-			));
+			const index = state.findIndex(todoId => action.todoId === todoId);
+			console.log(state);
+			if (index === -1) {
+				return [
+					...state,
+					action.todoId
+				];
+			}
+			else {
+				const updatedState = state;
+				updatedState.splice(index, 1);
+				return updatedState;
+			}
 		default:
 			return state;
 	}

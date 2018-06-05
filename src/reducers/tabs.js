@@ -1,3 +1,6 @@
+import {combineReducers} from 'redux';
+import todo from './todo';
+
 import {
 	ADD_TAB,
 	CHANGE_TAB_NAME,
@@ -5,24 +8,29 @@ import {
 	TOGGLE_TODO,
 	DELETE_TAB,
 	COPY_TAB,
-	STAR_TOGGLE_TODO, ADD_STARRED_TODO, ACTIVE_TODO, TOGGLE_VISIBILITY_FILTER
+	STAR_TOGGLE_TODO,
+	ADD_STARRED_TODO,
+	ACTIVE_TODO,
+	TOGGLE_VISIBILITY_FILTER, INBOX_ID, STARRED_ID
 } from '../actions/actionTypes';
 import todos from './todos';
 
 const initialState = [
 	{
-		tabId: 0,
+		tabId: INBOX_ID,
 		tabName: 'Inbox',
-		todos: []
+		todos: [],
+		starredTodos: []
 	},
 	{
-		tabId: 1,
+		tabId: STARRED_ID,
 		tabName: 'Starred',
-		todos: []
+		todos: [],
+		starredTodos: []
 	}
 ];
 
-function tabs(state = initialState, action) {
+function allId(state = initialState, action) {
 	switch (action.type) {
 		case ADD_TAB:
 			return [
@@ -31,17 +39,17 @@ function tabs(state = initialState, action) {
 					tabId: action.tabId,
 					tabName: action.tabName,
 					todos: [],
-					showCompletedTodo: true
+					showCompletedTodo: true,
+					starredTodos: []
 				}
 			];
 		case CHANGE_TAB_NAME:
 			return state.map(tab => (
 				tab.tabId === action.tabId ?
 					{
+						...tab,
 						tabId: tab.tabId,
-						tabName:
-						action.tabName,
-						todos: tab.todos
+						tabName: action.tabName,
 					} :
 					tab
 			));
@@ -54,7 +62,8 @@ function tabs(state = initialState, action) {
 					{
 						tabId: action.toId,
 						tabName: fromTab.tabName + " Copy",
-						todos: [...fromTab.todos]
+						todos: [...fromTab.todos],
+						starredTodos: [...fromTab.starredTodos]
 					}
 				]
 			);
@@ -70,11 +79,15 @@ function tabs(state = initialState, action) {
 					} :
 					tab
 			));
-		case ADD_TODO:
-		case ADD_STARRED_TODO:
-		case TOGGLE_TODO:
 		case STAR_TOGGLE_TODO:
-		case ACTIVE_TODO:
+			return state.map(tab => (
+				tab.tabId === action.tabId ?
+					{
+						...tab,
+						starredTodos: todos(tab.starredTodos, action)
+					} : tab
+			));
+		case ADD_TODO:
 			return state.map(tab => (
 				tab.tabId === action.tabId ?
 					{
@@ -82,9 +95,52 @@ function tabs(state = initialState, action) {
 						todos: todos(tab.todos, action)
 					} : tab
 			));
+		case ADD_STARRED_TODO:
+			return state.map(tab => (
+				tab.tabId === action.tabId ?
+					{
+						...tab,
+						starredTodos: todos(tab.starredTodos, action),
+						todos: todos(tab.todos, action)
+					} : tab
+			));
 		default:
 			return state;
 	}
+}
+
+function byId(state = {}, action) {
+	switch (action.type) {
+		case STAR_TOGGLE_TODO:
+		case ADD_TODO:
+		case ADD_STARRED_TODO:
+		case TOGGLE_TODO:
+		case ACTIVE_TODO:
+			return {
+				...state,
+				[action.todoId]: todo(state[action.todoId], action)
+			};
+		default:
+			return state;
+	}
+}
+
+const tabs = combineReducers({
+	byId,
+	allId
+});
+
+export function getTabs(state) {
+	const tabs = state.tabs.allId.map(tab => {
+		const todos = tab.todos.map(todo => (
+			state.tabs.byId[todo]
+		));
+		return {
+			...tab,
+			todos
+		}
+	});
+	return tabs;
 }
 
 export default tabs;

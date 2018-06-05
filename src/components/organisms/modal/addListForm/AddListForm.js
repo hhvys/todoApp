@@ -1,7 +1,6 @@
 import {
 	toggleModal,
 	addTab,
-	toggleEdit,
 	changeTabName,
 	changeActiveTab,
 	deleteTab,
@@ -10,28 +9,15 @@ import {
 import {connect} from 'react-redux';
 import AddForm from './AddForm';
 
-const mapStateToProps = (state) => {
-	return {
-		editEnabled: state.editEnabled,
-		activeTab: state.activeTab,
-		tabName: state
-					.tabs
-					.find(tab => tab.tabId === state.activeTab)
-					.tabName
-	};
-};
+const mapStateToProps = () => ({});
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		onCancel: (editEnabled) => {
+		onCancel: () => {
 			dispatch(toggleModal());
-			if(editEnabled)
-				dispatch(toggleEdit());
 		},
-		onSave: (tabId, tabName, editEnabled) => {
-			console.log(tabName);
-
-			editEnabled ?
+		onSave: (tabId, tabName) => {
+			tabId ?
 				dispatch(changeTabName(tabId, tabName)) :
 				dispatch(addTab(tabName))
 		},

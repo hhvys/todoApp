@@ -7,14 +7,24 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './resources/Lato.css';
 import todoApp from './reducers';
+import {loadState, saveState} from './localStorage';
 
-const initialState = JSON.parse(localStorage.getItem('FinalTodo')) || undefined;
 
-export const store = createStore(todoApp, initialState);
+const persistedState = loadState();
+
+export const store = createStore(
+	todoApp,
+	persistedState
+);
 
 store.subscribe(() => {
-	localStorage.setItem('FinalTodo', JSON.stringify(store.getState()));
+	const state = store.getState();
+	saveState({
+		tabs: state.tabs,
+		sortBy: state.sortBy
+	});
 });
+
 
 render(
 	<Provider store={store}>

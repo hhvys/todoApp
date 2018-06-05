@@ -1,11 +1,14 @@
 import {connect} from 'react-redux';
 import TabContainerView from '../components/organisms/TabContainerView/TabContainerView';
-import {changeActiveTab, searchQuery, toggleEdit, toggleModal} from "../actions/actionCreaters";
+import {changeActiveTab, searchQuery, toggleModal} from "../actions/actionCreaters";
+import {getTabs} from "../reducers/tabs";
+import {getActiveTab} from "../reducers/activeTab";
 
 const mapStateToProps = (state) => {
+	const tabs = getTabs(state);
 	return {
-		tabs: state.tabs,
-		activeTab: state.activeTab,
+		tabs,
+		activeTab: getActiveTab(state),
 	}
 };
 
@@ -16,8 +19,7 @@ const mapDispatchToProps = (dispatch) => {
 			dispatch(searchQuery(''));
 		},
 		onFooterSymbolClick: (tabId) => {
-			dispatch(toggleModal());
-			dispatch(toggleEdit());
+			dispatch(toggleModal(tabId));
 		}
 	}
 };

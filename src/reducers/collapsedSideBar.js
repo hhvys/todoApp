@@ -9,4 +9,8 @@ function collapsedSideBar(state = false, action) {
 	}
 }
 
+export function getCollapsedSideBar(state) {
+	return state.collapsedSideBar;
+}
+
 export default collapsedSideBar;

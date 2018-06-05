@@ -1,13 +1,20 @@
 import ModalView from './ModalView';
 import {connect} from 'react-redux';
 import './modal.css';
+import {getTabs} from "../../../reducers/tabs";
+import {getModalActive} from "../../../reducers/modalActive";
 
 const mapStateToProps = (state) => {
-	console.log(state);
+	const modalActive = getModalActive(state);
+	const tabId = modalActive.tabId;
+	const tabs = getTabs(state);
+	const editTab = tabs
+		.find(tab => tab.tabId === tabId);
+
 	return {
-		active: state.modalActive,
-		editEnabled: state.editEnabled,
-		activeTab: state.activeTab
+		active: modalActive.isOpened,
+		tabId: editTab && tabId,
+		tabName: editTab && editTab.tabName
 	};
 };
 

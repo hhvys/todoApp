@@ -3,57 +3,53 @@
   <component name="ChangeListManager">
     <list default="true" id="bd47c363-ddd1-4038-bd6b-fe39c2f08637" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/atoms/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/atoms/Button/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/atoms/Input/Input.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/atoms/Input/Input.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/atoms/logos/Symbol.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/atoms/logos/Symbol.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/atoms/logos/svgPaths.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/atoms/logos/svgPaths.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/logos/logos.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logos/logos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/MainContent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/Content.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/container/Container.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/container/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/CompletedTodo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/CompletedTodoView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/InputTodo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/InputTodoView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/TodoList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/TodoListView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/multiTab/Message.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/multiTab/MultiTab.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/multiTab/MultiTabView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/multiTab/SearchQuery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/multiTab/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/multiTab/multiTab.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/content.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/header/DropDown.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/header/Header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/header/HeaderView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/content/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/sideBar/SideBar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/sideBar/createList/CreateList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/sideBar/createList/CreateListView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/sideBar/createList/createList.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/sideBar/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/sideBar/searchBar/SearchBar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/sideBar/searchBar/searchBar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/sideBar/sideBar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/sideBar/tabList/Tab.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/sideBar/tabList/TabList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/sideBar/tabList/TabListView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainContent/sideBar/tabList/tabList.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/molecules/DropDownIcon/DropDownIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/molecules/DropDownIcon/DropDownIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/molecules/InputWithLabel/InputWithLabel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/molecules/InputWithLabel/InputWithLabel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/molecules/SearchBar/SearchBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/molecules/SearchBar/SearchBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/molecules/SearchBar/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/molecules/SearchBar/SearchBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/molecules/VerticalTab/VerticalTab.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/molecules/VerticalTab/VerticalTab.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/molecules/VerticalTab/VerticalTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/molecules/VerticalTab/VerticalTab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/actionCreaters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actionCreaters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/CheckBox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/CheckedCheckBox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/Delete.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/Duplicate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/Inbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/ListSymbol.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/Pencil.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/SearchSymbol.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/Sort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/SortCreation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/Star.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/Starred.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logos/logos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/organisms/MultiTabView/MultiTabView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organisms/MultiTabView/MultiTabView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/organisms/TabContainerView/TabContainerView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organisms/TabContainerView/TabContainerView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/organisms/modal/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organisms/modal/Modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/organisms/modal/ModalView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organisms/modal/ModalView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/organisms/modal/addListForm/AddForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organisms/modal/addListForm/AddForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/organisms/modal/addListForm/AddListForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/organisms/modal/addListForm/AddListForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/MultiTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MultiTab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/TodoContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TodoContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/VerticalTabContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/VerticalTabContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/activeTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/activeTab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/collapsedSideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/collapsedSideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/editEnabled.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/modalActive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/modalActive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/searchQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/searchQuery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/sortBy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/sortBy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/todoApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/todoApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/todos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/todos.js" afterDir="false" />
     </list>
     <list id="29b51d3f-622e-41ef-90b4-d9a4dd78bca1" name="Shelf of the change" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
+    <ignored path="$PROJECT_DIR$/.idea/shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,47 +59,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SearchBar.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/molecules/SearchBar/SearchBar.js">
+      <file leaf-file-name="tabs.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reducers/tabs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+            <state relative-caret-position="1559">
+              <caret line="127" column="6" selection-start-line="127" selection-start-column="6" selection-end-line="127" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchBar.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/molecules/SearchBar/SearchBar.css">
+      <file leaf-file-name="actionCreaters.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/actionCreaters.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+            <state relative-caret-position="328">
+              <caret line="99" column="14" selection-start-line="99" selection-start-column="14" selection-end-line="99" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Input.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/atoms/Input/Input.js">
+      <file leaf-file-name="AddForm.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/organisms/modal/addListForm/AddForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Input.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/atoms/Input/Input.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TodoView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/organisms/TodoView/TodoView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1605">
-              <caret line="107" column="38" selection-start-line="107" selection-start-column="38" selection-end-line="107" selection-end-column="38" />
+            <state relative-caret-position="-1154">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -111,53 +95,69 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Button.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/atoms/Button/Button.js">
+      <file leaf-file-name="v3.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/node-uuid/v3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-            </state>
+            <state relative-caret-position="-122" />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/App.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="345">
+              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#33#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SideBar.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/organisms/SideBar/SideBar.js">
+      <file leaf-file-name="localStorage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/localStorage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+            <state relative-caret-position="323">
+              <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="searchQuery.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reducers/searchQuery.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModalView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/organisms/modal/ModalView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activeTab.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reducers/activeTab.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddListForm.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/organisms/modal/addListForm/AddListForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#144#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InputWithLabel.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/molecules/InputWithLabel/InputWithLabel.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TodoView.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/organisms/TodoView/TodoView.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -167,51 +167,51 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tab-name</find>
-      <find>collapsed</find>
-      <find>main</find>
-      <find>edit-tab full-height d-flex align-items-center justify-content-center</find>
-      <find>.edit-tab</find>
-      <find>edit-</find>
-      <find>&lt;li</find>
-      <find>.todo-con</find>
-      <find>todo-conten</find>
-      <find>.todo-conte</find>
-      <find>todo-conte</find>
-      <find>todo-content</find>
-      <find>edit-tab</find>
-      <find>createList</find>
-      <find>svg {</find>
-      <find>.side</find>
-      <find>tab.</find>
-      <find>height</find>
-      <find>height: 38</find>
-      <find>over</find>
-      <find>.create-list</find>
-      <find>border-top</find>
-      <find>fixed</find>
-      <find>full</find>
-      <find>.tab-list</find>
-      <find>input</find>
-      <find>input {</find>
-      <find>.header</find>
-      <find>footer</find>
-      <find>.completed-todos</find>
+      <find>toggle</find>
+      <find>toggleed</find>
+      <find>modalAc</find>
+      <find>toggleMod</find>
+      <find>modal</find>
+      <find>toggleModa</find>
+      <find>modalActive</find>
+      <find>todo</find>
+      <find>todo`</find>
+      <find>tabs</find>
+      <find>state.tab</find>
+      <find>renderVerti</find>
+      <find>state.tabs.map</find>
+      <find>addlis</find>
+      <find>sear</find>
+      <find>sta</find>
+      <find>state.tabs</find>
+      <find>debugger</find>
+      <find>disp</find>
+      <find>dispatch</find>
+      <find>editEna</find>
+      <find>editEnabled</find>
+      <find>tabname</find>
+      <find>state.modalacti</find>
+      <find>oncan</find>
+      <find>toggleModal(</find>
+      <find>modalactive.</find>
+      <find>renderverticaltab</find>
+      <find>state.</find>
+      <find>nextId</find>
     </findStrings>
     <replaceStrings>
       <replace>minHeight</replace>
       <replace>style: {height: 38}</replace>
     </replaceStrings>
     <dirStrings>
-      <dir>$PROJECT_DIR$/src/containers</dir>
       <dir>$PROJECT_DIR$/src/components</dir>
+      <dir>$PROJECT_DIR$/src/containers</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -220,57 +220,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/mainContent/sideBar/searchBar/searchBar.css" />
-        <option value="$PROJECT_DIR$/src/components/mainContent/sideBar/searchBar/SearchBar.js" />
-        <option value="$PROJECT_DIR$/src/components/mainContent/sideBar/createList/CreateList.js" />
-        <option value="$PROJECT_DIR$/src/components/mainContent/sideBar/createList/CreateListView.js" />
-        <option value="$PROJECT_DIR$/src/components/mainContent/content/header/DropDown.js" />
-        <option value="$PROJECT_DIR$/src/components/mainContent/content/Content.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/multiTab/multiTab.css" />
-        <option value="$PROJECT_DIR$/src/components/logos/SearchSymbol.js" />
-        <option value="$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/multiTab/Message.js" />
-        <option value="$PROJECT_DIR$/src/components/mainContent/sideBar/tabList/TabListView.js" />
-        <option value="$PROJECT_DIR$/src/reducers/sortBy.js" />
-        <option value="$PROJECT_DIR$/src/components/mainContent/sideBar/tabList/TabList.js" />
-        <option value="$PROJECT_DIR$/src/css/index.css" />
-        <option value="$PROJECT_DIR$/src/components/logos/Inbox.js" />
-        <option value="$PROJECT_DIR$/src/components/logos/ListSymbol.js" />
-        <option value="$PROJECT_DIR$/src/components/mainContent/MainContent.js" />
-        <option value="$PROJECT_DIR$/src/components/mainContent/sideBar/tabList/Tab.js" />
-        <option value="$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/multiTab/MultiTabView.js" />
-        <option value="$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/CompletedTodoView.js" />
-        <option value="$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/TodoListView.js" />
-        <option value="$PROJECT_DIR$/src/components/mainContent/content/content.css" />
-        <option value="$PROJECT_DIR$/src/components/logos/Star.js" />
-        <option value="$PROJECT_DIR$/src/components/organisms/DropDown/DropDown.css" />
-        <option value="$PROJECT_DIR$/src/components/organisms/DropDown/DropDown.js" />
-        <option value="$PROJECT_DIR$/src/components/organisms/SideBar/SideBar.css" />
-        <option value="$PROJECT_DIR$/src/components/organisms/VerticalTabContainer.js" />
-        <option value="$PROJECT_DIR$/src/components/logos/logos.css" />
-        <option value="$PROJECT_DIR$/src/components/molecules/VerticalTab/VerticalTab.css" />
-        <option value="$PROJECT_DIR$/src/components/organisms/SideBar/SideBar.js" />
-        <option value="$PROJECT_DIR$/src/components/mainContent/sideBar/createList/createList.css" />
-        <option value="$PROJECT_DIR$/src/components/atoms/logos/Symbol.js" />
         <option value="$PROJECT_DIR$/src/components/organisms/VerticalTabContainer/VerticalTabContainer.js" />
         <option value="$PROJECT_DIR$/src/components/atoms/logos/svgPaths.js" />
         <option value="$PROJECT_DIR$/src/components/mainContent/sideBar/tabList/tabList.css" />
         <option value="$PROJECT_DIR$/src/components/organisms/CollapsedSideBar/CollapsedSideBar.css" />
         <option value="$PROJECT_DIR$/src/components/organisms/CollapsedSideBar/CollapsedSideBar.js" />
         <option value="$PROJECT_DIR$/src/components/molecules/DropDownIcon/DropDownIcon.js" />
-        <option value="$PROJECT_DIR$/src/components/organisms/Header/Header.js" />
         <option value="$PROJECT_DIR$/src/components/App.js" />
         <option value="$PROJECT_DIR$/src/components/atoms/logos/defaultSymbolStyles.js" />
         <option value="$PROJECT_DIR$/src/components/molecules/InputWithLabel/InputWithLabel.css" />
         <option value="$PROJECT_DIR$/src/components/atoms/Input/Input.css" />
         <option value="$PROJECT_DIR$/src/components/organisms/Header/Header.css" />
-        <option value="$PROJECT_DIR$/src/components/molecules/VerticalTab/VerticalTab.js" />
         <option value="$PROJECT_DIR$/src/components/atoms/Button/Button.js" />
         <option value="$PROJECT_DIR$/src/components/organisms/TodoView/TodoView.css" />
-        <option value="$PROJECT_DIR$/src/components/organisms/TodoView/TodoView.js" />
         <option value="$PROJECT_DIR$/src/components/molecules/SearchBar/SearchBar.css" />
         <option value="$PROJECT_DIR$/src/components/molecules/SearchBar/SearchBar.js" />
+        <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/src/components/molecules/VerticalTab/VerticalTab.css" />
+        <option value="$PROJECT_DIR$/src/components/molecules/VerticalTab/VerticalTab.js" />
+        <option value="$PROJECT_DIR$/src/components/molecules/InputWithLabel/InputWithLabel.js" />
+        <option value="$PROJECT_DIR$/src/components/atoms/logos/logos.css" />
+        <option value="$PROJECT_DIR$/src/components/atoms/logos/Symbol.js" />
+        <option value="$PROJECT_DIR$/src/components/organisms/TodoView/TodoView.js" />
+        <option value="$PROJECT_DIR$/src/reducers/editEnabled.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/components/organisms/Header/Header.js" />
+        <option value="$PROJECT_DIR$/src/components/organisms/SideBar/SideBarView.js" />
+        <option value="$PROJECT_DIR$/src/actions/actionTypes.js" />
+        <option value="$PROJECT_DIR$/src/components/organisms/TabContainerView/TabContainerView.js" />
+        <option value="$PROJECT_DIR$/src/reducers/todos.js" />
+        <option value="$PROJECT_DIR$/src/components/organisms/MultiTabView/MultiTabView.js" />
+        <option value="$PROJECT_DIR$/src/reducers/tabs.js" />
+        <option value="$PROJECT_DIR$/src/components/organisms/modal/ModalView.js" />
+        <option value="$PROJECT_DIR$/src/components/organisms/modal/addListForm/AddForm.js" />
+        <option value="$PROJECT_DIR$/src/reducers/activeTab.js" />
+        <option value="$PROJECT_DIR$/src/reducers/collapsedSideBar.js" />
+        <option value="$PROJECT_DIR$/src/reducers/modalActive.js" />
+        <option value="$PROJECT_DIR$/src/reducers/searchQuery.js" />
+        <option value="$PROJECT_DIR$/src/reducers/sortBy.js" />
+        <option value="$PROJECT_DIR$/src/reducers/todoApp.js" />
+        <option value="$PROJECT_DIR$/src/reducers/todo.js" />
+        <option value="$PROJECT_DIR$/src/containers/App.js" />
+        <option value="$PROJECT_DIR$/src/containers/Header.js" />
+        <option value="$PROJECT_DIR$/src/containers/MultiTab.js" />
+        <option value="$PROJECT_DIR$/src/containers/SideBar.js" />
+        <option value="$PROJECT_DIR$/src/containers/VerticalTabContainer.js" />
+        <option value="$PROJECT_DIR$/src/containers/TodoContainer.js" />
+        <option value="$PROJECT_DIR$/src/components/organisms/modal/Modal.js" />
+        <option value="$PROJECT_DIR$/src/localStorage.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/actions/actionCreaters.js" />
+        <option value="$PROJECT_DIR$/src/components/organisms/modal/addListForm/AddListForm.js" />
       </list>
     </option>
   </component>
@@ -291,8 +291,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -314,7 +315,54 @@
             <path>
               <item name="todo_final" type="b2602c69:ProjectViewProjectNode" />
               <item name="todo_final" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todo_final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todo_final" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="node-uuid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todo_final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todo_final" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todo_final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todo_final" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todo_final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todo_final" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todo_final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todo_final" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="organisms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todo_final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todo_final" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="organisms" type="462c0819:PsiDirectoryNode" />
+              <item name="modal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="todo_final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="todo_final" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="organisms" type="462c0819:PsiDirectoryNode" />
+              <item name="modal" type="462c0819:PsiDirectoryNode" />
+              <item name="addListForm" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -324,7 +372,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Apple JS&#10;ECMAScript 6&#10;TypeScript JSX" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="ECMAScript 6&#10;Apple JS&#10;TypeScript JSX" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -332,11 +380,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/components/organisms" />
       <recent name="$PROJECT_DIR$/src/components/molecules" />
       <recent name="$PROJECT_DIR$/src/components/organisms/VerticalTabContainer" />
       <recent name="$PROJECT_DIR$/src/components/mainContent/content/container/todoContent" />
-      <recent name="$PROJECT_DIR$/src/components/mainContent/content/container" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -365,11 +413,12 @@
       <workItem from="1527607949275" duration="13495000" />
       <workItem from="1527652164914" duration="19831000" />
       <workItem from="1527680942386" duration="786000" />
+      <workItem from="1528112021725" duration="11206000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66106000" />
+    <option name="totallyTimeSpent" value="92054000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -385,25 +434,24 @@
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.2832981" />
-      <window_info anchor="bottom" id="TODO" order="9" weight="0.32969698" />
-      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="8" weight="0.32848486" />
-      <window_info anchor="bottom" id="Version Control" order="4" weight="0.32969698" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.32900944" />
+      <window_info anchor="bottom" id="TODO" order="16" weight="0.32969698" />
+      <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="14" weight="0.32848486" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32969698" />
+      <window_info anchor="bottom" id="Run" order="12" weight="0.32900944" />
       <window_info id="npm" order="0" side_tool="true" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="2" weight="0.32969698" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32969698" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="13" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="18" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="10" weight="0.32969698" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="0" />
+      <window_info anchor="bottom" id="Message" order="11" />
+      <window_info anchor="bottom" id="Cvs" order="17" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,262 +489,23 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/multiTab/MultiTab.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/logos/SearchSymbol.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/multiTab/Message.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/sortBy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainContent/sideBar/tabList/TabListView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/actionCreaters.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainContent/sideBar/tabList/TabList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-124">
-          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/logos/Inbox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/logos/ListSymbol.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainContent/sideBar/tabList/Tab.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/multiTab/MultiTabView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/CompletedTodoView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="99" column="56" lean-forward="true" selection-start-line="99" selection-start-column="56" selection-end-line="99" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/TodoListView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="51" column="32" lean-forward="true" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/logos/Star.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainContent/content/container/todoContent/multiTab/multiTab.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/organisms/DropDown/DropDown.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainContent/MainContent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/molecules/DropDownIcon/DropDownIcon.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainContent/sideBar/SideBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainContent/sideBar/sideBar.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/molecules/VerticalTab/VerticalTab.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        <state relative-caret-position="176">
+          <caret line="30" column="31" lean-forward="true" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/organisms/DropDown/DropDown.js">
+    <entry file="file://$PROJECT_DIR$/src/components/atoms/Input/Input.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainContent/sideBar/createList/createList.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-start-column="2" selection-end-line="16" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/organisms/SideBar/SideBar.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/logos/logos.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainContent/sideBar/tabList/tabList.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-end-line="42" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/organisms/CollapsedSideBar/CollapsedSideBar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/organisms/CollapsedSideBar/CollapsedSideBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="256" column="104" selection-start-line="256" selection-start-column="104" selection-end-line="256" selection-end-column="104" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainContent/content/header/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/molecules/DropDownIcon/DropDownIcon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainContent/content/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/mainContent/content/content.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" column="7" selection-start-line="51" selection-end-line="51" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/atoms/logos/svgPaths.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2340">
-          <caret line="156" column="6" selection-start-line="156" selection-start-column="6" selection-end-line="156" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/atoms/logos/Symbol.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -707,54 +516,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/organisms/VerticalTabContainer/VerticalTabContainer.js">
+    <entry file="file://$PROJECT_DIR$/src/components/atoms/logos/logos.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/molecules/InputWithLabel/InputWithLabel.js">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="262">
+          <caret line="655" selection-start-line="655" selection-end-line="655" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/organisms/Header/Header.css">
+    <entry file="file://$PROJECT_DIR$/src/reducers/editEnabled.js" />
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="72" column="28" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/manifest.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/organisms/DropDown/DropDown.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/organisms/Header/Header.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        <state relative-caret-position="531">
+          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/index.css">
+    <entry file="file://$PROJECT_DIR$/src/components/atoms/Input/Input.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="60" column="13" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="13" />
+        <state relative-caret-position="90">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/molecules/VerticalTab/VerticalTab.js">
+    <entry file="file://$PROJECT_DIR$/src/components/molecules/InputWithLabel/InputWithLabel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
+        <state relative-caret-position="195">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -768,24 +589,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/molecules/InputWithLabel/InputWithLabel.css">
+    <entry file="file://$PROJECT_DIR$/src/components/logos/logos.css" />
+    <entry file="file://$PROJECT_DIR$/src/components/atoms/logos/Symbol.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        <state relative-caret-position="58">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/organisms/TodoView/TodoView.css">
+    <entry file="file://$PROJECT_DIR$/src/actions/actionTypes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/molecules/VerticalTab/VerticalTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/organisms/TodoView/TodoView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1605">
-          <caret line="107" column="38" selection-start-line="107" selection-start-column="38" selection-end-line="107" selection-end-column="38" />
+        <state relative-caret-position="494">
+          <caret line="95" column="14" selection-start-line="95" selection-start-column="14" selection-end-line="95" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/organisms/MultiTabView/MultiTabView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-512">
+          <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -794,49 +642,255 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        <state relative-caret-position="135">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/organisms/SideBar/SideBar.js">
+    <entry file="file://$PROJECT_DIR$/src/components/organisms/SideBar/SideBarView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+        <state relative-caret-position="254">
+          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/atoms/Input/Input.css">
+    <entry file="file://$PROJECT_DIR$/src/components/organisms/TabContainerView/TabContainerView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        <state relative-caret-position="-478">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/molecules/SearchBar/SearchBar.css">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        <state relative-caret-position="225">
+          <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/atoms/Input/Input.js">
+    <entry file="file://$PROJECT_DIR$/src/components/organisms/modal/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/molecules/SearchBar/SearchBar.js">
+    <entry file="file://$PROJECT_DIR$/src/reducers/collapsedSideBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/modalActive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/sortBy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/todoApp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/todos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="35" column="3" lean-forward="true" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/todo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/MultiTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/SideBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/VerticalTabContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/TodoContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/organisms/modal/Modal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/organisms/modal/ModalView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/activeTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/searchQuery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.es6">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/localStorage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/tabs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1559">
+          <caret line="127" column="6" selection-start-line="127" selection-start-column="6" selection-end-line="127" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/node-uuid/uuid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1282">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/node-uuid/v3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-122" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/actionCreaters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="99" column="14" selection-start-line="99" selection-start-column="14" selection-end-line="99" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/organisms/modal/addListForm/AddForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1154">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/organisms/modal/addListForm/AddListForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#144#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -5,7 +5,6 @@ import modalActive from './modalActive';
 import tabs from './tabs';
 import sortBy from './sortBy';
 import searchQuery from './searchQuery';
-import editEnabled from './editEnabled';
 
 const todoApp = combineReducers({
 	activeTab,
@@ -13,8 +12,7 @@ const todoApp = combineReducers({
 	modalActive,
 	tabs,
 	sortBy,
-	searchQuery,
-	editEnabled
+	searchQuery
 });
 
 export default  todoApp;

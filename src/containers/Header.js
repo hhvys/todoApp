@@ -1,17 +1,23 @@
 import {connect} from 'react-redux';
 import HeaderView from '../components/organisms/Header/Header';
 import {changeSorting} from "../actions/actionCreaters";
+import {getTabs} from "../reducers/tabs";
+import {getSearchQuery} from "../reducers/searchQuery";
+import {getActiveTab} from "../reducers/activeTab";
+import {getCollapsedSideBar} from "../reducers/collapsedSideBar";
 
 
 const mapStateToProps = (state) => {
+	const tabs = getTabs(state);
+	const searchQuery = getSearchQuery(state);
+	const activeTab = getActiveTab(state);
 	return ({
-		headerContent: state.searchQuery ?
-			state.searchQuery :
-			state
-				.tabs
-				.find(tab => tab.tabId === state.activeTab)
+		headerContent: searchQuery ?
+			searchQuery :
+			tabs
+				.find(tab => tab.tabId === activeTab)
 				.tabName,
-		collapsed: state.collapsedSideBar
+		collapsed: getCollapsedSideBar(state)
 	})
 };
 
