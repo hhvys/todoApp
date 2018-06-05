@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import TodoView from '../components/organisms/TodoView/TodoView';
 import {addTodo, toggleStarTodo, toggleTodo, toggleVisibilityFilter} from "../actions/actionCreaters";
-import {getTabs} from "../reducers/tabs";
+import {getTabs} from "../reducers/tabs/tabs";
 import {getActiveTab} from "../reducers/activeTab";
 import {getSortBy} from "../reducers/sortBy";
 import {getCollapsedSideBar} from "../reducers/collapsedSideBar";

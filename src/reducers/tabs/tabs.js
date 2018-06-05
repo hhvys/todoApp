@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
 import todo from './todo';
-
+import todos from './todos';
 import {
 	ADD_TAB,
 	CHANGE_TAB_NAME,
@@ -11,9 +11,11 @@ import {
 	STAR_TOGGLE_TODO,
 	ADD_STARRED_TODO,
 	ACTIVE_TODO,
-	TOGGLE_VISIBILITY_FILTER, INBOX_ID, STARRED_ID
-} from '../actions/actionTypes';
-import todos from './todos';
+	TOGGLE_VISIBILITY_FILTER,
+	INBOX_ID,
+	STARRED_ID
+} from '../../actions/actionTypes';
+
 
 const initialState = [
 	{
@@ -30,7 +32,7 @@ const initialState = [
 	}
 ];
 
-function allId(state = initialState, action) {
+function tabInfo(state = initialState, action) {
 	switch (action.type) {
 		case ADD_TAB:
 			return [
@@ -109,7 +111,7 @@ function allId(state = initialState, action) {
 	}
 }
 
-function byId(state = {}, action) {
+function todoInfo(state = {}, action) {
 	switch (action.type) {
 		case STAR_TOGGLE_TODO:
 		case ADD_TODO:
@@ -126,21 +128,25 @@ function byId(state = {}, action) {
 }
 
 const tabs = combineReducers({
-	byId,
-	allId
+	todoInfo,
+	tabInfo
 });
 
+export default tabs;
+
 export function getTabs(state) {
-	const tabs = state.tabs.allId.map(tab => {
+	const tabs = state.tabs.tabInfo.map(tab => {
 		const todos = tab.todos.map(todo => (
-			state.tabs.byId[todo]
+			state.tabs.todoInfo[todo]
+		));
+		const starredTodos = tab.starredTodos.map(todo => (
+			state.tabs.todoInfo[todo]
 		));
 		return {
 			...tab,
-			todos
+			todos,
+			starredTodos
 		}
 	});
 	return tabs;
 }
-
-export default tabs;

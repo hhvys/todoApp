@@ -74,13 +74,13 @@ class MultiTabView extends React.Component {
 	};
 
 	renderTabs({
-									tabs,
-									onFooterSymbolClick,
-									onHeaderSymbolClick,
-									sortBy,
-									onButtonClick,
-									searchQuery
-								}) {
+							 tabs,
+							 onFooterSymbolClick,
+							 onHeaderSymbolClick,
+							 sortBy,
+							 onButtonClick,
+							 searchQuery
+						 }) {
 		tabs = searchQuery.length !== 0 ?
 			tabs
 				.map(tab => ({
@@ -99,10 +99,10 @@ class MultiTabView extends React.Component {
 
 		tabs = tabs.filter(tab => tab.todos.length);
 
-		if(tabs.length === 0 && searchQuery.length === 0)
+		if (tabs.length === 0 && searchQuery.length === 0)
 			onButtonClick(INBOX_ID);
 
-		if(tabs.length === 0)
+		if (tabs.length === 0)
 			return (<NotFound/>);
 
 		return tabs.map(tab => (

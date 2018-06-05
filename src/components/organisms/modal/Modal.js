@@ -1,7 +1,7 @@
 import ModalView from './ModalView';
 import {connect} from 'react-redux';
 import './modal.css';
-import {getTabs} from "../../../reducers/tabs";
+import {getTabs} from "../../../reducers/tabs/tabs";
 import {getModalActive} from "../../../reducers/modalActive";
 
 const mapStateToProps = (state) => {

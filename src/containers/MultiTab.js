@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import MultiTabView from '../components/organisms/MultiTabView/MultiTabView';
 import {addStarredTodo, changeActiveTab, searchQuery, toggleStarTodo, toggleTodo} from "../actions/actionCreaters";
-import {getTabs} from "../reducers/tabs";
+import {getTabs} from "../reducers/tabs/tabs";
 import {getSortBy} from "../reducers/sortBy";
 import {getSearchQuery} from "../reducers/searchQuery";
 import {getActiveTab} from "../reducers/activeTab";

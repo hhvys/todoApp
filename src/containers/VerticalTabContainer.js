@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import TabContainerView from '../components/organisms/TabContainerView/TabContainerView';
 import {changeActiveTab, searchQuery, toggleModal} from "../actions/actionCreaters";
-import {getTabs} from "../reducers/tabs";
+import {getTabs} from "../reducers/tabs/tabs";
 import {getActiveTab} from "../reducers/activeTab";
 
 const mapStateToProps = (state) => {

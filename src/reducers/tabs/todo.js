@@ -3,7 +3,7 @@ import {
 	ADD_STARRED_TODO,
 	TOGGLE_TODO,
 	STAR_TOGGLE_TODO
-} from "../actions/actionTypes";
+} from "../../actions/actionTypes";
 
 const todo = (state = {}, action) => {
 	switch (action.type) {
@@ -45,8 +45,5 @@ const todo = (state = {}, action) => {
 	}
 };
 
-export function getTodo(state) {
-
-}
 
 export default todo;

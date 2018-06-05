@@ -1,8 +1,7 @@
 import {connect} from 'react-redux';
 import SideBarView from '../components/organisms/SideBar/SideBarView';
 import {searchQuery, toggleModal, toggleSideBar} from "../actions/actionCreaters";
-import {changeActiveTab} from "../actions/actionCreaters";
-import {getTabs} from "../reducers/tabs";
+import {getTabs} from "../reducers/tabs/tabs";
 import {getActiveTab} from "../reducers/activeTab";
 import {getCollapsedSideBar} from "../reducers/collapsedSideBar";
 

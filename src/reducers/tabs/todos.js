@@ -1,7 +1,7 @@
 import {
 	ADD_TODO,
 	ADD_STARRED_TODO, STAR_TOGGLE_TODO,
-} from "../actions/actionTypes";
+} from "../../actions/actionTypes";
 
 const todos = (state = [], action) => {
 	switch (action.type) {
