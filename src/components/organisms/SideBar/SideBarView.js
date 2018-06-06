@@ -5,11 +5,10 @@ import VerticalTab from "../../molecules/VerticalTab/VerticalTab";
 import {PLUS, LIST_SYMBOL, PENCIL} from '../../atoms/logos/constants';
 import VerticalTabContainer from '../../../containers/VerticalTabContainer';
 import CollapsedSideBar from "../CollapsedSideBar/CollapsedSideBar";
-
+import styles from './SideBar.scss';
 
 
 class SideBarView extends React.Component {
-
 
 	render() {
 		const {
@@ -20,6 +19,7 @@ class SideBarView extends React.Component {
 			collapsed,
 			...props
 		} = this.props;
+		console.log(styles);
 		return collapsed ?
 			<CollapsedSideBar collapseSideBar={collapseSideBar}/> :
 			(
@@ -55,15 +55,7 @@ class SideBarView extends React.Component {
 											 		fill: '#328ad6'
 												}
 											 }}
-											 style={{
-												 height: 42,
-												 minHeight: 42,
-												 backgroundColor: '#F7F7F7',
-												 borderTop: '1px solid #e0e0df',
-												 color: '#328ad6',
-												 fontWeight: 500,
-												 fill: '#328ad6'
-											 }}/>
+											 style={styles.tab}/>
 				</div>
 			);
 	}

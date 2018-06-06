@@ -1,22 +1,17 @@
 .div__header {
-    left: 280px;
-    z-index: 50;
-}
+  left: 280px;
+  z-index: 50; }
 
 .div__header.collapsed {
-    left: 42px;
-}
+  left: 42px; }
 
-.div__header.collapsed .dropdown-icons{
-    margin-right: 42px;
-}
+.div__header.collapsed .dropdown-icons {
+  margin-right: 42px; }
 
 .div__header .dropdown-icons {
-    margin-right: 280px;
-}
+  margin-right: 280px; }
 
 .div__header .header-content {
-    font-size: 20px;
-    color: #fff;
-    font-weight: 500;
-}
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500; }

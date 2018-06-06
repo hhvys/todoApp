@@ -1,0 +1,80 @@
+html, body, *, *:before, *:after {
+    box-sizing: border-box;
+    font-family: "Lato";
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+html, body {
+    margin: 0;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-image: url('../resources/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    position: fixed;
+    z-index: -100;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+ul {
+    list-style-type: none;
+    -webkit-padding-start: 0;
+    -webkit-margin-before: 0;
+}
+
+li {
+    display: block;
+    text-align: left;
+}
+
+button:focus, input:focus {
+    outline: none;
+
+}
+
+input[type=checkbox] {
+    transform: scale(1.2);
+}
+
+.full-size {
+    height: 100%;
+    width: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.txt-overflow {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.fixed {
+    position: fixed;
+}
+
+#root {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    display: flex;
+    overflow: auto;
+}
+
+.hide {
+    display: none;
+}

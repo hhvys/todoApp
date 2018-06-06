@@ -6,13 +6,6 @@ import DropDown from "../DropDown/DropDown";
 
 class Header extends React.Component {
 
-	constructor(props) {
-		super(props);
-		this.state = {
-			pushDown: false
-		}
-	}
-
 	dropDownHandler = (e) => {
 		e.preventDefault();
 		e.stopPropagation();
@@ -26,6 +19,13 @@ class Header extends React.Component {
 		});
 	};
 
+	constructor(props) {
+		super(props);
+		this.state = {
+			pushDown: false
+		}
+	}
+
 	render() {
 		const {
 			collapsed,
@@ -37,8 +37,9 @@ class Header extends React.Component {
 		} = this.props;
 		return (
 			<div>
-				<div className={`${className ? className : ''} ${collapsed ? 'collapsed' : ''} div__header fixed full-width d-flex align-items-center justify-content-between`}
-						 {...props}>
+				<div
+					className={`${className ? className : ''} ${collapsed ? 'collapsed' : ''} div__header fixed full-width d-flex align-items-center justify-content-between`}
+					{...props}>
 					<div className={"header-content pl-4"}>
 						{headerContent}
 					</div>
