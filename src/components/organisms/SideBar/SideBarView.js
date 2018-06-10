@@ -55,7 +55,15 @@ class SideBarView extends React.Component {
 											 		fill: '#328ad6'
 												}
 											 }}
-											 style={styles.tab}/>
+											 style={{
+												 height: 42,
+												 minHeight: 42,
+												 backgroundColor: '#F7F7F7',
+												 borderTop: '1px solid #e0e0df',
+												 color: '#328ad6',
+												 fontWeight: 500,
+												 fill: '#328ad6'
+											 }}/>
 				</div>
 			);
 	}

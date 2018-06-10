@@ -68,7 +68,6 @@ class TabContainerView extends React.Component {
 										'#b9b9b9'
 							}
 						}}
-
 					/>
 				);
 			})
