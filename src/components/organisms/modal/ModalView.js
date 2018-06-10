@@ -1,10 +1,11 @@
 import React from 'react';
 import AddListForm from './addListForm/index';
+import styles from './modal.scss';
 
 const ModalView = (props) => (
-	<div className={props.active ? "modal active" : "modal"}>
-		<div className="modal-content">
-			<h3>
+	<div className={props.active ? `${styles.modal} ${styles.active}` : styles.modal}>
+		<div className={styles.modalContent}>
+			<h3 className={styles.h3}>
 				{
 					props.tabId ?
 						'Edit List' :

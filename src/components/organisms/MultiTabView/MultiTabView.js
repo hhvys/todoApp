@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from "../../atoms/Button/Button";
-import './MultiTabView.css';
+import styles from './MultiTabView.scss';
 import {CHECK_BOX, CHECKED_CHECK_BOX} from "../../atoms/logos/constants";
 import VerticalTab from '../../molecules/VerticalTab/VerticalTab';
 import {INBOX_ID, SORT_BY} from "../../../actions/actionTypes"
@@ -46,25 +46,12 @@ class MultiTabView extends React.Component {
 
 					return (
 						<VerticalTab key={todo.todoId}
+												 className={styles.todo}
 												 headerSymbol={todo.completed ? CHECKED_CHECK_BOX : CHECK_BOX}
 												 footerSymbol={todo.star ? STARRED : STAR}
-												 footerProps={{
-													 style: {
-														 marginRight: 10
-													 }
-												 }}
-												 headerProps={{
-													 style: {
-														 marginLeft: 10
-													 }
-												 }}
+												 headerClass={styles.logo}
+												 footerClass={styles.logo}
 												 mainContent={todo.text}
-												 style={{
-													 marginTop: 2,
-													 backgroundColor: '#F7F7F7',
-													 borderRadius: '5px',
-													 height: 46
-												 }}
 												 onFooterSymbolClick={() => onFooterSymbolClick(tabId, todo.todoId)}
 												 onHeaderSymbolClick={() => onHeaderSymbolClick(tabId, todo.todoId)}
 						/>
@@ -136,7 +123,7 @@ class MultiTabView extends React.Component {
 			onInputSubmit
 		} = this.props;
 		return (
-			<div className={`div__multi__tab__view ${collapsed ? 'collapsed' : ''} mr-3`}>
+			<div className={`${styles.multiTabView} ${collapsed ? styles.collapsed : ''} mr-3`}>
 				{
 					searchQuery.length === 0 ?
 						<InputWithLabel

@@ -1,22 +1,30 @@
-.div__header {
+.header {
     left: 280px;
     z-index: 50;
 }
 
-.div__header.collapsed {
+.collapsed {
     left: 42px;
 }
 
-.div__header.collapsed .dropdown-icons{
+.collapsed .dropdownIcons{
     margin-right: 42px;
 }
 
-.div__header .dropdown-icons {
+.dropdownIcons {
     margin-right: 280px;
 }
 
-.div__header .header-content {
+.headerContent {
     font-size: 20px;
     color: #fff;
     font-weight: 500;
+}
+
+.dropdown {
+    width: 246px;
+    position: fixed;
+    right: 0;
+    top: 44px;
+    background-color: #678865
 }

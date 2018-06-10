@@ -25,6 +25,7 @@ class Symbol extends React.Component {
 
 	render() {
 		let {
+			className,
 			style,
 			symbolType,
 			height,
@@ -34,7 +35,7 @@ class Symbol extends React.Component {
 		if (symbolType === STARRED)
 			[height, width] = [44, 22];
 		return (
-			<svg className={"d-flex justify-content-center"}
+			<svg className={`${className ? className : ''} d-flex justify-content-center`}
 					 style={{...this.getDefaultStyles(symbolType), ...style}} viewBox={`0 0 ${width} ${height}`} height={height}
 					 width={width} {...restProps}>
 				{this.getSymbol(symbolType)}

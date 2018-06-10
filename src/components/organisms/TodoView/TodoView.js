@@ -1,5 +1,5 @@
 import React from 'react';
-import './TodoView.css';
+import styles from './TodoView.scss';
 import InputWithLabel from "../../molecules/InputWithLabel/InputWithLabel";
 import VerticalTab from "../../molecules/VerticalTab/VerticalTab";
 import Button from "../../atoms/Button/Button";
@@ -7,26 +7,6 @@ import {CHECK_BOX, CHECKED_CHECK_BOX, STARRED, STAR} from "../../atoms/logos/con
 import {SORT_BY} from "../../../actions/actionTypes";
 
 class TodoView extends React.Component {
-
-	constructor(props) {
-		super(props);
-		this.state = {
-			currentTime: new Date()
-		};
-	}
-
-	componentDidMount() {
-		this.interval = setInterval(() => {
-			this.setState({
-				currentTime: new Date()
-			});
-		}, 65000);
-	}
-
-	componentWillUnmount() {
-		clearInterval(this.interval);
-	}
-
 
 	getCompletionTime = (completedTime) => {
 		let timeDiff = Math.abs(this.state.currentTime - Date.parse(completedTime)) / 1000;
@@ -44,7 +24,6 @@ class TodoView extends React.Component {
 				return Math.ceil((timeDiff - 3600) / 3600).toString() + ' hours ago';
 		}
 	};
-
 	renderVerticalTab = ({
 												 todos,
 												 activeTab,
@@ -80,36 +59,41 @@ class TodoView extends React.Component {
 				.map(todo => {
 
 					return (
-						<VerticalTab key={todo.todoId}
-												 headerSymbol={todo.completed ? CHECKED_CHECK_BOX : CHECK_BOX}
-												 footerSymbol={todo.star ? STARRED : STAR}
-												 headerProps={{
-													 style: {
-														 marginLeft: 10
-													 }
-												 }}
-												 footerProps={{
-													 style: {
-														 marginRight: 10,
-												 }
-												 }}
-												 mainContent={todo.text}
-												 style={{
-													 marginTop: 2,
-													 backgroundColor: '#F7F7F7',
-													 borderRadius: '5px',
-													 height: 46,
-													 opacity: completed ? 0.6 : 1
-												 }}
-
-												 onFooterSymbolClick={() => onFooterSymbolClick(activeTab, todo.todoId)}
-												 onHeaderSymbolClick={() => onHeaderSymbolClick(activeTab, todo.todoId)}
-												 extraContent={completed ? this.getCompletionTime(todo.completedTime) : null}
+						<VerticalTab
+							className={completed ? styles.completedTodo : styles.todo}
+							key={todo.todoId}
+							headerSymbol={todo.completed ? CHECKED_CHECK_BOX : CHECK_BOX}
+							footerSymbol={todo.star ? STARRED : STAR}
+							headerClass={styles.headerLogo}
+							footerClass={styles.footerLogo}
+							mainContent={todo.text}
+							onFooterSymbolClick={() => onFooterSymbolClick(activeTab, todo.todoId)}
+							onHeaderSymbolClick={() => onHeaderSymbolClick(activeTab, todo.todoId)}
+							extraContent={completed ? this.getCompletionTime(todo.completedTime) : null}
 						/>
 					);
 				})
 		);
 	};
+
+	constructor(props) {
+		super(props);
+		this.state = {
+			currentTime: new Date()
+		};
+	}
+
+	componentDidMount() {
+		this.interval = setInterval(() => {
+			this.setState({
+				currentTime: new Date()
+			});
+		}, 65000);
+	}
+
+	componentWillUnmount() {
+		clearInterval(this.interval);
+	}
 
 	render() {
 		const {
@@ -128,15 +112,15 @@ class TodoView extends React.Component {
 
 		return (
 			<div
-				className={`${className ? className : ''} ${collapsed ? 'collapsed' : ''} div__todo__view full-height d-flex flex-column justify-content-start mr-3`} {...props}>
+				className={`${className ? className : ''} ${collapsed ? styles.collapsed : ''} ${styles.todoView} full-height d-flex flex-column justify-content-start mr-3`} {...props}>
 				<InputWithLabel
+					className={styles.input}
 					label={"+"}
 					placeholder={"Add a to-do..."}
-					style={{fontSize: 16}}
 					onSubmit={(value) => onInputSubmit(activeTab, value)}
 				/>
 
-				<div className={"incomplete-todos mt-3"}>
+				<div className={"mt-3"}>
 					{this.renderVerticalTab({
 						todos: todos.filter(todo => !todo.completed),
 						activeTab,
@@ -152,7 +136,7 @@ class TodoView extends React.Component {
 								text={showCompleted ? "HIDE COMPLETED TO-DOS" : "SHOW COMPLETED TO-DOS"}
 								onClick={() => onButtonClick(activeTab)}/>
 
-				<div className={"completed-todos mt-3"}>
+				<div className={"mt-3"}>
 					{showCompleted && this.renderVerticalTab({
 						todos: todos.filter(todo => todo.completed),
 						activeTab,

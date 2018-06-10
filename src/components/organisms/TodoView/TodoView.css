@@ -1,9 +1,0 @@
-.div__todo__view {
-    margin-left: 300px;
-    margin-top: 70px;
-    height: 100%;
-}
-
-.div__todo__view.collapsed {
-    margin-left: 62px;
-}

@@ -1,4 +1,4 @@
-input {
+.input {
     background-color: inherit;
     border: none;
     font-size: 16px;
@@ -7,7 +7,7 @@ input {
     color: inherit;
 }
 
-input::placeholder {
+.input::placeholder {
     color: #FFFFFF;
     opacity: 0.6;
 }

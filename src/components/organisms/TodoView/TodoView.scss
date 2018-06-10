@@ -1,0 +1,36 @@
+@import "../../../constants";
+
+.todoView {
+  margin-left: ($side-bar-width + 20px);
+  margin-top: 70px;
+  height: 100%;
+}
+
+.collapsed {
+  margin-left: 62px;
+}
+
+.headerLogo {
+  margin-left: 10px;
+}
+
+.footerLogo {
+  margin-right: 10px;
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.todo {
+  margin-top: 2px;
+  background-color: #F7F7F7;
+  border-radius: 5px;
+  height: 46px;
+}
+
+.completedTodo {
+  @extend .todo;
+  opacity: 0.6;
+}
+
+.input {
+  font-size: 16px;
+}

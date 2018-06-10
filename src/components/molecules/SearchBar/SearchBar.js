@@ -1,17 +1,20 @@
 import React from 'react';
-import './SearchBar.css';
+import styles from './SearchBar.scss';
 import Symbol from '../../atoms/logos/Symbol';
 import Input from '../../atoms/Input/Input';
 import {LIST_TOGGLE, SEARCH_SYMBOL} from "../../atoms/logos/constants";
 
 const SearchBar = ({
+										 className,
 										 onInputChange,
 										 collapseSideBar,
 										 ...props
 									 }) => (
-	<div className={`search__div full-height full-width d-flex justify-content-center align-items-center`}
-			 {...props}>
-		<div className={"collapse__symbol d-flex align-items-center justify-content-center pl-2"} onClick={collapseSideBar}>
+	<div
+		className={`${styles.search} full-width d-flex justify-content-center align-items-center ${className ? className : ''}`}
+		{...props}>
+		<div className={`${styles.collapse} d-flex align-items-center justify-content-center pl-2`}
+				 onClick={collapseSideBar}>
 			<Symbol symbolType={LIST_TOGGLE}/>
 		</div>
 		<Input className={"pl-3"}
@@ -20,10 +23,10 @@ const SearchBar = ({
 		/>
 
 		<div className={"d-flex align-items-center justify-content-center pr-2"}>
-			<Symbol symbolType={SEARCH_SYMBOL}
-							style={{
-								fill: 'white'
-							}}/>
+			<Symbol
+				className={styles.white}
+				symbolType={SEARCH_SYMBOL}
+			/>
 		</div>
 	</div>
 );

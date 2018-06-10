@@ -1,0 +1,50 @@
+.verticalTab {
+    background-color: inherit;
+    cursor: pointer;
+}
+
+//.dropdown {
+//    height: 31px;
+//    width: 246px;
+//    color: white;
+//}
+//
+//    .dropdown .startSymbol {
+//        fill: white;
+//    }
+//
+//.dropdown:hover {
+//    background-color: #769475;
+//}
+
+.active {
+    background-color: #E1EEFA;
+}
+
+.header {
+    width: 30px;
+}
+
+.content {
+    flex: 1;
+    height: 100%;
+}
+
+.extraContent {
+    font-size: 10px;
+    color: #262626;
+}
+
+.footer {
+    width: 35px;
+}
+
+.footerContent {
+    font-size: 12px;
+    font-weight: 500;
+    color: #bdbcbb;
+}
+
+.endSymbol:hover {
+    font-weight: bold;
+}

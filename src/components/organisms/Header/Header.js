@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.css';
+import styles from './Header.scss';
 import DropDownIcon from "../../molecules/DropDownIcon/DropDownIcon";
 import {SORT} from "../../atoms/logos/constants";
 import DropDown from "../DropDown/DropDown";
@@ -38,12 +38,12 @@ class Header extends React.Component {
 		return (
 			<div>
 				<div
-					className={`${className ? className : ''} ${collapsed ? 'collapsed' : ''} div__header fixed full-width d-flex align-items-center justify-content-between`}
+					className={`${className ? className : ''} ${collapsed ? styles.collapsed : ''} ${styles.header} fixed full-width d-flex align-items-center justify-content-between`}
 					{...props}>
-					<div className={"header-content pl-4"}>
+					<div className={`${styles.headerContent} pl-4`}>
 						{headerContent}
 					</div>
-					<div className={"dropdown-icons d-flex align-items-center justify-content-between"}
+					<div className={`${styles.dropdownIcons} d-flex align-items-center justify-content-between`}
 							 onClick={onDropDownButtonClick}
 					>
 						<DropDownIcon
@@ -58,13 +58,7 @@ class Header extends React.Component {
 					(
 						<DropDown
 							onTabClick={onDropDownTabClick}
-							style={{
-								width: 246,
-								position: 'fixed',
-								right: 0,
-								top: 44,
-								backgroundColor: '#678865'
-							}}
+							className={styles.dropdown}
 						/>
 					)
 				}

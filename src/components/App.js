@@ -8,7 +8,7 @@ import MultiTab from '../containers/MultiTab';
 const App = ({multiView}) => {
 	return (
 		<div className="full-size">
-			<SideBar className={"full-height fixed"} style={{width: 280}}/>
+			<SideBar className={"full-height fixed"}/>
 			<Header style={{backgroundColor: '#678865'}}/>
 			{
 				multiView ?

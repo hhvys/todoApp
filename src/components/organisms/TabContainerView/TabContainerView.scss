@@ -1,0 +1,29 @@
+.tab {
+  height: 38px;
+}
+
+.logo {
+  width: 30px;
+}
+
+.inboxLogo {
+  fill: rgb(50, 138, 214);
+}
+
+.starLogo {
+  fill: red;
+}
+
+.listLogo {
+  fill: #b9b9b9;
+}
+
+.footerLogo {
+  fill: #262626;
+  opacity: 0.6;
+  margin-right: 5px;
+}
+
+.footerLogo:hover {
+  opacity: 1;
+}

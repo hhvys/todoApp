@@ -1,10 +1,9 @@
 import React from 'react';
-import './NotFound.css';
+import styles from './NotFound.scss';
 
 const NotFound = () => (
-	<div className={"div__not__found d-flex align-items-center justify-content-center flex-column fixed"}>
-		{/*<SearchSymbol style={{height: 100, width: 100, fill: 'white'}}/>*/}
-		<h3 className="mt-3" style={{color: 'white', opacity: 0.6}}>No Search Results</h3>
+	<div className={`${styles.notFound} d-flex align-items-center justify-content-center flex-column fixed`}>
+		<h3 className={`${styles.h3} mt-3`}>No Search Results</h3>
 	</div>
 );
 

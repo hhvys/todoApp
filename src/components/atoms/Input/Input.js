@@ -1,5 +1,5 @@
 import React from 'react';
-import './Input.css';
+import styles from './Input.scss';
 
 const handleChange = (e, onInputChange) => {
 	onInputChange(e.target.value);
@@ -7,7 +7,7 @@ const handleChange = (e, onInputChange) => {
 
 const Input = ({className, onInputChange, ...props}) => {
 	return (<input
-		className={`${className ? className : ''} add-todo full-height d-flex align-items-center justify-content-center`}
+		className={`${className ? className : ''} ${styles.input} full-height d-flex align-items-center justify-content-center`}
 		onChange={(e) => handleChange(e, onInputChange)} {...props}/>);
 };
 

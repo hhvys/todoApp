@@ -2,6 +2,7 @@ import React from 'react';
 import VerticalTab from "../../molecules/VerticalTab/VerticalTab";
 import {INBOX_ID, STARRED_ID} from "../../../actions/actionTypes";
 import {INBOX, STAR} from "../../atoms/logos/constants";
+import styles from './TabContainerView.scss';
 
 class TabContainerView extends React.Component {
 
@@ -31,10 +32,8 @@ class TabContainerView extends React.Component {
 				}
 				return (
 					<VerticalTab
+						className={styles.tab}
 						key={tab.tabId}
-						style={{
-							height: 38
-						}}
 						onClick={() => onClick(tab.tabId)}
 						onHeaderSymbolClick={onHeaderSymbolClick}
 						onFooterSymbolClick={() => onFooterSymbolClick(tab.tabId)}
@@ -46,28 +45,28 @@ class TabContainerView extends React.Component {
 									headerSymbol
 						}
 
-						footerSymbol={activeTab === tab.tabId &&
-						activeTab !== INBOX_ID &&
-						activeTab !== STARRED_ID &&
-						footerSymbol}
+						footerSymbol={
+							activeTab === tab.tabId &&
+							activeTab !== INBOX_ID &&
+							activeTab !== STARRED_ID &&
+							footerSymbol
+						}
 
 						footerContent={
 							footerContent > 0 && footerContent
 						}
-						footerProps={{
-							style: {}
-						}}
 						mainContent={tab.tabName}
 						active={activeTab === tab.tabId}
-						headerProps={{
-							style: {
-								fill: tab.tabId === INBOX_ID ?
-									'rgb(50, 138, 214)' :
+						headerClass={
+							`${styles.logo} ${
+								tab.tabId === INBOX_ID ?
+									styles.inboxLogo :
 									tab.tabId === STARRED_ID ?
-										'red' :
-										'#b9b9b9'
-							}
-						}}
+										styles.starLogo :
+										styles.listLogo
+								}`
+						}
+						footerClass={styles.footerLogo}
 					/>
 				);
 			})
@@ -75,10 +74,12 @@ class TabContainerView extends React.Component {
 	};
 
 	render() {
-		const {style} = this.props;
+		const {className} = this.props;
 		return (
-			<div className={" flex-column justify-content-start align-items-center"} style={style}>
-				{this.renderVerticalTab(this.props)}
+			<div className={`${className ? className : ''} flex-column justify-content-start align-items-center`}>
+				{
+					this.renderVerticalTab(this.props)
+				}
 			</div>
 		);
 	}

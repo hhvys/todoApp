@@ -1,5 +1,5 @@
 import React from 'react';
-import './DropDownIcon.css';
+import styles from './DropDownIcon.scss';
 import Symbol from "../../atoms/logos/Symbol";
 
 class DropDownIcon extends React.Component {
@@ -22,15 +22,17 @@ class DropDownIcon extends React.Component {
 			...props
 		} = this.props;
 		return (
-			<div className={"div__dd__icon full-height d-flex align-items-center justify-content-center flex-column"}
+			<div className={`${styles.icon} full-height d-flex align-items-center justify-content-center flex-column`}
 					 onClick={onClick} {...props}>
 
-				<div className={"icon-symbol full-height d-flex align-items-center justify-content-center"}>
-					<Symbol symbolType={iconSymbol}
-									style={{fill: 'white', marginTop: 10}}/>
+				<div className={`full-height d-flex align-items-center justify-content-center`}>
+					<Symbol
+						className={styles.logo}
+						symbolType={iconSymbol}
+					/>
 				</div>
 
-				<div className={"icon-text full-height d-flex align-items-center justify-content-center"}>
+				<div className={`${styles.iconText} icon-text full-height d-flex align-items-center justify-content-center`}>
 					{iconText}
 				</div>
 

@@ -1,0 +1,33 @@
+@import "../../../constants";
+
+.collapsedSidebar {
+  width: 42px;
+  height: 100vh;
+}
+
+.listToggle {
+  min-height: 45px;
+  height: 45px;
+  background-color: #5B795A;
+  cursor: pointer;
+}
+
+.tabList {
+  background-color: #F7F7F7;
+  flex: 1;
+}
+
+.tabList div {
+  height: 38px;
+}
+
+.createList {
+  background-color: #F7F7F7;
+  height: 42px;
+  border-top: 1px solid #e0e0df;
+}
+
+.logo {
+  fill: $side-bar-primary;
+  cursor: pointer;
+}

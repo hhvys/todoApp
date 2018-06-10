@@ -1,8 +1,8 @@
 import React from 'react';
-import './Button.css';
+import styles from './Button.scss';
 
 const Button = ({text, className, ...props}) => (
-	<div className={`div__button ${className ? className : ''}`} {...props}>
+	<div className={`${styles.button} ${className ? className : ''}`} {...props}>
 		{text}
 	</div>
 );
