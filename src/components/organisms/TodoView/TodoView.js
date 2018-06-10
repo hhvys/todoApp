@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './TodoView.scss';
+import styles from './TodoView.mod.scss';
 import InputWithLabel from "../../molecules/InputWithLabel/InputWithLabel";
 import VerticalTab from "../../molecules/VerticalTab/VerticalTab";
 import Button from "../../atoms/Button/Button";

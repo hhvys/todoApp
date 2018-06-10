@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './NotFound.scss';
+import styles from './NotFound.mod.scss';
 
 const NotFound = () => (
 	<div className={`${styles.notFound} d-flex align-items-center justify-content-center flex-column fixed`}>

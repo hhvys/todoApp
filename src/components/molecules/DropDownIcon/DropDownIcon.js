@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './DropDownIcon.scss';
+import styles from './DropDownIcon.mod.scss';
 import Symbol from "../../atoms/logos/Symbol";
 
 class DropDownIcon extends React.Component {

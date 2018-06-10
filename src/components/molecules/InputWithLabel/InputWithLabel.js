@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './InputWithLabel.scss';
+import styles from './InputWithLabel.mod.scss';
 import Input from "../../atoms/Input/Input";
 
 const handleKeyUp = (e, onSubmit) => {

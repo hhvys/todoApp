@@ -2,7 +2,7 @@ import React from 'react';
 import VerticalTab from "../../molecules/VerticalTab/VerticalTab";
 import {INBOX_ID, STARRED_ID} from "../../../actions/actionTypes";
 import {INBOX, STAR} from "../../atoms/logos/constants";
-import styles from './TabContainerView.scss';
+import styles from './TabContainerView.mod.scss';
 
 class TabContainerView extends React.Component {
 

@@ -4,7 +4,7 @@ import VerticalTab from "../../molecules/VerticalTab/VerticalTab";
 import {PLUS, LIST_SYMBOL, PENCIL} from '../../atoms/logos/constants';
 import VerticalTabContainer from '../../../containers/VerticalTabContainer';
 import CollapsedSideBar from "../CollapsedSideBar/CollapsedSideBar";
-import styles from './SideBar.scss';
+import styles from './SideBar.mod.scss';
 
 
 class SideBarView extends React.Component {

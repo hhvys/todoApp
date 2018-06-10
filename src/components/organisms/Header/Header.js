@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Header.scss';
+import styles from './Header.mod.scss';
 import DropDownIcon from "../../molecules/DropDownIcon/DropDownIcon";
 import {SORT} from "../../atoms/logos/constants";
 import DropDown from "../DropDown/DropDown";

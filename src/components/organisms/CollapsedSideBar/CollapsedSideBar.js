@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './CollapsedSideBar.scss';
+import styles from './CollapsedSideBar.mod.scss';
 import Symbol from "../../atoms/logos/Symbol";
 import {INBOX, LIST_TOGGLE, PLUS, THREE_DOTS} from "../../atoms/logos/constants";
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../../../atoms/logos/logos.css';
-import styles from '../modal.scss';
+import styles from '../modal.mod.scss';
 import Symbol from "../../../atoms/logos/Symbol";
 import {DUPLICATE, TRASH} from "../../../atoms/logos/constants";
 

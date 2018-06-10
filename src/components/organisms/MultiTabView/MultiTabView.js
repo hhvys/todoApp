@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from "../../atoms/Button/Button";
-import styles from './MultiTabView.scss';
+import styles from './MultiTabView.mod.scss';
 import {CHECK_BOX, CHECKED_CHECK_BOX} from "../../atoms/logos/constants";
 import VerticalTab from '../../molecules/VerticalTab/VerticalTab';
 import {INBOX_ID, SORT_BY} from "../../../actions/actionTypes"

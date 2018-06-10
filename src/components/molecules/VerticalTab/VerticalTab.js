@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './VerticalTab.scss';
+import styles from './VerticalTab.mod.scss';
 import Symbol from "../../atoms/logos/Symbol";
 
 function renderFooter(footerSymbol, onFooterSymbolClick, footerClass) {

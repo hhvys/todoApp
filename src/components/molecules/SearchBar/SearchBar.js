@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './SearchBar.scss';
+import styles from './SearchBar.mod.scss';
 import Symbol from '../../atoms/logos/Symbol';
 import Input from '../../atoms/Input/Input';
 import {LIST_TOGGLE, SEARCH_SYMBOL} from "../../atoms/logos/constants";

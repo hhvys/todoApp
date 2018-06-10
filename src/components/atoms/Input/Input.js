@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Input.scss';
+import styles from './Input.mod.scss';
 
 const handleChange = (e, onInputChange) => {
 	onInputChange(e.target.value);

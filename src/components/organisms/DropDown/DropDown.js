@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './DropDown.scss';
+import styles from './DropDown.mod.scss';
 import VerticalTab from "../../molecules/VerticalTab/VerticalTab";
 import {SORT, STAR, SORT_CREATION} from "../../atoms/logos/constants";
 import {SORT_BY} from "../../../actions/actionTypes";

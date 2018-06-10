@@ -38,7 +38,7 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.scss$/,
+				test: /\.mod\.scss$/,
 				use: [
 					MiniCssExtractPlugin.loader,
 					{
@@ -57,17 +57,15 @@ module.exports = {
 				],
 			},
 			// {
-			// 	test: /\.(gif|png|jpe?g|svg)$/i,
-			// 	// exclude: path.resolve(__dirname, "node_modules"),
+			// 	test: /\.scss$/,
 			// 	use: [
-			// 		'file-loader',
+			// 		MiniCssExtractPlugin.loader,
 			// 		{
-			// 			loader: 'image-webpack-loader',
-			// 			options: {
-			// 				bypassOnDebug: true, // webpack@1.x
-			// 				disable: true, // webpack@2.x and newer
-			// 			},
+			// 			loader: "css-loader",
 			// 		},
+			// 		{
+			// 			loader: "sass-loader",
+			// 		}
 			// 	],
 			// },
 			{

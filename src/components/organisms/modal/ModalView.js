@@ -1,6 +1,6 @@
 import React from 'react';
 import AddListForm from './addListForm/index';
-import styles from './modal.scss';
+import styles from './modal.mod.scss';
 
 const ModalView = (props) => (
 	<div className={props.active ? `${styles.modal} ${styles.active}` : styles.modal}>
