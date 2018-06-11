@@ -1,6 +1,5 @@
 var path = require('path');
 var MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// var combineLoaders = require('webpack-combine-loaders');
 
 module.exports = {
 	entry: './src/index.js',
@@ -56,6 +55,7 @@ module.exports = {
 					}
 				],
 			},
+			//todo
 			// {
 			// 	test: /\.scss$/,
 			// 	use: [

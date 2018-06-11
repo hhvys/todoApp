@@ -1,10 +1,10 @@
 import {connect} from 'react-redux';
-import TodoView from '../components/organisms/TodoView/TodoView';
 import {addTodo, toggleStarTodo, toggleTodo, toggleVisibilityFilter} from "../actions/actionCreaters";
 import {getTabs} from "../reducers/tabs/tabs";
 import {getActiveTab} from "../reducers/activeTab";
 import {getSortBy} from "../reducers/sortBy";
 import {getCollapsedSideBar} from "../reducers/collapsedSideBar";
+import TodosContainer from '../components/organisms/TodoView/TodoContainer';
 
 const mapStateToProps = (state) => {
 	const tabs = getTabs(state);
@@ -35,6 +35,6 @@ const mapDispatchToProps = (dispatch) => {
 const TodoContainer = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(TodoView);
+)(TodosContainer);
 
 export default TodoContainer;
