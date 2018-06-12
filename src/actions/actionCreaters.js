@@ -123,7 +123,7 @@ export function copyTab(fromId) {
 
 		const starredTodos = fromTab
 			.starredTodos
-			.map(todo => todoMap[todo]);
+			.map(todo => todoMap[todo.todoId]);
 
 		const ret = {
 			type: COPY_TAB,
