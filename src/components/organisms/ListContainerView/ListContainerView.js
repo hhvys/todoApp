@@ -2,9 +2,9 @@ import React from 'react';
 import VerticalTab from "../../molecules/VerticalTab/VerticalTab";
 import {INBOX_ID, STARRED_ID} from "../../../actions/actionTypes";
 import {INBOX, STAR} from "../../atoms/logos/constants";
-import styles from './TabContainerView.mod.scss';
+import styles from './ListContainerView.mod.scss';
 
-class TabContainerView extends React.Component {
+class ListContainerView extends React.Component {
 
 	renderVerticalTab = ({
 												 activeTab,
@@ -13,23 +13,12 @@ class TabContainerView extends React.Component {
 												 onHeaderSymbolClick,
 												 onFooterSymbolClick,
 												 headerSymbol,
-												 footerSymbol,
-												 footerContent
+												 footerSymbol
 											 }) => {
-
 		return (
 			tabs.map(tab => {
-				footerContent = tab.todos
-					.filter(todo => !todo.completed)
-					.length;
-				if (tab.tabId === STARRED_ID) {
-					footerContent = tabs.reduce((totalStarred, tab) => {
-						const tabStarred = tab.todos.reduce((starred, todo) => starred + (todo.star && !todo.completed), 0);
-						return totalStarred + tabStarred;
-					}, 0);
-					if (footerContent === 0)
-						return null;
-				}
+				if (tab.footerContent === 0 && tab.tabId === STARRED_ID)
+					return null;
 				return (
 					<VerticalTab
 						className={styles.tab}
@@ -53,7 +42,7 @@ class TabContainerView extends React.Component {
 						}
 
 						footerContent={
-							footerContent > 0 && footerContent
+							tab.footerContent > 0 && tab.footerContent
 						}
 						mainContent={tab.tabName}
 						active={activeTab === tab.tabId}
@@ -85,4 +74,4 @@ class TabContainerView extends React.Component {
 	}
 }
 
-export default TabContainerView;
+export default ListContainerView;

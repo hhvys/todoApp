@@ -1,5 +1,7 @@
 import * as actionTypes from './actionTypes'
 import {v4} from 'node-uuid';
+import {COPY_TAB} from "./actionTypes";
+import {getTabs, getTodoInfo} from "../reducers/tabs/tabs";
 
 export function searchQuery(query) {
 	return {
@@ -36,7 +38,6 @@ export function toggleModal(tabId) {
 }
 
 export function addTab(tabName) {
-
 	return {
 		type: actionTypes.ADD_TAB,
 		tabId: v4(),
@@ -94,10 +95,44 @@ export function activeTodo(tabId, todoId) {
 }
 
 export function copyTab(fromId) {
-	return {
-		type: actionTypes.COPY_TAB,
-		fromId,
-		toId: v4()
+	return (dispatch, getState) => {
+		const state = getState();
+		const tabs = getTabs(state);
+		const newTabId = v4();
+		const fromTab = tabs
+			.find(tab => tab.tabId === fromId);
+
+		//Map of from_todoIds to to_todoIds
+		const todoMap = {};
+		fromTab
+			.todos
+			.forEach(todo => todoMap[todo.todoId] = v4());
+
+		//Map of new_todoIds to todoInfo
+		const todos = {};
+		Object
+			.keys(todoMap)
+			.forEach(todoId => {
+				const newTodoId = todoMap[todoId];
+				todos[newTodoId] = {
+					...getTodoInfo(state, todoId),
+					tabId: newTabId,
+					todoId: newTodoId
+				}
+			});
+
+		const starredTodos = fromTab
+			.starredTodos
+			.map(todo => todoMap[todo]);
+
+		const ret = {
+			type: COPY_TAB,
+			starredTodos,
+			todos,
+			toId: newTabId,
+			tabName: fromTab.tabName + " Copy"
+		};
+		dispatch(ret);
 	}
 }
 
@@ -110,14 +145,12 @@ export function toggleStarTodo(tabId, todoId) {
 }
 
 export function changeSorting(sortBy) {
+	if (!sortBy)
+		return (dispatch, getState) =>
+			dispatch(changeSorting(getState().sortBy));
+
 	return {
 		type: actionTypes.CHANGE_SORT,
 		sortBy
-	}
-}
-
-export function toggleDropDown() {
-	return {
-		type: actionTypes.TOGGLE_DROPDOWN
 	}
 }

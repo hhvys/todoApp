@@ -23,31 +23,6 @@ class TodoContainer extends React.Component {
 		clearInterval(this.interval);
 	}
 
-	sortTodos = (todos, sortBy) => (
-		todos
-			.sort((a, b) => {
-				switch (sortBy) {
-					case SORT_BY.SORT_PRIORITY:
-						if (a.star && !b.star)
-							return -1;
-						if (!a.star && b.star)
-							return 1;
-						return 0;
-
-					case SORT_BY.SORT_CREATION:
-						if (a.completedTime > b.completedTime)
-							return -1;
-						return 1;
-
-					case SORT_BY.SORT_ALPHA:
-						if (a.text < b.text)
-							return -1;
-						return 1;
-				}
-
-			})
-	);
-
 	getCompletionTime = (completedTime) => {
 		let timeDiff = Math.abs(this.state.currentTime - Date.parse(completedTime)) / 1000;
 
@@ -74,8 +49,7 @@ class TodoContainer extends React.Component {
 	);
 
 	render() {
-		let {todos, sortBy, ...props} = this.props;
-		todos = this.sortTodos(todos, sortBy);
+		let {todos, ...props} = this.props;
 		todos = this.addCompletionTime(todos);
 		return (
 			<TodoView

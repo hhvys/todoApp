@@ -1,4 +1,3 @@
-import {combineReducers} from 'redux';
 import todo from './todo';
 import todos from './todos';
 import {
@@ -13,7 +12,8 @@ import {
 	ACTIVE_TODO,
 	TOGGLE_VISIBILITY_FILTER,
 	INBOX_ID,
-	STARRED_ID
+	STARRED_ID,
+	CHANGE_SORT
 } from '../../actions/actionTypes';
 
 
@@ -32,8 +32,14 @@ const initialState = [
 	}
 ];
 
-function tabInfo(state = initialState, action) {
+function tabInfo(state = initialState, action, todoInfo) {
 	switch (action.type) {
+		case CHANGE_SORT:
+			return state.map(tab => ({
+				...tab,
+				todos: todos(tab.todos, action, todoInfo),
+				starredTodos: todos(tab.starredTodos, action, todoInfo)
+			}));
 		case ADD_TAB:
 			return [
 				...state,
@@ -56,16 +62,16 @@ function tabInfo(state = initialState, action) {
 					tab
 			));
 		case COPY_TAB:
-			let fromTab =
-				state.find(tab => tab.tabId === action.fromId);
 			return (
 				[
 					...state,
 					{
 						tabId: action.toId,
-						tabName: fromTab.tabName + " Copy",
-						todos: [...fromTab.todos],
-						starredTodos: [...fromTab.starredTodos]
+						tabName: action.tabName,
+						todos: Object
+							.keys(action.todos)
+							.map(key => action.todos[key].todoId),
+						starredTodos: [...action.starredTodos]
 					}
 				]
 			);
@@ -122,31 +128,40 @@ function todoInfo(state = {}, action) {
 				...state,
 				[action.todoId]: todo(state[action.todoId], action)
 			};
+		case COPY_TAB:
+			return {...state, ...(action.todos)};
 		default:
 			return state;
 	}
 }
 
-const tabs = combineReducers({
-	todoInfo,
-	tabInfo
-});
+export function getTodoInfo(state, todos) {
+	if (Array.isArray(todos)) {
+		return todos.map(todo => (
+			state.tabs.todoInfo[todo]
+		))
+	}
+	return state.tabs.todoInfo[todos];
+}
+
+//reducer
+const tabs = (state = {}, action) => {
+	return {
+		todoInfo: todoInfo(state.todoInfo, action),
+		tabInfo: tabInfo(state.tabInfo, action, state.todoInfo)
+	}
+};
 
 export default tabs;
 
 export function getTabs(state) {
-	const tabs = state.tabs.tabInfo.map(tab => {
-		const todos = tab.todos.map(todo => (
-			state.tabs.todoInfo[todo]
-		));
-		const starredTodos = tab.starredTodos.map(todo => (
-			state.tabs.todoInfo[todo]
-		));
+	return state.tabs.tabInfo.map(tab => {
+		const todos = getTodoInfo(state, tab.todos);
+		const starredTodos = getTodoInfo(state, tab.starredTodos);
 		return {
 			...tab,
 			todos,
 			starredTodos
 		}
 	});
-	return tabs;
 }

@@ -1,8 +1,7 @@
 import {connect} from 'react-redux';
-import {addTodo, toggleStarTodo, toggleTodo, toggleVisibilityFilter} from "../actions/actionCreaters";
+import {addTodo, changeSorting, toggleStarTodo, toggleTodo, toggleVisibilityFilter} from "../actions/actionCreaters";
 import {getTabs} from "../reducers/tabs/tabs";
 import {getActiveTab} from "../reducers/activeTab";
-import {getSortBy} from "../reducers/sortBy";
 import {getCollapsedSideBar} from "../reducers/collapsedSideBar";
 import TodosContainer from '../components/organisms/TodoView/TodoContainer';
 
@@ -18,7 +17,6 @@ const mapStateToProps = (state) => {
 		showCompleted: tabs
 			.find(tab => tab.tabId === activeTab)
 			.showCompletedTodo,
-		sortBy: getSortBy(state),
 		collapsed: getCollapsedSideBar(state)
 	});
 };
@@ -26,9 +24,15 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return ({
 		onHeaderSymbolClick: (tabId, todoId) => dispatch(toggleTodo(tabId, todoId)),
-		onFooterSymbolClick: (tabId, todoId) => dispatch(toggleStarTodo(tabId, todoId)),
+		onFooterSymbolClick: (tabId, todoId) => {
+			dispatch(toggleStarTodo(tabId, todoId));
+			dispatch(changeSorting());
+		},
 		onButtonClick: (tabId) => dispatch(toggleVisibilityFilter(tabId)),
-		onInputSubmit: (tabId, value) => dispatch(addTodo(tabId, value))
+		onInputSubmit: (tabId, value) => {
+			dispatch(addTodo(tabId, value));
+			dispatch(changeSorting());
+		}
 	});
 };
 

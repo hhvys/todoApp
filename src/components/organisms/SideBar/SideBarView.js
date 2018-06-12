@@ -2,7 +2,7 @@ import React from 'react';
 import SearchBar from "../../molecules/SearchBar/SearchBar";
 import VerticalTab from "../../molecules/VerticalTab/VerticalTab";
 import {PLUS, LIST_SYMBOL, PENCIL} from '../../atoms/logos/constants';
-import VerticalTabContainer from '../../../containers/VerticalTabContainer';
+import ListContainer from '../../../containers/ListContainer';
 import CollapsedSideBar from "../CollapsedSideBar/CollapsedSideBar";
 import styles from './SideBar.mod.scss';
 
@@ -31,7 +31,7 @@ class SideBarView extends React.Component {
 						collapseSideBar={collapseSideBar}
 					/>
 
-					<VerticalTabContainer
+					<ListContainer
 						className={styles.verticalTabContainer}
 						headerSymbol={LIST_SYMBOL}
 						footerSymbol={PENCIL}

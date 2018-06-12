@@ -47,7 +47,7 @@ class AddForm extends React.Component {
 		}
 		this.input.value = '';
 		this.save.classList.remove(styles.active);
-	}
+	};
 
 	constructor(props) {
 		super(props);

@@ -1,8 +1,8 @@
 import {throttle} from 'lodash';
 import {loadState, saveState} from "./localStorage";
 import todoApp from "./reducers";
-import {createStore} from 'redux'
-
+import {createStore, applyMiddleware} from 'redux'
+import thunk from 'redux-thunk';
 
 const addLoggingToDispatch = (store) => {
 	const rawDispatch = store.dispatch;
@@ -22,7 +22,8 @@ const configureStore = () => {
 
 	const store = createStore(
 		todoApp,
-		persistedState
+		persistedState,
+		applyMiddleware(thunk)
 	);
 
 	store.dispatch = addLoggingToDispatch(store);

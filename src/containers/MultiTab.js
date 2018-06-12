@@ -1,17 +1,42 @@
 import {connect} from 'react-redux';
 import MultiTabView from '../components/organisms/MultiTabView/MultiTabView';
-import {addStarredTodo, changeActiveTab, searchQuery, toggleStarTodo, toggleTodo} from "../actions/actionCreaters";
+import {
+	addStarredTodo,
+	changeActiveTab,
+	changeSorting,
+	searchQuery,
+	toggleStarTodo,
+	toggleTodo
+} from "../actions/actionCreaters";
 import {getTabs} from "../reducers/tabs/tabs";
-import {getSortBy} from "../reducers/sortBy";
 import {getSearchQuery} from "../reducers/searchQuery";
 import {getActiveTab} from "../reducers/activeTab";
 import {getCollapsedSideBar} from "../reducers/collapsedSideBar";
 
+const getFilteredTabs = (state) => {
+	let tabs = getTabs(state);
+	tabs = state.searchQuery.length ?
+		tabs
+			.map(tab => ({
+				...tab,
+				todos: tab
+					.todos
+					.filter(todo => !todo.completed && (new RegExp(state.searchQuery).test(todo.text)))
+			})) :
+		tabs
+			.map(tab => ({
+				...tab,
+				todos: tab
+					.starredTodos
+					.filter(todo => !todo.completed)
+			}));
+
+	return tabs.filter(tab => tab.todos.length);
+};
+
 const mapStateToProps = (state) => {
-	const tabs = getTabs(state);
 	return {
-		tabs,
-		sortBy: getSortBy(state),
+		tabs: getFilteredTabs(state),
 		searchQuery: getSearchQuery(state),
 		activeTab: getActiveTab(state),
 		collapsed: getCollapsedSideBar(state)
@@ -29,6 +54,7 @@ const mapDispatchToProps = (dispatch) => {
 		},
 		onInputSubmit: (value) => {
 			dispatch(addStarredTodo(value));
+			dispatch(changeSorting());
 		}
 	};
 };

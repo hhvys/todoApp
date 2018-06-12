@@ -2,7 +2,7 @@ import React from 'react';
 import SideBar from '../containers/SideBar';
 import Header from "../containers/Header";
 import TodoContainer from '../containers/TodoContainer';
-import Modal from './organisms/modal';
+import Modal from './organisms/Modal';
 import MultiTab from '../containers/MultiTab';
 
 const App = ({multiView}) => {

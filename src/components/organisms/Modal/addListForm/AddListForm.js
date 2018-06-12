@@ -17,9 +17,13 @@ const mapDispatchToProps = (dispatch) => {
 			dispatch(toggleModal());
 		},
 		onSave: (tabId, tabName) => {
-			tabId ?
-				dispatch(changeTabName(tabId, tabName)) :
-				dispatch(addTab(tabName))
+			if (tabId)
+				dispatch(changeTabName(tabId, tabName));
+			else {
+				const addTabAction = addTab(tabName);
+				dispatch(addTabAction);
+				dispatch(changeActiveTab(addTabAction.tabId));
+			}
 		},
 		onDelete: (tabId) => {
 			dispatch(changeActiveTab(0));
