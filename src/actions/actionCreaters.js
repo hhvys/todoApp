@@ -1,7 +1,8 @@
 import * as actionTypes from './actionTypes'
 import {v4} from 'node-uuid';
 import {COPY_TAB} from "./actionTypes";
-import {getTabs, getTodoInfo} from "../reducers/tabs/tabs";
+import {getTabs} from "../reducers/tabs/tabs";
+import {getTodoInfo} from "../reducers/tabs/todoInfo";
 
 export function searchQuery(query) {
 	return {

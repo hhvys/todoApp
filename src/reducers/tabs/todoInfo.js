@@ -1,8 +1,10 @@
 import {
-	ADD_TODO,
+	ACTIVE_TODO,
 	ADD_STARRED_TODO,
-	TOGGLE_TODO,
-	STAR_TOGGLE_TODO
+	ADD_TODO,
+	COPY_TAB,
+	STAR_TOGGLE_TODO,
+	TOGGLE_TODO
 } from "../../actions/actionTypes";
 
 const todo = (state = {}, action) => {
@@ -45,5 +47,31 @@ const todo = (state = {}, action) => {
 	}
 };
 
+function todoInfo(state = {}, action) {
+	switch (action.type) {
+		case STAR_TOGGLE_TODO:
+		case ADD_TODO:
+		case ADD_STARRED_TODO:
+		case TOGGLE_TODO:
+		case ACTIVE_TODO:
+			return {
+				...state,
+				[action.todoId]: todo(state[action.todoId], action)
+			};
+		case COPY_TAB:
+			return {...state, ...(action.todos)};
+		default:
+			return state;
+	}
+}
 
-export default todo;
+export default todoInfo;
+
+export function getTodoInfo(state, todos) {
+	if (Array.isArray(todos)) {
+		return todos.map(todo => (
+			state.tabs.todoInfo[todo]
+		))
+	}
+	return state.tabs.todoInfo[todos];
+}
