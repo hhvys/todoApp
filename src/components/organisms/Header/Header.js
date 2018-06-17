@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Header.mod.scss';
 import DropDownIcon from "../../molecules/DropDownIcon/DropDownIcon";
-import {SORT} from "../../atoms/logos/constants";
+import {SORT} from "../../atoms/Icons/constants";
 import DropDown from "../DropDown/DropDown";
 
 class Header extends React.Component {

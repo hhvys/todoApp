@@ -55,19 +55,6 @@ module.exports = {
 					}
 				],
 			},
-			//todo
-			// {
-			// 	test: /\.scss$/,
-			// 	use: [
-			// 		MiniCssExtractPlugin.loader,
-			// 		{
-			// 			loader: "css-loader",
-			// 		},
-			// 		{
-			// 			loader: "sass-loader",
-			// 		}
-			// 	],
-			// },
 			{
 				test: /\.(png|jpe?g)$/,
 				loader: 'url-loader'

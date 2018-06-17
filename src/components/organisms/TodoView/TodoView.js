@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './TodoView.mod.scss';
 import InputWithLabel from "../../molecules/InputWithLabel/InputWithLabel";
-import VerticalTab from "../../molecules/VerticalTab/VerticalTab";
+import RowComponent from "../../molecules/RowComponent/RowComponent";
 import Button from "../../atoms/Button/Button";
-import {CHECK_BOX, CHECKED_CHECK_BOX, STARRED, STAR} from "../../atoms/logos/constants";
+import {CHECK_BOX, CHECKED_CHECK_BOX, STARRED, STAR} from "../../atoms/Icons/constants";
 
 class TodoView extends React.Component {
 
@@ -20,7 +20,7 @@ class TodoView extends React.Component {
 			todos
 				.map(todo => {
 					return (
-						<VerticalTab
+						<RowComponent
 							className={completed ? styles.completedTodo : styles.todo}
 							key={todo.todoId}
 							headerSymbol={todo.completed ? CHECKED_CHECK_BOX : CHECK_BOX}

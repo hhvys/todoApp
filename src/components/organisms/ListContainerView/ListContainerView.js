@@ -1,7 +1,7 @@
 import React from 'react';
-import VerticalTab from "../../molecules/VerticalTab/VerticalTab";
+import RowComponent from "../../molecules/RowComponent/RowComponent";
 import {INBOX_ID, STARRED_ID} from "../../../actions/actionTypes";
-import {INBOX, STAR} from "../../atoms/logos/constants";
+import {INBOX, STAR} from "../../atoms/Icons/constants";
 import styles from './ListContainerView.mod.scss';
 
 class ListContainerView extends React.Component {
@@ -20,7 +20,7 @@ class ListContainerView extends React.Component {
 				if (tab.footerContent === 0 && tab.tabId === STARRED_ID)
 					return null;
 				return (
-					<VerticalTab
+					<RowComponent
 						className={styles.tab}
 						key={tab.tabId}
 						onClick={() => onClick(tab.tabId)}

@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './SearchBar.mod.scss';
-import Symbol from '../../atoms/logos/Symbol';
+import Icon from '../../atoms/Icons/Icon';
 import Input from '../../atoms/Input/Input';
-import {LIST_TOGGLE, SEARCH_SYMBOL} from "../../atoms/logos/constants";
+import {LIST_TOGGLE, SEARCH_SYMBOL} from "../../atoms/Icons/constants";
 
 const SearchBar = ({
 			className,
@@ -24,13 +24,13 @@ const SearchBar = ({
 							 inputValue={inputValue}
 				/>
 
-				<div className={"d-flex align-items-center justify-content-center pr-2"}>
-					<Symbol
-						className={styles.white}
-						symbolType={SEARCH_SYMBOL}
-					/>
-				</div>
-			</div>
-		);
+		<div className={"d-flex align-items-center justify-content-center pr-2"}>
+			<Icon
+				className={styles.white}
+				symbolType={SEARCH_SYMBOL}
+			/>
+		</div>
+	</div>
+);
 
 export default SearchBar;

@@ -1,19 +1,19 @@
 import React from 'react';
-import styles from './VerticalTab.mod.scss';
-import Symbol from "../../atoms/logos/Symbol";
+import styles from './RowComponent.mod.scss';
+import Icon from "../../atoms/Icons/Icon";
 
 function renderFooter(footerSymbol, onFooterSymbolClick, footerClass) {
 	return footerSymbol ? (
 		<div className={`full-height d-flex align-items-center justify-content-center`}>
-			<Symbol className={`${footerClass ? footerClass : ''} ${styles.endSymbol}`}
-							onClick={onFooterSymbolClick}
-							symbolType={footerSymbol}
+			<Icon className={`${footerClass ? footerClass : ''} ${styles.endSymbol}`}
+						onClick={onFooterSymbolClick}
+						symbolType={footerSymbol}
 			/>
 		</div>
 	) : null;
 }
 
-const VerticalTab = ({
+const RowComponent = ({
 											 className,
 											 headerClass,
 											 footerClass,
@@ -34,8 +34,8 @@ const VerticalTab = ({
 		onClick={onClick} {...props}>
 
 		<div className={`${styles.verticalTab} full-height d-flex align-items-center justify-content-center`}>
-			<Symbol className={`${headerClass ? headerClass : ''} `} onClick={onHeaderSymbolClick}
-							symbolType={headerSymbol}/>
+			<Icon className={`${headerClass ? headerClass : ''} `} onClick={onHeaderSymbolClick}
+						symbolType={headerSymbol}/>
 		</div>
 
 		<div className={`${styles.content} d-flex flex-column justify-content-center `}>
@@ -61,4 +61,4 @@ const VerticalTab = ({
 	</div>
 );
 
-export default VerticalTab;
+export default RowComponent;

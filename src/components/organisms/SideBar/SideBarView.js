@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from "../../molecules/SearchBar/SearchBar";
-import VerticalTab from "../../molecules/VerticalTab/VerticalTab";
-import {PLUS, LIST_SYMBOL, PENCIL} from '../../atoms/logos/constants';
+import RowComponent from "../../molecules/RowComponent/RowComponent";
+import {PLUS, LIST_SYMBOL, PENCIL} from '../../atoms/Icons/constants';
 import ListContainer from '../../../containers/ListContainer';
 import CollapsedSideBar from "../CollapsedSideBar/CollapsedSideBar";
 import styles from './SideBar.mod.scss';
@@ -39,11 +39,11 @@ class SideBarView extends React.Component {
 						footerSymbol={PENCIL}
 						/>
 
-					<VerticalTab headerSymbol={PLUS}
-											 mainContent={"Create List"}
-											 onClick={onCreateClick}
-											 headerClass={styles.footerLogo}
-											 className={styles.footer}
+					<RowComponent headerSymbol={PLUS}
+												mainContent={"Create List"}
+												onClick={onCreateClick}
+												headerClass={styles.footerLogo}
+												className={styles.footer}
 					/>
 				</div>
 			);
