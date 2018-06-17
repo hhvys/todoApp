@@ -1,10 +1,10 @@
 import React from 'react';
 import Button from "../../atoms/Button/Button";
 import styles from './MultiTabView.mod.scss';
-import {CHECK_BOX, CHECKED_CHECK_BOX} from "../../atoms/logos/constants";
-import VerticalTab from '../../molecules/VerticalTab/VerticalTab';
+import {CHECK_BOX, CHECKED_CHECK_BOX} from "../../atoms/Icons/constants";
+import RowComponent from '../../molecules/RowComponent/RowComponent';
 import {INBOX_ID} from "../../../actions/actionTypes"
-import {STARRED, STAR} from "../../atoms/logos/constants";
+import {STARRED, STAR} from "../../atoms/Icons/constants";
 import InputWithLabel from '../../molecules/InputWithLabel/InputWithLabel';
 import NotFound from '../../molecules/NotFound/NotFound';
 
@@ -23,15 +23,15 @@ class MultiTabView extends React.Component {
 				.map(todo => {
 
 					return (
-						<VerticalTab key={todo.todoId}
-												 className={styles.todo}
-												 headerSymbol={todo.completed ? CHECKED_CHECK_BOX : CHECK_BOX}
-												 footerSymbol={todo.star ? STARRED : STAR}
-												 headerClass={styles.logo}
-												 footerClass={styles.logo}
-												 mainContent={todo.text}
-												 onFooterSymbolClick={() => onFooterSymbolClick(tabId, todo.todoId)}
-												 onHeaderSymbolClick={() => onHeaderSymbolClick(tabId, todo.todoId)}
+						<RowComponent key={todo.todoId}
+													className={styles.todo}
+													headerSymbol={todo.completed ? CHECKED_CHECK_BOX : CHECK_BOX}
+													footerSymbol={todo.star ? STARRED : STAR}
+													headerClass={styles.logo}
+													footerClass={styles.logo}
+													mainContent={todo.text}
+													onFooterSymbolClick={() => onFooterSymbolClick(tabId, todo.todoId)}
+													onHeaderSymbolClick={() => onHeaderSymbolClick(tabId, todo.todoId)}
 						/>
 					);
 				})

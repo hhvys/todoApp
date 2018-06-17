@@ -2,9 +2,9 @@ import React from 'react';
 import * as svgPaths from './svgPaths';
 import * as defaultStyles from './defaultSymbolStyles';
 import {STARRED} from "./constants";
-import './logos.css';
+import './Icons.css';
 
-class Symbol extends React.Component {
+class Icon extends React.Component {
 
 	static defaultProps = {
 		height: 20,
@@ -45,4 +45,4 @@ class Symbol extends React.Component {
 	}
 }
 
-export default Symbol;
+export default Icon;

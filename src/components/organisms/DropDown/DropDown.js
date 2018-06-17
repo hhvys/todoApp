@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './DropDown.mod.scss';
-import VerticalTab from "../../molecules/VerticalTab/VerticalTab";
-import {SORT, STAR, SORT_CREATION} from "../../atoms/logos/constants";
+import RowComponent from "../../molecules/RowComponent/RowComponent";
+import {SORT, STAR, SORT_CREATION} from "../../atoms/Icons/constants";
 import {SORT_BY} from "../../../actions/actionTypes";
 
 class DropDown extends React.Component {
@@ -17,21 +17,21 @@ class DropDown extends React.Component {
 		} = this.props;
 		return (
 			<div className={className} onClick={onClick} {...props} style={{...style}}>
-				<VerticalTab
+				<RowComponent
 					className={styles.tab}
 					onClick={() => onTabClick(SORT_BY.SORT_ALPHA)}
 					headerSymbol={SORT}
 					mainContent={"Sort Alphabetically"}
 					headerClass={styles.headerLogo}
 				/>
-				<VerticalTab
+				<RowComponent
 					className={styles.tab}
 					onClick={() => onTabClick(SORT_BY.SORT_CREATION)}
 					headerSymbol={SORT_CREATION}
 					mainContent={"Sort by Creation Date"}
 					headerClass={styles.headerLogo}
 				/>
-				<VerticalTab
+				<RowComponent
 					className={styles.tab}
 					onClick={() => onTabClick(SORT_BY.SORT_PRIORITY)}
 					headerSymbol={STAR}

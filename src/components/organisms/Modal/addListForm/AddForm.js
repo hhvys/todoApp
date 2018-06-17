@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../../../atoms/logos/logos.css';
+import '../../../atoms/Icons/Icons.css';
 import styles from '../modal.mod.scss';
-import Symbol from "../../../atoms/logos/Symbol";
-import {DUPLICATE, TRASH} from "../../../atoms/logos/constants";
+import Icon from "../../../atoms/Icons/Icon";
+import {DUPLICATE, TRASH} from "../../../atoms/Icons/constants";
 
 class AddForm extends React.Component {
 
@@ -90,8 +90,8 @@ class AddForm extends React.Component {
 							styles.hide :
 							styles.delete
 					}>
-						<Symbol symbolType={TRASH} onClick={this.handleDelete}/>
-						<Symbol symbolType={DUPLICATE} onClick={this.handleDuplicate}/>
+						<Icon symbolType={TRASH} onClick={this.handleDelete}/>
+						<Icon symbolType={DUPLICATE} onClick={this.handleDuplicate}/>
 					</div>
 					<div>
 						<button className={`${styles.save} ${styles.button}`}

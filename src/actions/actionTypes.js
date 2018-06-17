@@ -6,7 +6,6 @@ export const CHANGE_ACTIVE_TAB = 'CHANGE_ACTIVE_TAB';
 export const TOGGLE_SIDEBAR = 'TOGGLE_SIDEBAR';
 export const TOGGLE_MODAL = 'TOGGLE_MODAL';
 export const CHANGE_SORT = 'CHANGE_SORT';
-export const TOGGLE_DROPDOWN = 'TOGGLE_DROPDOWN';
 export const SEARCH_QUERY = 'SEARCH_QUERY';
 
 /*
@@ -26,7 +25,6 @@ export const ADD_STARRED_TODO = 'ADD_STARRED_TODO';
 export const TOGGLE_TODO = 'TOGGLE_TODO';
 export const STAR_TOGGLE_TODO = 'STAR_TOGGLE_TODO';
 export const ACTIVE_TODO = 'ACTIVE_TODO';
-export const COPY_TODO = 'COPY_TODO';
 
 /*
 	* Sort Actions

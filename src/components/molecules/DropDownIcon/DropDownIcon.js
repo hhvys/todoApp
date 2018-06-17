@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './DropDownIcon.mod.scss';
-import Symbol from "../../atoms/logos/Symbol";
+import Icon from "../../atoms/Icons/Icon";
 
 class DropDownIcon extends React.Component {
 	static defaultProps = {
@@ -26,7 +26,7 @@ class DropDownIcon extends React.Component {
 					 onClick={onClick} {...props}>
 
 				<div className={`full-height d-flex align-items-center justify-content-center`}>
-					<Symbol
+					<Icon
 						className={styles.logo}
 						symbolType={iconSymbol}
 					/>
