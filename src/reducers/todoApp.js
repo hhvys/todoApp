@@ -15,4 +15,4 @@ const todoApp = combineReducers({
 	searchQuery
 });
 
-export default  todoApp;
+export default todoApp;

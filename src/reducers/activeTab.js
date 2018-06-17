@@ -1,6 +1,6 @@
-import {CHANGE_ACTIVE_TAB} from '../actions/actionTypes';
+import {CHANGE_ACTIVE_TAB, INBOX_ID} from '../actions/actionTypes';
 
-function activeTab(state = 0, action) {
+function activeTab(state = INBOX_ID, action) {
 	switch (action.type) {
 		case CHANGE_ACTIVE_TAB:
 			return action.tabId;
