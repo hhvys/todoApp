@@ -16,6 +16,7 @@ class SideBarView extends React.Component {
 			onCreateClick,
 			collapseSideBar,
 			collapsed,
+			searchValue,
 			...props
 		} = this.props;
 
@@ -29,6 +30,7 @@ class SideBarView extends React.Component {
 						className={styles.searchBar}
 						onInputChange={onSearchChange}
 						collapseSideBar={collapseSideBar}
+						inputValue={searchValue}
 					/>
 
 					<ListContainer
