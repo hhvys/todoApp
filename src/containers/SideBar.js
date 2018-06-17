@@ -8,7 +8,6 @@ import {getCollapsedSideBar} from "../reducers/collapsedSideBar";
 const mapStateToProps = (state) => {
 
 	return {
-		activeTab: getActiveTab(state),
 		tabs: getTabs(state),
 		collapsed: getCollapsedSideBar(state)
 	};

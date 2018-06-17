@@ -1,32 +1,24 @@
 import {throttle} from 'lodash';
 import {loadState, saveState} from "./localStorage";
 import todoApp from "./reducers";
-import {createStore, applyMiddleware} from 'redux'
+import {createStore, applyMiddleware, compose} from 'redux'
 import thunk from 'redux-thunk';
-
-const addLoggingToDispatch = (store) => {
-	const rawDispatch = store.dispatch;
-	return (action) => {
-		console.group(action.type);
-		console.log('%c prev state', 'color: gray', store.getState());
-		console.log('%c action', 'color: blue', action);
-		const returnValue = rawDispatch(action);
-		console.log('%c next state', 'color: green', store.getState());
-		console.groupEnd();
-		return returnValue;
-	}
-};
+import logger from 'redux-logger';
 
 const configureStore = () => {
 	const persistedState = loadState();
+	const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 	const store = createStore(
 		todoApp,
 		persistedState,
-		applyMiddleware(thunk)
+		composeEnhancers(
+			applyMiddleware(
+				thunk,
+				logger
+			)
+		)
 	);
-
-	store.dispatch = addLoggingToDispatch(store);
 
 	store.subscribe(throttle(() => {
 		const state = store.getState();

@@ -2,7 +2,7 @@ import React from 'react';
 import * as svgPaths from './svgPaths';
 import * as defaultStyles from './defaultSymbolStyles';
 import {STARRED} from "./constants";
-import './logos.css';
+import './logos.mod.scss';
 
 class Symbol extends React.Component {
 
