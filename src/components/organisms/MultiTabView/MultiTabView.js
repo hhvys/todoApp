@@ -75,7 +75,6 @@ class MultiTabView extends React.Component {
 			onHeaderSymbolClick,
 			onFooterSymbolClick,
 			searchQuery,
-			activeTab,
 			onButtonClick,
 			collapsed,
 			onInputSubmit
@@ -98,7 +97,6 @@ class MultiTabView extends React.Component {
 						onHeaderSymbolClick,
 						onFooterSymbolClick,
 						searchQuery,
-						activeTab,
 						onButtonClick
 					})
 				}

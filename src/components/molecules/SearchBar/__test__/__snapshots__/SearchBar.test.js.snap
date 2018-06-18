@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar should pass collapseSideBar prop to startLogo 1`] = `
+<div
+  className="collapse d-flex align-items-center justify-content-center pl-2"
+  onClick={[Function]}
+>
+  <Icon
+    height={20}
+    symbolType="LIST_TOGGLE"
+    width={20}
+  />
+</div>
+`;
+
+exports[`SearchBar should pass onInputChange and inputValue to Input 1`] = `
+<Input
+  className="pl-3"
+  inputValue={[Function]}
+  onInputChange={[Function]}
+  placeholder="Search"
+/>
+`;
+
+exports[`SearchBar should render 1`] = `
+<div
+  className="search full-width d-flex justify-content-center align-items-center className"
+>
+  <div
+    className="collapse d-flex align-items-center justify-content-center pl-2"
+  >
+    <Icon
+      height={20}
+      symbolType="LIST_TOGGLE"
+      width={20}
+    />
+  </div>
+  <Input
+    className="pl-3"
+    placeholder="Search"
+  />
+  <div
+    className="d-flex align-items-center justify-content-center pr-2"
+  >
+    <Icon
+      className="white"
+      height={20}
+      symbolType="SEARCH_SYMBOL"
+      width={20}
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropDown should render 1`] = `
+<div>
+  <RowComponent
+    className="tab"
+    headerClass="headerLogo"
+    headerSymbol="SORT"
+    mainContent="Sort Alphabetically"
+    onClick={[Function]}
+  />
+  <RowComponent
+    className="tab"
+    headerClass="headerLogo"
+    headerSymbol="SORT_CREATION"
+    mainContent="Sort by Creation Date"
+    onClick={[Function]}
+  />
+  <RowComponent
+    className="tab"
+    headerClass="headerLogo"
+    headerSymbol="STAR"
+    mainContent="Sort by Priority"
+    onClick={[Function]}
+  />
+</div>
+`;

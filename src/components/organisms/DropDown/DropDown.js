@@ -11,12 +11,11 @@ class DropDown extends React.Component {
 		const {
 			className,
 			onClick,
-			style,
 			onTabClick,
 			...props
 		} = this.props;
 		return (
-			<div className={className} onClick={onClick} {...props} style={{...style}}>
+			<div className={className} onClick={onClick} {...props}>
 				<RowComponent
 					className={styles.tab}
 					onClick={() => onTabClick(SORT_BY.SORT_ALPHA)}

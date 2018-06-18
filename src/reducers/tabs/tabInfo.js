@@ -61,7 +61,7 @@ const todos = (state = [], action, todoInfo) => {
 	}
 };
 
-const initialState = [
+export const initialState = [
 	{
 		tabId: INBOX_ID,
 		tabName: 'Inbox',

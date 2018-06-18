@@ -37,6 +37,8 @@ class Header extends React.Component {
 		} = this.props;
 		return (
 			<div>
+
+				{/*contentDiv*/}
 				<div
 					className={`${className ? className : ''} ${collapsed ? styles.collapsed : ''} ${styles.header} fixed full-width d-flex align-items-center justify-content-between`}
 					{...props}>

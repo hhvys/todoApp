@@ -1,6 +1,5 @@
 import React from 'react';
 import TodoView from "./TodoView";
-import {SORT_BY} from "../../../actions/actionTypes";
 
 class TodoContainer extends React.Component {
 

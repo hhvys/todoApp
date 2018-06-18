@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListContainerView should render on initalState 1`] = `
+<div
+  className="className flex-column justify-content-start align-items-center"
+>
+  <RowComponent
+    active={false}
+    className="tab"
+    footerClass="footerLogo"
+    footerContent={false}
+    footerSymbol={false}
+    headerClass="logo inboxLogo"
+    headerSymbol="INBOX"
+    key="0"
+    mainContent="Inbox"
+    onClick={[Function]}
+    onFooterSymbolClick={[Function]}
+  />
+</div>
+`;

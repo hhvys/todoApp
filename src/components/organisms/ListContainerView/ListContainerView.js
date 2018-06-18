@@ -17,7 +17,7 @@ class ListContainerView extends React.Component {
 											 }) => {
 		return (
 			tabs.map(tab => {
-				if (tab.footerContent === 0 && tab.tabId === STARRED_ID)
+				if (!tab.footerContent && tab.tabId === STARRED_ID)
 					return null;
 				return (
 					<RowComponent

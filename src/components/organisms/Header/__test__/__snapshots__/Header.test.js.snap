@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render 1`] = `
+<div>
+  <div
+    className="ClassName  header fixed full-width d-flex align-items-center justify-content-between"
+  >
+    <div
+      className="headerContent pl-4"
+    />
+    <div
+      className="dropdownIcons d-flex align-items-center justify-content-between"
+    >
+      <DropDownIcon
+        iconSymbol="SORT"
+        iconText="Sort"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;

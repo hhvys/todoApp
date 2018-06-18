@@ -57,9 +57,11 @@ const RowComponent = ({
 
 		{/*footerDiv*/}
 		<div className={`${styles.footer} full-height d-flex align-items-center justify-content-between`}>
+
 			<div className={`${styles.footerContent} full-height d-flex align-items-center justify-content-end`}>
 				{footerContent}
 			</div>
+
 			{renderFooter(footerSymbol, onFooterSymbolClick, footerClass)}
 		</div>
 
