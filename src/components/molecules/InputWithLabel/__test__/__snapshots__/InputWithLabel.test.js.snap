@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputWithLabel should not render label if label is undefined or null 1`] = `
+<div
+  className=" inputLabel full-width d-flex align-items-center justify-content-center"
+>
+  <Input
+    onInputChange={[Function]}
+    onKeyUp={[Function]}
+  />
+</div>
+`;
+
+exports[`InputWithLabel should pass className prop to wrapper div 1`] = `
+<div
+  className="randomClass inputLabel full-width d-flex align-items-center justify-content-center"
+>
+  <Input
+    onInputChange={[Function]}
+    onKeyUp={[Function]}
+  />
+</div>
+`;
+
+exports[`InputWithLabel should pass placeholder prop to Input 1`] = `
+<Input
+  onInputChange={[Function]}
+  onKeyUp={[Function]}
+  placeholder="placeholder"
+/>
+`;
+
+exports[`InputWithLabel should render label if label prop is defined 1`] = `
+<div
+  className=" inputLabel full-width d-flex align-items-center justify-content-center"
+>
+  <label
+    className="addSymbol full-height d-flex align-items-center justify-content-center"
+  >
+    anyLabel
+  </label>
+  <Input
+    onInputChange={[Function]}
+    onKeyUp={[Function]}
+  />
+</div>
+`;

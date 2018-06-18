@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RowComponent footerDiv should pass footerContent to footerDiv 1`] = `
+<div
+  className="footer full-height d-flex align-items-center justify-content-between"
+>
+  <div
+    className="footerContent full-height d-flex align-items-center justify-content-end"
+  >
+    footerContent
+  </div>
+</div>
+`;
+
+exports[`RowComponent footerDiv should render footerIconDiv if footerSymbol is defined 1`] = `
+<div
+  className="footer full-height d-flex align-items-center justify-content-between"
+>
+  <div
+    className="footerContent full-height d-flex align-items-center justify-content-end"
+  >
+    footerContent
+  </div>
+  <div
+    className="full-height d-flex align-items-center justify-content-center"
+  >
+    <Icon
+      className="footerClass endSymbol"
+      height={20}
+      onClick={[Function]}
+      symbolType="footerLogo"
+      width={20}
+    />
+  </div>
+</div>
+`;
+
+exports[`RowComponent headerDiv should pass header props to headerDiv 1`] = `
+<div
+  className="verticalTab full-height d-flex align-items-center justify-content-center"
+>
+  <Icon
+    className="headerClass "
+    height={20}
+    onClick={[Function]}
+    symbolType="headerLogo"
+    width={20}
+  />
+</div>
+`;
+
+exports[`RowComponent mainDiv should pass mainContent to contentDiv 1`] = `
+<div
+  className="content d-flex flex-column justify-content-center "
+>
+  <div
+    className="d-flex align-items-center txt-overflow ml-2"
+  >
+    mainContent
+  </div>
+</div>
+`;
+
+exports[`RowComponent mainDiv should render extraContent div if extraContent is defined 1`] = `
+<div
+  className="content d-flex flex-column justify-content-center "
+>
+  <div
+    className="d-flex align-items-center txt-overflow ml-2"
+  >
+    mainContent
+  </div>
+  <div
+    className="extraContent d-flex align-items-center ml-2"
+  >
+    extraContent
+  </div>
+</div>
+`;
+
+exports[`RowComponent should render 1`] = `
+<div
+  className=" verticalTab full-width d-flex align-items-center justify-content-center "
+>
+  <div
+    className="verticalTab full-height d-flex align-items-center justify-content-center"
+  >
+    <Icon
+      className=" "
+      height={20}
+      width={20}
+    />
+  </div>
+  <div
+    className="content d-flex flex-column justify-content-center "
+  >
+    <div
+      className="d-flex align-items-center txt-overflow ml-2"
+    />
+  </div>
+  <div
+    className="footer full-height d-flex align-items-center justify-content-between"
+  >
+    <div
+      className="footerContent full-height d-flex align-items-center justify-content-end"
+    />
+  </div>
+</div>
+`;
