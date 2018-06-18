@@ -7,6 +7,9 @@ import {
 	TOGGLE_SIDEBAR
 } from "../../actions/actionTypes";
 import todoApp from '../index';
+import {getTabs} from "../tabs/tabs";
+import prevState from './reducersInput';
+import getTabsOutput from './getTabsOutput';
 
 const initialState = {
 	activeTab: INBOX_ID,
@@ -121,4 +124,10 @@ describe('in reducers', () => {
 		};
 		expect(todoApp(initialState, action)).toEqual(nextState);
 	});
+});
+
+describe('in selectors', () => {
+	it('should handle getTabs', () => {
+		expect(getTabs(prevState)).toEqual(getTabsOutput);
+	})
 });

@@ -8,7 +8,8 @@ import {
 const todos = (state = [], action, todoInfo) => {
 	switch (action.type) {
 		case CHANGE_SORT:
-			return state.sort((a, b) => {
+			const newState = [...state];
+			return newState.sort((a, b) => {
 				a = todoInfo[a];
 				b = todoInfo[b];
 				switch (action.sortBy) {
@@ -90,7 +91,6 @@ function tabInfo(state = initialState, action, todoInfo) {
 					tabId: action.tabId,
 					tabName: action.tabName,
 					todos: [],
-					showCompletedTodo: true,
 					starredTodos: []
 				}
 			];
@@ -159,5 +159,7 @@ function tabInfo(state = initialState, action, todoInfo) {
 			return state;
 	}
 }
+
+
 
 export default tabInfo;

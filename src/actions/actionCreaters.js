@@ -103,28 +103,22 @@ export function copyTab(fromId) {
 		const fromTab = tabs
 			.find(tab => tab.tabId === fromId);
 
-		//Map of from_todoIds to to_todoIds
-		const todoMap = {};
-		fromTab
-			.todos
-			.forEach(todo => todoMap[todo.todoId] = v4());
-
 		//Map of new_todoIds to todoInfo
 		const todos = {};
-		Object
-			.keys(todoMap)
-			.forEach(todoId => {
-				const newTodoId = todoMap[todoId];
+		const starredTodos = [];
+
+		fromTab
+			.todos
+			.forEach(todo => {
+				const newTodoId = v4();
 				todos[newTodoId] = {
-					...getTodoInfo(state, todoId),
+					...getTodoInfo(state, todo.todoId),
 					tabId: newTabId,
 					todoId: newTodoId
-				}
+				};
+				todos[newTodoId].star &&
+					starredTodos.push(newTodoId);
 			});
-
-		const starredTodos = fromTab
-			.starredTodos
-			.map(todo => todoMap[todo.todoId]);
 
 		const ret = {
 			type: COPY_TAB,

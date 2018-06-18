@@ -14,22 +14,15 @@ const todo = (state = {}, action) => {
 				tabId: action.tabId,
 				todoId: action.todoId,
 				text: action.text,
-				completed: false,
-				star: false,
-				completedTime: undefined,
 				createdTime: new Date(),
-				active: false
 			};
 		case ADD_STARRED_TODO:
 			return {
 				tabId: action.tabId,
 				todoId: action.todoId,
 				text: action.text,
-				completed: false,
 				star: true,
-				completedTime: undefined,
 				createdTime: new Date(),
-				active: false
 			};
 		case TOGGLE_TODO:
 			return {
@@ -53,7 +46,6 @@ function todoInfo(state = {}, action) {
 		case ADD_TODO:
 		case ADD_STARRED_TODO:
 		case TOGGLE_TODO:
-		case ACTIVE_TODO:
 			return {
 				...state,
 				[action.todoId]: todo(state[action.todoId], action)
