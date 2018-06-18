@@ -14,21 +14,21 @@ function renderFooter(footerSymbol, onFooterSymbolClick, footerClass) {
 }
 
 const RowComponent = ({
-											 className,
-											 headerClass,
-											 footerClass,
-											 onClick,
-											 onFooterSymbolClick,
-											 onHeaderSymbolClick,
-											 headerSymbol,
-											 footerSymbol,
-											 footerContent,
-											 mainContent,
-											 active,
-											 hover,
-											 extraContent,
-											 ...props
-										 }) => (
+												className,
+												headerClass,
+												footerClass,
+												onClick,
+												onFooterSymbolClick,
+												onHeaderSymbolClick,
+												headerSymbol,
+												footerSymbol,
+												footerContent,
+												mainContent,
+												active,
+												hover,
+												extraContent,
+												...props
+											}) => (
 	<div
 		className={`${className ? className : ''} ${styles.verticalTab} full-width d-flex align-items-center justify-content-center ${active ? styles.active : ''}`}
 		onClick={onClick} {...props}>
@@ -42,11 +42,14 @@ const RowComponent = ({
 			<div className={`d-flex align-items-center txt-overflow ml-2`}>
 				{mainContent}
 			</div>
-			{extraContent ?
-				(<div className={`${styles.extraContent} d-flex align-items-center ml-2`}>
-					{extraContent}
-				</div>) :
-				null
+			{
+				extraContent ?
+					(
+						<div className={`${styles.extraContent} d-flex align-items-center ml-2`}>
+							{extraContent}
+						</div>
+					) :
+					null
 			}
 
 		</div>

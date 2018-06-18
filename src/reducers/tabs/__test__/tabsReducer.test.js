@@ -1,4 +1,4 @@
-import tabs, {getTabs} from "../tabs";
+import tabs from "../tabs";
 import {
 	ADD_TAB,
 	ADD_TODO,
@@ -32,6 +32,7 @@ const initialState = {
 };
 
 describe('in tabs reducer', () => {
+
 	it('should have initial state', () => {
 		expect(tabs(undefined, {})).toEqual(initialState);
 	});

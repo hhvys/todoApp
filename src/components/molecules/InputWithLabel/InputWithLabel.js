@@ -20,13 +20,23 @@ const InputWithLabel = ({
 													...props
 												}) => (
 	<div {...props}
-			 className={`${className ? className : ''} ${styles.inputLabel} full-width d-flex align-items-center justify-content-center`}>
-		<label
-			className={`${styles.addSymbol} full-height d-flex align-items-center justify-content-center`}>{label}</label>
-		<Input onInputChange={() => {
-		}}
-					 onKeyUp={(e) => handleKeyUp(e, onSubmit)}
-					 placeholder={placeholder}
+			 className={`${className ? className : ''} ${styles.inputLabel} full-width d-flex align-items-center justify-content-center`}
+	>
+		{
+			label ?
+				(
+					<label
+						className={`${styles.addSymbol} full-height d-flex align-items-center justify-content-center`}
+					>
+						{label}
+					</label>
+				) :
+				null
+		}
+		<Input
+			onInputChange={onInputChange ? onInputChange : () => {}}
+			onKeyUp={(e) => handleKeyUp(e, onSubmit)}
+			placeholder={placeholder}
 		/>
 	</div>
 );

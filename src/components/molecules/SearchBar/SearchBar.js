@@ -16,7 +16,7 @@ const SearchBar = ({
 				{...props}>
 				<div className={`${styles.collapse} d-flex align-items-center justify-content-center pl-2`}
 						 onClick={collapseSideBar}>
-					<Symbol symbolType={LIST_TOGGLE}/>
+					<Icon symbolType={LIST_TOGGLE}/>
 				</div>
 				<Input className={"pl-3"}
 							 placeholder={'Search'}

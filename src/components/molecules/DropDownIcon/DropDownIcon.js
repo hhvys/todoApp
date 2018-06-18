@@ -3,12 +3,6 @@ import styles from './DropDownIcon.mod.scss';
 import Icon from "../../atoms/Icons/Icon";
 
 class DropDownIcon extends React.Component {
-	static defaultProps = {
-		style: {
-			height: 44,
-			width: 52
-		}
-	};
 
 	constructor(props) {
 		super(props);
