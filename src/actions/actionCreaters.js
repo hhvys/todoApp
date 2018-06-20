@@ -1,8 +1,9 @@
-import * as actionTypes from './actionTypes'
+import * as actionTypes from './actionTypes';
 import {v4} from 'node-uuid';
 import {COPY_TAB} from "./actionTypes";
 import {getTabs} from "../reducers/tabs/tabs";
 import {getTodoInfo} from "../reducers/tabs/todoInfo";
+import {INBOX_ID} from "./actionTypes";
 
 export function searchQuery(query) {
 	return {
@@ -73,7 +74,7 @@ export function addTodo(tabId, text) {
 export function addStarredTodo(text) {
 	return {
 		type: actionTypes.ADD_STARRED_TODO,
-		tabId: 0,
+		tabId: INBOX_ID,
 		todoId: v4(),
 		text
 	}
@@ -82,14 +83,6 @@ export function addStarredTodo(text) {
 export function toggleTodo(tabId, todoId) {
 	return {
 		type: actionTypes.TOGGLE_TODO,
-		tabId,
-		todoId
-	}
-}
-
-export function activeTodo(tabId, todoId) {
-	return {
-		type: actionTypes.ACTIVE_TODO,
 		tabId,
 		todoId
 	}
@@ -127,7 +120,7 @@ export function copyTab(fromId) {
 			toId: newTabId,
 			tabName: fromTab.tabName + " Copy"
 		};
-		dispatch(ret);
+		return dispatch(ret);
 	}
 }
 
@@ -139,10 +132,14 @@ export function toggleStarTodo(tabId, todoId) {
 	}
 }
 
+function dispatchWithCurrentSortBy() {
+	return (dispatch, getState) => (
+		dispatch(changeSorting(getState().sortBy)));
+}
+
 export function changeSorting(sortBy) {
 	if (!sortBy)
-		return (dispatch, getState) =>
-			dispatch(changeSorting(getState().sortBy));
+		return dispatchWithCurrentSortBy();
 
 	return {
 		type: actionTypes.CHANGE_SORT,

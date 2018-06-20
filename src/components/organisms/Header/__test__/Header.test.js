@@ -20,8 +20,8 @@ describe('Header', () => {
 			collapsed: undefined,
 			className: "ClassName",
 			headerContent: undefined,
-			onDropDownButtonClick: undefined,
-			onDropDownTabClick: undefined,
+			onDropDownButtonClick: jest.fn(),
+			onDropDownTabClick: jest.fn(),
 		};
 		mountedHeader = undefined;
 	});
@@ -46,8 +46,87 @@ describe('Header', () => {
 	it('should pass headerContent to contentDiv', () => {
 		props.headerContent = "headerContent";
 		const contentDiv = header().find('div').first().childAt(0);
-		const div = contentDiv.childAt(0);
 		expect(contentDiv.childAt(0).props().children).toBe(props.headerContent);
+	});
+
+	describe('DropDown', () => {
+		it('should pass onDropDownTabClick as onTabClick to DropDown', () => {
+			header().setState({
+				pushDown: true
+			});
+			header().update();
+			const dropDown = header().find('DropDown');
+			expect(dropDown.props().onTabClick).toBe(props.onDropDownTabClick);
+		});
+		it('should render DropDown if state.pushDown is true', () => {
+			header().setState({
+				pushDown: true
+			});
+			header().update();
+			const wrapperDiv = header().find('div').first();
+			expect(wrapperDiv.find('DropDown').length).toBe(1);
+		});
+
+		it('should not render DropDown if state.pushDown is false', () => {
+			header().setState({
+				pushDown: false
+			});
+			header().update();
+			const wrapperDiv = header().find('div').first();
+			expect(wrapperDiv.find('DropDown').length).toBe(0);
+		});
+	});
+
+	it('should render DropDown on click', () => {
+		const dropDownIcon = header().find('DropDownIcon');
+		let wrapperDiv = header().find('div').first();
+		expect(wrapperDiv.find('DropDown').length).toBe(0);
+		dropDownIcon.simulate('click', {
+			preventDefault: () => {
+			},
+			stopPropagation: () => {
+			}
+		});
+		header().update();
+		wrapperDiv = header().find('div').first();
+		expect(wrapperDiv.find('DropDown').length).toBe(1);
+	});
+
+	it('should not render DropDown if clicked twice', () => {
+		const dropDownIcon = header().find('DropDownIcon');
+		let wrapperDiv = header().find('div').first();
+		expect(wrapperDiv.find('DropDown').length).toBe(0);
+		const mockEvent = {
+			preventDefault: () => {
+			},
+			stopPropagation: () => {
+			}
+		};
+		dropDownIcon.simulate('click', mockEvent);
+		dropDownIcon.simulate('click', mockEvent);
+		header().update();
+		wrapperDiv = header().find('div').first();
+		expect(wrapperDiv.find('DropDown').length).toBe(0);
+	});
+
+	it('should pass onDropDownButtonClick as onClick to dropdownIcons', () => {
+		const dropdownIcon = header().find('.dropdownIcons');
+		expect(dropdownIcon.props().onClick).toBe(props.onDropDownButtonClick);
+	});
+
+	describe('dropdownIcons', () => {
+		it('should call onDropDownButtonClick if clicked', () => {
+			props.onDropDownButtonClick = jest.fn();
+			const dropdownIcon = header().find('.dropdownIcons');
+			const mockEvent = {
+				preventDefault: () => {
+				},
+				stopPropagation: () => {
+				}
+			};
+			dropdownIcon.simulate('click', mockEvent);
+			expect(props.onDropDownButtonClick.mock.calls.length).toBe(1);
+		})
 	});
 
 });

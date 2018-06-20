@@ -10,6 +10,7 @@ exports[`Header should render 1`] = `
     />
     <div
       className="dropdownIcons d-flex align-items-center justify-content-between"
+      onClick={[Function]}
     >
       <DropDownIcon
         iconSymbol="SORT"

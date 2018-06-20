@@ -40,7 +40,6 @@ describe('ListContainerView', () => {
 	it('should have number of RowComponent = tabs.length - 1 if no uncompleted starredTodos are available', () => {
 		props.tabs = starredState2;
 		const RowComponents = listContainerView().find('RowComponent');
-		console.log(RowComponents);
 		expect(RowComponents.length).toBe(props.tabs.length - 1);
 	});
 

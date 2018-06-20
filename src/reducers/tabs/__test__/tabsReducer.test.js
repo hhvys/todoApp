@@ -9,7 +9,6 @@ import {
 	STARRED_ID
 } from "../../../actions/actionTypes";
 import prevState from './tabsInput';
-import {v4} from "node-uuid";
 import tabsSortAlphaOutput from './tabsSortAlphaOutput'
 import tabsCopyTabOutput from './tabsCopyTabOutput';
 
