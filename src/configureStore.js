@@ -8,7 +8,6 @@ import logger from 'redux-logger';
 const configureStore = () => {
 	const persistedState = loadState();
 	const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
 	const store = createStore(
 		todoApp,
 		persistedState,

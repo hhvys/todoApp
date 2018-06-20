@@ -23,8 +23,10 @@ class TodoContainer extends React.Component {
 	}
 
 	getCompletionTime = (completedTime) => {
-		let timeDiff = Math.abs(this.state.currentTime - Date.parse(completedTime)) / 1000;
+		if(!completedTime)
+			return undefined;
 
+		let timeDiff = Math.abs(this.state.currentTime - Date.parse(completedTime)) / 1000;
 		switch (true) {
 			case (timeDiff < 60):
 				return 'A few seconds ago';

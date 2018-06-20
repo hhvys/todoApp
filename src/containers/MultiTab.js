@@ -13,7 +13,7 @@ import {getSearchQuery} from "../reducers/searchQuery";
 import {getActiveTab} from "../reducers/activeTab";
 import {getCollapsedSideBar} from "../reducers/collapsedSideBar";
 
-const getFilteredTabs = (state) => {
+export const getFilteredTabs = (state) => {
 	let tabs = getTabs(state);
 	tabs = state.searchQuery.length ?
 		tabs

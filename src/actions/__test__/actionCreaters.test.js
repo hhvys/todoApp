@@ -20,7 +20,6 @@ import {v4} from 'node-uuid';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import todoApp from "../../reducers/todoApp";
-import {COPY_ACTION, STATE} from "./__fixtures__/copyTab.fixtures";
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);

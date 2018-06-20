@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers App should render MultiTabView 1`] = `
+<div
+  className="full-size"
+>
+  <Connect(SideBarView)
+    className="full-height fixed"
+  />
+  <Connect(Header)
+    style={
+      Object {
+        "backgroundColor": "#678865",
+      }
+    }
+  />
+  <Connect(MultiTabView) />
+  <Connect(ModalView) />
+</div>
+`;
+
+exports[`containers App should render TodoContainer 1`] = `
+<div
+  className="full-size"
+>
+  <Connect(SideBarView)
+    className="full-height fixed"
+  />
+  <Connect(Header)
+    style={
+      Object {
+        "backgroundColor": "#678865",
+      }
+    }
+  />
+  <Connect(TodoContainer) />
+  <Connect(ModalView) />
+</div>
+`;
+
+exports[`containers Header should have collapsed class 1`] = `
+<div>
+  <div
+    className=" collapsed header fixed full-width d-flex align-items-center justify-content-between"
+  >
+    <div
+      className="headerContent pl-4"
+    >
+      Inbox
+    </div>
+    <div
+      className="dropdownIcons d-flex align-items-center justify-content-between"
+    >
+      <DropDownIcon
+        iconSymbol="SORT"
+        iconText="Sort"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`containers Header should render searchQuery as header 1`] = `
+<div>
+  <div
+    className="  header fixed full-width d-flex align-items-center justify-content-between"
+  >
+    <div
+      className="headerContent pl-4"
+    >
+      searchQuery
+    </div>
+    <div
+      className="dropdownIcons d-flex align-items-center justify-content-between"
+    >
+      <DropDownIcon
+        iconSymbol="SORT"
+        iconText="Sort"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`containers ListContainer should render initialState 1`] = `
+<div
+  className=" flex-column justify-content-start align-items-center"
+>
+  <RowComponent
+    active={true}
+    className="tab"
+    footerClass="footerLogo"
+    footerContent={false}
+    footerSymbol={false}
+    headerClass="logo inboxLogo"
+    headerSymbol="INBOX"
+    key="0"
+    mainContent="Inbox"
+    onClick={[Function]}
+    onFooterSymbolClick={[Function]}
+  />
+</div>
+`;
+
+exports[`containers MultiTab should render initialState 1`] = `
+<div
+  className="multiTabView  mr-3"
+>
+  <InputWithLabel
+    className="input"
+    label="+"
+    onSubmit={[Function]}
+    placeholder="Add a starred to-do in Inbox..."
+  />
+  <div
+    key="0"
+  >
+    <Button
+      className="mt-4 mb-2"
+      onClick={[Function]}
+      text="INBOX"
+    />
+    <RowComponent
+      className="todo"
+      footerClass="logo"
+      footerSymbol="STARRED"
+      headerClass="logo"
+      headerSymbol="CHECK_BOX"
+      key="5ccdce50-5266-4872-aa7f-c8e5e7d4e74c"
+      mainContent="5"
+      onFooterSymbolClick={[Function]}
+      onHeaderSymbolClick={[Function]}
+    />
+    <RowComponent
+      className="todo"
+      footerClass="logo"
+      footerSymbol="STARRED"
+      headerClass="logo"
+      headerSymbol="CHECK_BOX"
+      key="6d0db783-1bcb-40ab-ab48-12a0ae8aa773"
+      mainContent="2"
+      onFooterSymbolClick={[Function]}
+      onHeaderSymbolClick={[Function]}
+    />
+  </div>
+  <div
+    key="9ad18f5c-d3b8-46ff-a54e-69bba97f1aa1"
+  >
+    <Button
+      className="mt-4 mb-2"
+      onClick={[Function]}
+      text="1ST TAB"
+    />
+    <RowComponent
+      className="todo"
+      footerClass="logo"
+      footerSymbol="STARRED"
+      headerClass="logo"
+      headerSymbol="CHECK_BOX"
+      key="a88ff79a-b113-407e-9298-bfb4811b44c5"
+      mainContent="tab 1 6"
+      onFooterSymbolClick={[Function]}
+      onHeaderSymbolClick={[Function]}
+    />
+  </div>
+  <div
+    key="e26ee1de-944d-4b3a-88cc-1464fe53f32b"
+  >
+    <Button
+      className="mt-4 mb-2"
+      onClick={[Function]}
+      text="2ND TAB"
+    />
+    <RowComponent
+      className="todo"
+      footerClass="logo"
+      footerSymbol="STARRED"
+      headerClass="logo"
+      headerSymbol="CHECK_BOX"
+      key="85b1e538-724c-4c72-ad8c-ae51bf4db5af"
+      mainContent="tab 2 1"
+      onFooterSymbolClick={[Function]}
+      onHeaderSymbolClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`containers SideBar should render 1`] = `
+<div
+  className="sideBar  d-flex flex-column align-items-center justify-content-center"
+  tabs={
+    Array [
+      Object {
+        "starredTodos": Array [],
+        "tabId": 0,
+        "tabName": "Inbox",
+        "todos": Array [],
+      },
+      Object {
+        "starredTodos": Array [],
+        "tabId": 1,
+        "tabName": "Starred",
+        "todos": Array [],
+      },
+    ]
+  }
+>
+  <SearchBar
+    className="searchBar"
+    collapseSideBar={[Function]}
+    inputValue=""
+    onInputChange={[Function]}
+  />
+  <Connect(ListContainerView)
+    className="verticalTabContainer"
+    footerSymbol="PENCIL"
+    headerSymbol="LIST_SYMBOL"
+  />
+  <RowComponent
+    className="footer"
+    headerClass="footerLogo"
+    headerSymbol="PLUS"
+    mainContent="Create List"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`containers SideBar should render collapsedSideBar 1`] = `
+<CollapsedSideBar
+  collapseSideBar={[Function]}
+/>
+`;
+
+exports[`containers TodoContainer should render 1`] = `
+<TodoView
+  activeTab={0}
+  collapsed={false}
+  onButtonClick={[Function]}
+  onFooterSymbolClick={[Function]}
+  onHeaderSymbolClick={[Function]}
+  onInputSubmit={[Function]}
+  todos={Array []}
+/>
+`;

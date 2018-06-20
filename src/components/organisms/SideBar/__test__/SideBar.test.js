@@ -1,5 +1,6 @@
 import React from 'react';
 import SideBar from '../SideBarView';
+jest.mock('node-uuid', () => ({v4: jest.fn(() => 1)}));
 
 describe('SideBar', () => {
 	let props;

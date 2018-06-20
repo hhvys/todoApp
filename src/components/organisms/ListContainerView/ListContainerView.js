@@ -6,7 +6,7 @@ import styles from './ListContainerView.mod.scss';
 
 class ListContainerView extends React.Component {
 
-	renderVerticalTab = ({
+	renderTabs = ({
 												 activeTab,
 												 tabs,
 												 onClick,
@@ -67,7 +67,7 @@ class ListContainerView extends React.Component {
 		return (
 			<div className={`${className ? className : ''} flex-column justify-content-start align-items-center`}>
 				{
-					this.renderVerticalTab(this.props)
+					this.renderTabs(this.props)
 				}
 			</div>
 		);
