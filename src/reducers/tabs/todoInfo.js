@@ -1,5 +1,4 @@
 import {
-	ACTIVE_TODO,
 	ADD_STARRED_TODO,
 	ADD_TODO,
 	COPY_TAB,
@@ -62,8 +61,8 @@ export default todoInfo;
 export function getTodoInfo(state, todos) {
 	if (Array.isArray(todos)) {
 		return todos.map(todo => (
-			state.tabs.todoInfo[todo]
+			state.todoInfo[todo]
 		))
 	}
-	return state.tabs.todoInfo[todos];
+	return state.todoInfo[todos];
 }

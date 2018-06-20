@@ -1,5 +1,5 @@
 import todoInfo, {getTodoInfo} from "./todoInfo";
-import tabInfo from "./tabInfo";
+import tabInfo, {getTabInfo} from "./tabInfo";
 
 
 const tabs = (state = {}, action) => {
@@ -12,9 +12,9 @@ const tabs = (state = {}, action) => {
 export default tabs;
 
 export function getTabs(state) {
-	return state.tabs.tabInfo.map(tab => {
-		const todos = getTodoInfo(state, tab.todos);
-		const starredTodos = getTodoInfo(state, tab.starredTodos);
+	return getTabInfo(state.tabs).map(tab => {
+		const todos = getTodoInfo(state.tabs, tab.todos);
+		const starredTodos = getTodoInfo(state.tabs, tab.starredTodos);
 		return {
 			...tab,
 			todos,

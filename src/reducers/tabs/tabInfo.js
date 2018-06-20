@@ -102,7 +102,7 @@ function tabInfo(state = initialState, action, todoInfo) {
 						tabId: tab.tabId,
 						tabName: action.tabName,
 					} :
-					tab
+					{...tab}
 			));
 		case COPY_TAB:
 			return (
@@ -128,7 +128,7 @@ function tabInfo(state = initialState, action, todoInfo) {
 						...tab,
 						showCompletedTodo: !tab.showCompletedTodo
 					} :
-					tab
+					{...tab}
 			));
 		case STAR_TOGGLE_TODO:
 			return state.map(tab => (
@@ -136,7 +136,8 @@ function tabInfo(state = initialState, action, todoInfo) {
 					{
 						...tab,
 						starredTodos: todos(tab.starredTodos, action)
-					} : tab
+					} :
+					{...tab}
 			));
 		case ADD_TODO:
 			return state.map(tab => (
@@ -144,7 +145,8 @@ function tabInfo(state = initialState, action, todoInfo) {
 					{
 						...tab,
 						todos: todos(tab.todos, action)
-					} : tab
+					} :
+					{...tab}
 			));
 		case ADD_STARRED_TODO:
 			return state.map(tab => (
@@ -153,13 +155,20 @@ function tabInfo(state = initialState, action, todoInfo) {
 						...tab,
 						starredTodos: todos(tab.starredTodos, action),
 						todos: todos(tab.todos, action)
-					} : tab
+					} :
+					{...tab}
 			));
 		default:
 			return state;
 	}
 }
 
-
+export const getTabInfo = (state, tabId) => {
+	if(typeof tabId === 'undefined')
+		return state.tabInfo;
+	return state
+		.tabInfo
+		.find(tab => tab.tabId === tabId);
+};
 
 export default tabInfo;

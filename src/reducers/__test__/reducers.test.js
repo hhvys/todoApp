@@ -2,132 +2,136 @@ import {
 	CHANGE_ACTIVE_TAB,
 	CHANGE_SORT, INBOX_ID,
 	SEARCH_QUERY,
-	SORT_BY, STARRED_ID,
+	SORT_BY,
 	TOGGLE_MODAL,
 	TOGGLE_SIDEBAR
 } from "../../actions/actionTypes";
 import todoApp from '../index';
 import {getTabs} from "../tabs/tabs";
-import prevState from './reducersInput';
-import getTabsOutput from './getTabsOutput';
+import {GET_TABS, INITIAL_STATE, STATE_WITH_TABS} from "./__fixtures__/reducers.fixtures";
+import {getActiveTab} from "../activeTab";
+import {getCollapsedSideBar} from "../collapsedSideBar";
+import {getModalActive} from "../modalActive";
+import {getSearchQuery} from "../searchQuery";
+import {getSortBy} from "../sortBy";
+import {SORT_CREATION} from "../../components/atoms/Icons/constants";
 
-const initialState = {
-	activeTab: INBOX_ID,
-	collapsedSideBar: false,
-	modalActive: {
-		isOpened: false
-	},
-	tabs: {
-		todoInfo: {},
-		tabInfo: [
-		{
-			tabId: INBOX_ID,
-			tabName: 'Inbox',
-			todos: [],
-			starredTodos: []
-		},
-		{
-			tabId: STARRED_ID,
-			tabName: 'Starred',
-			todos: [],
-			starredTodos: []
-		}
-	]},
-	sortBy: SORT_BY.SORT_CREATION,
-	searchQuery: ''
-};
+describe('todoApp', () => {
+	describe('reducer', () => {
 
-describe('in reducers', () => {
-	it('should have initial state', () => {
-		expect(todoApp(undefined, {})).toEqual(initialState);
-	});
+		it('should have initial state', () => {
+			expect(todoApp(undefined, {})).toEqual(INITIAL_STATE);
+		});
 
-	it('should not affect state', () => {
-		const action = {
-			type: 'ANY_RANDOM_NOT_EXISTING$#%'
-		};
-		expect(todoApp(initialState, action)).toEqual(initialState);
-	});
+		it('should handle CHANGE_SORT', () => {
+			const action = {
+				type: CHANGE_SORT,
+				sortBy: SORT_BY.SORT_ALPHA
+			};
+			const nextState = {
+				...INITIAL_STATE,
+				sortBy: SORT_BY.SORT_ALPHA
+			};
+			expect(todoApp(INITIAL_STATE, action)).toEqual(nextState);
+		});
 
-	it('should handle CHANGE_SORT', () => {
-		const action = {
-			type: CHANGE_SORT,
-			sortBy: SORT_BY.SORT_ALPHA
-		};
-		const nextState = {
-			...initialState,
-			sortBy: SORT_BY.SORT_ALPHA
-		};
-		expect(todoApp(initialState, action)).toEqual(nextState);
-	});
+		it('should handle SEARCH_QUERY', () => {
+			const action = {
+				type: SEARCH_QUERY,
+				query: 'anything'
+			};
+			const nextState = {
+				...INITIAL_STATE,
+				searchQuery: 'anything'
+			};
+			expect(todoApp(INITIAL_STATE, action)).toEqual(nextState);
+		});
 
-	it('should handle SEARCH_QUERY', () => {
-		const action = {
-			type: SEARCH_QUERY,
-			query: 'anything'
-		};
-		const nextState = {
-			...initialState,
-			searchQuery: 'anything'
-		};
-		expect(todoApp(initialState, action)).toEqual(nextState);
-	});
+		it('should handle TOGGLE_MODAL if tabId is undefined', () => {
+			let action = {
+				type: TOGGLE_MODAL,
+				tabId: undefined,
+			};
+			const nextState = {
+				...INITIAL_STATE,
+				modalActive: {
+					isOpened: true,
+					tabId: undefined
+				}
+			};
+			expect(todoApp(INITIAL_STATE, action)).toEqual(nextState);
+		});
 
-	it('should handle TOGGLE_MODAL', () => {
-		let action = {
-			type: TOGGLE_MODAL,
-			tabId: undefined,
-		};
-		const nextState = {
-			...initialState,
-			modalActive: {
-				isOpened: true,
-				tabId: undefined
-			}
-		};
-		expect(todoApp(initialState, action)).toEqual(nextState);
+		it('should handle TOGGLE_MODAL if tabId is defined', () => {
+			const action = {
+				type: TOGGLE_MODAL,
+				tabId: 5,
+			};
+			const nextState = {
+				...INITIAL_STATE,
+				modalActive: {
+					isOpened: true,
+					tabId: 5
+				}
+			};
+			expect(todoApp(INITIAL_STATE, action)).toEqual(nextState);
+		});
 
-		action = {
-			type: TOGGLE_MODAL,
-			tabId: 5,
-		};
-		const nextNextState = {
-			...initialState,
-			modalActive: {
-				isOpened: false,
+		it('should handle TOGGLE_SIDEBAR', () => {
+			const action = {
+				type: TOGGLE_SIDEBAR
+			};
+			const nextState = {
+				...INITIAL_STATE,
+				collapsedSideBar: true
+			};
+			expect(todoApp(INITIAL_STATE, action)).toEqual(nextState);
+		});
+
+		it('should handle CHANGE_ACTIVE_TAB', () => {
+			const action = {
+				type: CHANGE_ACTIVE_TAB,
 				tabId: 5
-			}
-		};
-		expect(todoApp(nextState, action)).toEqual(nextNextState);
-
+			};
+			const nextState = {
+				...INITIAL_STATE,
+				activeTab: 5
+			};
+			expect(todoApp(INITIAL_STATE, action)).toEqual(nextState);
+		});
 	});
 
-	it('should handle TOGGLE_SIDEBAR', () => {
-		const action = {
-			type: TOGGLE_SIDEBAR
-		};
-		const nextState = {
-			...initialState,
-			collapsedSideBar: true
-		};
-		expect(todoApp(initialState, action)).toEqual(nextState);
-	});
+	describe('selectors', () => {
 
-	it('should handle CHANGE_ACTIVE_TAB', () => {
-		const action = {
-			type: CHANGE_ACTIVE_TAB,
-			tabId: 5
-		};
-		const nextState = {
-			...initialState,
-			activeTab: 5
-		};
-		expect(todoApp(initialState, action)).toEqual(nextState);
-	});
-});
+		it('should get activeTab', () => {
+			expect(getActiveTab(INITIAL_STATE)).toBe(INBOX_ID);
+		});
 
-describe('in selectors', () => {
-	it('should handle getTabs', () => {
-		expect(getTabs(prevState)).toEqual(getTabsOutput);
-	})
+		it('should get collapsedSideBar', () => {
+			expect(getCollapsedSideBar(INITIAL_STATE)).toBe(false);
+		});
+
+		it('should get modalActive', () => {
+			expect(getModalActive(INITIAL_STATE)).toEqual({
+				isOpened: false
+			});
+		});
+
+		it('should get searchQuery', () => {
+			const initialState = {
+				...INITIAL_STATE,
+				searchQuery: 'searchQuery'
+			};
+			expect(getSearchQuery(initialState)).toBe(initialState.searchQuery);
+		});
+
+		it('should get sortBy', () => {
+			expect(getSortBy(INITIAL_STATE)).toBe(SORT_CREATION);
+		});
+
+		it('should get tabs containing todoInfo', () => {
+			expect(getTabs(STATE_WITH_TABS)).toEqual(GET_TABS);
+		});
+
+	});
 });

@@ -4,6 +4,7 @@ import {COPY_TAB} from "./actionTypes";
 import {getTabs} from "../reducers/tabs/tabs";
 import {getTodoInfo} from "../reducers/tabs/todoInfo";
 import {INBOX_ID} from "./actionTypes";
+import {getSortBy} from "../reducers/sortBy";
 
 export function searchQuery(query) {
 	return {
@@ -105,7 +106,7 @@ export function copyTab(fromId) {
 			.forEach(todo => {
 				const newTodoId = v4();
 				todos[newTodoId] = {
-					...getTodoInfo(state, todo.todoId),
+					...getTodoInfo(state.tabs, todo.todoId),
 					tabId: newTabId,
 					todoId: newTodoId
 				};
@@ -134,7 +135,7 @@ export function toggleStarTodo(tabId, todoId) {
 
 function dispatchWithCurrentSortBy() {
 	return (dispatch, getState) => (
-		dispatch(changeSorting(getState().sortBy)));
+		dispatch(changeSorting(getSortBy(getState()))));
 }
 
 export function changeSorting(sortBy) {
