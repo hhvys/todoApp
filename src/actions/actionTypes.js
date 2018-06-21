@@ -24,7 +24,6 @@ export const ADD_TODO = 'ADD_TODO';
 export const ADD_STARRED_TODO = 'ADD_STARRED_TODO';
 export const TOGGLE_TODO = 'TOGGLE_TODO';
 export const STAR_TOGGLE_TODO = 'STAR_TOGGLE_TODO';
-export const ACTIVE_TODO = 'ACTIVE_TODO';
 
 /*
 	* Sort Actions

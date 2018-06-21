@@ -292,17 +292,4 @@ describe('actionCreaters', () => {
 		})
 
 	});
-
-	// todo
-	// describe('copyTab', () => {
-	// 	it('should dispatch COPY_TAB action if fromId is defined', () => {
-	// 		const state = STATE;
-	// 		const expectedActions = [COPY_ACTION];
-	// 		const store = mockStore(state);
-	// 		const fromId = 'e26ee1de-944d-4b3a-88cc-1464fe53f32b';
-	// 		store.dispatch(copyTab(fromId));
-	// 		expect(store.getActions()).toEqual(expectedActions);
-	// 	});
-	// });
-
 });
