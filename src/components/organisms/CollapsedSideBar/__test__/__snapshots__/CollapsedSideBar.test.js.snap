@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component CollapsedSideBar should pass collapseSideBar as onClick prop to Icons 1`] = `
+<div
+  className="collapsedSidebar  fixed d-flex flex-column align-items-center justify-content-start"
+>
+  <div
+    className="listToggle full-width d-flex align-items-center justify-content-center"
+  >
+    <Icon
+      height={20}
+      onClick={[Function]}
+      symbolType="LIST_TOGGLE"
+      width={20}
+    />
+  </div>
+  <div
+    className="tabList full-width d-flex flex-column align-items-center justify-content-start"
+  >
+    <div
+      className="full-width d-flex align-items-center justify-content-center"
+    >
+      <Icon
+        className="logo"
+        height={20}
+        onClick={[Function]}
+        symbolType="INBOX"
+        width={20}
+      />
+    </div>
+    <div
+      className="full-width d-flex align-items-center justify-content-center"
+    >
+      <Icon
+        className="logo"
+        height={20}
+        onClick={[Function]}
+        symbolType="THREE_DOTS"
+        width={20}
+      />
+    </div>
+  </div>
+  <div
+    className="createList full-width d-flex align-items-center justify-content-center"
+  >
+    <Icon
+      className="logo"
+      height={20}
+      onClick={[Function]}
+      symbolType="PLUS"
+      width={20}
+    />
+  </div>
+</div>
+`;
+
+exports[`component CollapsedSideBar should render 1`] = `
+<div
+  className="collapsedSidebar  fixed d-flex flex-column align-items-center justify-content-start"
+>
+  <div
+    className="listToggle full-width d-flex align-items-center justify-content-center"
+  >
+    <Icon
+      height={20}
+      symbolType="LIST_TOGGLE"
+      width={20}
+    />
+  </div>
+  <div
+    className="tabList full-width d-flex flex-column align-items-center justify-content-start"
+  >
+    <div
+      className="full-width d-flex align-items-center justify-content-center"
+    >
+      <Icon
+        className="logo"
+        height={20}
+        symbolType="INBOX"
+        width={20}
+      />
+    </div>
+    <div
+      className="full-width d-flex align-items-center justify-content-center"
+    >
+      <Icon
+        className="logo"
+        height={20}
+        symbolType="THREE_DOTS"
+        width={20}
+      />
+    </div>
+  </div>
+  <div
+    className="createList full-width d-flex align-items-center justify-content-center"
+  >
+    <Icon
+      className="logo"
+      height={20}
+      symbolType="PLUS"
+      width={20}
+    />
+  </div>
+</div>
+`;

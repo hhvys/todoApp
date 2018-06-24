@@ -18,12 +18,13 @@ import {
 import * as actionTypes from "../../../actions/actionTypes";
 import {getTabInfo} from "../tabInfo";
 import {getTodoInfo} from "../todoInfo";
+import todoInfo from '../todoInfo';
 
-describe('todoApp tabs', () => {
+describe('todoApp tabs todoInfo', () => {
 	describe('reducer', () => {
 
 		it('should have initial state', () => {
-			expect(tabs(undefined, {})).toEqual(TABS_INITIAL_STATE);
+			expect(todoInfo(undefined, {})).toEqual(TABS_INITIAL_STATE.todoInfo);
 		});
 
 		describe('action STAR_TOGGLE_TODO', () => {
@@ -34,7 +35,7 @@ describe('todoApp tabs', () => {
 					tabId: INBOX_ID,
 					todoId: 'a383d653-0fc9-4873-bf88-e4ee57885632'
 				};
-				expect(tabs(TABS_STATE, action)).toEqual(TOGGLE_STAR_TODO_STATE);
+				expect(todoInfo(TABS_STATE.todoInfo, action)).toEqual(TOGGLE_STAR_TODO_STATE.todoInfo);
 			});
 
 			it('should remove todo from starred todos', () => {
@@ -43,7 +44,7 @@ describe('todoApp tabs', () => {
 					tabId: INBOX_ID,
 					todoId: 'a383d653-0fc9-4873-bf88-e4ee57885632'
 				};
-				expect(tabs(TOGGLE_STAR_TODO_STATE, action)).toEqual(TABS_STATE);
+				expect(todoInfo(TOGGLE_STAR_TODO_STATE.todoInfo, action)).toEqual(TABS_STATE.todoInfo);
 			});
 
 		});
@@ -70,7 +71,7 @@ describe('todoApp tabs', () => {
 					...TABS_STATE.todoInfo
 				}
 			};
-			expect(tabs(TABS_STATE, action)).toEqual(nextState);
+			expect(todoInfo(TABS_STATE.todoInfo, action)).toEqual(nextState.todoInfo);
 		});
 
 		it('should handle ADD_STARRED_TODO', () => {
@@ -119,7 +120,7 @@ describe('todoApp tabs', () => {
 				}
 			};
 
-			expect(tabs(TABS_INITIAL_STATE, action)).toEqual(nextState);
+			expect(todoInfo(TABS_INITIAL_STATE.todoInfo, action)).toEqual(nextState.todoInfo);
 		});
 
 		it('should handle ADD_TODO', () => {
@@ -167,7 +168,7 @@ describe('todoApp tabs', () => {
 				}
 			};
 
-			expect(tabs(TABS_INITIAL_STATE, action)).toEqual(nextState);
+			expect(todoInfo(TABS_INITIAL_STATE.todoInfo, action)).toEqual(nextState.todoInfo);
 		});
 
 		it('should handle CHANGE_SORT', () => {
@@ -176,18 +177,18 @@ describe('todoApp tabs', () => {
 				sortBy: SORT_BY.SORT_ALPHA
 			};
 			const nextState = TABS_SORTBY_ALPHA;
-			expect(tabs(TABS_STATE, action)).toEqual(nextState);
+			expect(todoInfo(TABS_STATE.todoInfo, action)).toEqual(nextState.todoInfo);
 
 			action = {
 				type: CHANGE_SORT,
 				sortBy: SORT_BY.SORT_CREATION
 			};
 
-			expect(tabs(nextState, action)).toEqual(TABS_STATE);
+			expect(todoInfo(nextState.todoInfo, action)).toEqual(TABS_STATE.todoInfo);
 		});
 
 		it('should handle COPY_TAB', () => {
-			expect(tabs(TABS_STATE, COPY_TAB_ACTION)).toEqual(COPIED_TAB_STATE);
+			expect(todoInfo(TABS_STATE.todoInfo, COPY_TAB_ACTION)).toEqual(COPIED_TAB_STATE.todoInfo);
 		});
 
 		it('should handle CHANGE_TAB_NAME', () => {
@@ -200,7 +201,7 @@ describe('todoApp tabs', () => {
 			const nextState = _.cloneDeep(TABS_INITIAL_STATE);
 			nextState.tabInfo[0].tabName = action.tabName;
 
-			expect(tabs(TABS_INITIAL_STATE, action)).toEqual(nextState);
+			expect(todoInfo(TABS_INITIAL_STATE.todoInfo, action)).toEqual(nextState.todoInfo);
 		});
 
 		it('should handle DELETE_TAB', () => {
@@ -220,7 +221,7 @@ describe('todoApp tabs', () => {
 				],
 				todoInfo: {}
 			};
-			expect(tabs(TABS_INITIAL_STATE, action)).toEqual(nextState);
+			expect(todoInfo(TABS_INITIAL_STATE.todoInfo, action)).toEqual(nextState.todoInfo);
 
 		});
 
@@ -231,27 +232,12 @@ describe('todoApp tabs', () => {
 			};
 			const nextState = _.cloneDeep(TABS_INITIAL_STATE);
 			nextState.tabInfo[0].showCompletedTodo = true;
-			expect(tabs(TABS_INITIAL_STATE, action)).toEqual(nextState);
+			expect(todoInfo(TABS_INITIAL_STATE.todoInfo, action)).toEqual(nextState.todoInfo);
 		});
 
 	});
 
 	describe('selectors', () => {
-
-		describe('tabInfo', () => {
-			it('should get all tabInfo if tabId is not defined', () => {
-				expect(getTabInfo(TABS_INITIAL_STATE)).toEqual(TABS_INITIAL_STATE.tabInfo);
-			});
-			it('should get tabInfo of tabId', () => {
-				const inboxTabInfo = {
-					tabId: INBOX_ID,
-					tabName: 'Inbox',
-					todos: [],
-					starredTodos: []
-				};
-				expect(getTabInfo(TABS_INITIAL_STATE, INBOX_ID)).toEqual(inboxTabInfo);
-			});
-		});
 
 		describe('todoInfo', () => {
 

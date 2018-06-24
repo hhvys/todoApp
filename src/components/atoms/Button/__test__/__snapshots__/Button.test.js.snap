@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component Button should render 1`] = `
+<div
+  className="button "
+/>
+`;
+
+exports[`component Button should render className 1`] = `
+<div
+  className="button className"
+/>
+`;
+
+exports[`component Button should render textContent 1`] = `
+<div
+  className="button "
+>
+  text
+</div>
+`;

@@ -29,23 +29,19 @@ describe('SideBar', () => {
 
 	it('should render CollapsedSideBar if collapsed is true', () => {
 		props.collapsed = true;
-		const collapsedSideBar = sideBar().find('CollapsedSideBar');
-		expect(collapsedSideBar.length).toBe(1);
+		expect(sideBar()).toMatchSnapshot();
 	});
 	it('should render ListContainerView if collapsed is false', () => {
 		props.collapsed = false;
-		const listContainer = sideBar().find('Connect(ListContainerView)');
-		expect(listContainer.length).toBe(1);
+		expect(sideBar()).toMatchSnapshot();
 	});
 	it('should render SearchBar if collapsed is false', () => {
 		props.collapsed = false;
-		const searchBar = sideBar().find('SearchBar');
-		expect(searchBar.length).toBe(1);
+		expect(sideBar()).toMatchSnapshot();
 	});
 	it('should render RowComponent if collapsed is false', () => {
 		props.collapsed = false;
-		const rowComponent = sideBar().find('RowComponent');
-		expect(rowComponent.length).toBe(1);
+		expect(sideBar()).toMatchSnapshot();
 	});
 	it('should pass searchValue to inputValue of SearchBar', () => {
 		props.searchValue = 'searchValue';

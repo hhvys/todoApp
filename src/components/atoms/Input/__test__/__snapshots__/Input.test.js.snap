@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component Input should pass inputValue 1`] = `
+<input
+  className=" input full-height d-flex align-items-center justify-content-center"
+  onChange={[Function]}
+  value="text"
+/>
+`;
+
+exports[`component Input should render 1`] = `
+<input
+  className=" input full-height d-flex align-items-center justify-content-center"
+  onChange={[Function]}
+/>
+`;
+
+exports[`component Input should render className 1`] = `
+<input
+  className="className input full-height d-flex align-items-center justify-content-center"
+  onChange={[Function]}
+/>
+`;

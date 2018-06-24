@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component DropDownIcon should pass iconSymbol 1`] = `
+<div
+  className="icon full-height d-flex align-items-center justify-content-center flex-column"
+>
+  <div
+    className="full-height d-flex align-items-center justify-content-center"
+  >
+    <Icon
+      className="logo"
+      height={20}
+      symbolType="iconLogo"
+      width={20}
+    />
+  </div>
+  <div
+    className="iconText icon-text full-height d-flex align-items-center justify-content-center"
+  />
+</div>
+`;
+
+exports[`component DropDownIcon should pass iconText 1`] = `
+<div
+  className="icon full-height d-flex align-items-center justify-content-center flex-column"
+>
+  <div
+    className="full-height d-flex align-items-center justify-content-center"
+  >
+    <Icon
+      className="logo"
+      height={20}
+      width={20}
+    />
+  </div>
+  <div
+    className="iconText icon-text full-height d-flex align-items-center justify-content-center"
+  >
+    iconText
+  </div>
+</div>
+`;
+
+exports[`component DropDownIcon should render 1`] = `
+<div
+  className="icon full-height d-flex align-items-center justify-content-center flex-column"
+>
+  <div
+    className="full-height d-flex align-items-center justify-content-center"
+  >
+    <Icon
+      className="logo"
+      height={20}
+      width={20}
+    />
+  </div>
+  <div
+    className="iconText icon-text full-height d-flex align-items-center justify-content-center"
+  />
+</div>
+`;

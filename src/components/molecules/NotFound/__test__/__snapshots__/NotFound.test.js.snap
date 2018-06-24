@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component NotFound should render 1`] = `
+<div
+  className="notFound d-flex align-items-center justify-content-center flex-column fixed"
+>
+  <h3
+    className="h3 mt-3"
+  >
+    No Search Results
+  </h3>
+</div>
+`;

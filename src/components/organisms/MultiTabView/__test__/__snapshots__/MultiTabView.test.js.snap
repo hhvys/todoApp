@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiTabView should have rendered number of Buttons = tabs.length 1`] = `
+<div
+  className="multiTabView  mr-3"
+>
+  <InputWithLabel
+    className="input"
+    label="+"
+    onSubmit={[Function]}
+    placeholder="Add a starred to-do in Inbox..."
+  />
+  <div
+    key="9ad18f5c-d3b8-46ff-a54e-69bba97f1aa1"
+  >
+    <Button
+      className="mt-4 mb-2"
+      onClick={[Function]}
+      text="1ST TAB"
+    />
+    <RowComponent
+      className="todo"
+      footerClass="logo"
+      footerSymbol="STAR"
+      headerClass="logo"
+      headerSymbol="CHECK_BOX"
+      key="9c60c2e7-291c-4e30-9dfe-9cfbb2295476"
+      mainContent="tab 1 1"
+      onFooterSymbolClick={[Function]}
+      onHeaderSymbolClick={[Function]}
+    />
+  </div>
+  <div
+    key="e26ee1de-944d-4b3a-88cc-1464fe53f32b"
+  >
+    <Button
+      className="mt-4 mb-2"
+      onClick={[Function]}
+      text="2ND TAB"
+    />
+    <RowComponent
+      className="todo"
+      footerClass="logo"
+      footerSymbol="STAR"
+      headerClass="logo"
+      headerSymbol="CHECK_BOX"
+      key="899cda93-66bd-483c-a7aa-3852b900013f"
+      mainContent="tab 2 3"
+      onFooterSymbolClick={[Function]}
+      onHeaderSymbolClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`MultiTabView should pass onButtonClick to Button as onClick 1`] = `
+<div
+  className="multiTabView  mr-3"
+>
+  <InputWithLabel
+    className="input"
+    label="+"
+    onSubmit={[Function]}
+    placeholder="Add a starred to-do in Inbox..."
+  />
+  <div
+    key="9ad18f5c-d3b8-46ff-a54e-69bba97f1aa1"
+  >
+    <Button
+      className="mt-4 mb-2"
+      onClick={[Function]}
+      text="1ST TAB"
+    />
+    <RowComponent
+      className="todo"
+      footerClass="logo"
+      footerSymbol="STAR"
+      headerClass="logo"
+      headerSymbol="CHECK_BOX"
+      key="9c60c2e7-291c-4e30-9dfe-9cfbb2295476"
+      mainContent="tab 1 1"
+      onFooterSymbolClick={[Function]}
+      onHeaderSymbolClick={[Function]}
+    />
+  </div>
+  <div
+    key="e26ee1de-944d-4b3a-88cc-1464fe53f32b"
+  >
+    <Button
+      className="mt-4 mb-2"
+      onClick={[Function]}
+      text="2ND TAB"
+    />
+    <RowComponent
+      className="todo"
+      footerClass="logo"
+      footerSymbol="STAR"
+      headerClass="logo"
+      headerSymbol="CHECK_BOX"
+      key="899cda93-66bd-483c-a7aa-3852b900013f"
+      mainContent="tab 2 3"
+      onFooterSymbolClick={[Function]}
+      onHeaderSymbolClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`MultiTabView should pass onFooterSymbolClick to RowComponent 1`] = `
+<div
+  className="multiTabView  mr-3"
+>
+  <InputWithLabel
+    className="input"
+    label="+"
+    onSubmit={[Function]}
+    placeholder="Add a starred to-do in Inbox..."
+  />
+  <div
+    key="9ad18f5c-d3b8-46ff-a54e-69bba97f1aa1"
+  >
+    <Button
+      className="mt-4 mb-2"
+      onClick={[Function]}
+      text="1ST TAB"
+    />
+    <RowComponent
+      className="todo"
+      footerClass="logo"
+      footerSymbol="STAR"
+      headerClass="logo"
+      headerSymbol="CHECK_BOX"
+      key="9c60c2e7-291c-4e30-9dfe-9cfbb2295476"
+      mainContent="tab 1 1"
+      onFooterSymbolClick={[Function]}
+      onHeaderSymbolClick={[Function]}
+    />
+  </div>
+  <div
+    key="e26ee1de-944d-4b3a-88cc-1464fe53f32b"
+  >
+    <Button
+      className="mt-4 mb-2"
+      onClick={[Function]}
+      text="2ND TAB"
+    />
+    <RowComponent
+      className="todo"
+      footerClass="logo"
+      footerSymbol="STAR"
+      headerClass="logo"
+      headerSymbol="CHECK_BOX"
+      key="899cda93-66bd-483c-a7aa-3852b900013f"
+      mainContent="tab 2 3"
+      onFooterSymbolClick={[Function]}
+      onHeaderSymbolClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`MultiTabView should pass onHeaderSymbolClick to RowComponent 1`] = `
+<div
+  className="multiTabView  mr-3"
+>
+  <InputWithLabel
+    className="input"
+    label="+"
+    onSubmit={[Function]}
+    placeholder="Add a starred to-do in Inbox..."
+  />
+  <div
+    key="9ad18f5c-d3b8-46ff-a54e-69bba97f1aa1"
+  >
+    <Button
+      className="mt-4 mb-2"
+      onClick={[Function]}
+      text="1ST TAB"
+    />
+    <RowComponent
+      className="todo"
+      footerClass="logo"
+      footerSymbol="STAR"
+      headerClass="logo"
+      headerSymbol="CHECK_BOX"
+      key="9c60c2e7-291c-4e30-9dfe-9cfbb2295476"
+      mainContent="tab 1 1"
+      onFooterSymbolClick={[Function]}
+      onHeaderSymbolClick={[Function]}
+    />
+  </div>
+  <div
+    key="e26ee1de-944d-4b3a-88cc-1464fe53f32b"
+  >
+    <Button
+      className="mt-4 mb-2"
+      onClick={[Function]}
+      text="2ND TAB"
+    />
+    <RowComponent
+      className="todo"
+      footerClass="logo"
+      footerSymbol="STAR"
+      headerClass="logo"
+      headerSymbol="CHECK_BOX"
+      key="899cda93-66bd-483c-a7aa-3852b900013f"
+      mainContent="tab 2 3"
+      onFooterSymbolClick={[Function]}
+      onHeaderSymbolClick={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`MultiTabView should render InputWithLabel 1`] = `
+<div
+  className="multiTabView  mr-3"
+>
+  <InputWithLabel
+    className="input"
+    label="+"
+    onSubmit={[Function]}
+    placeholder="Add a starred to-do in Inbox..."
+  />
+  <NotFound />
+</div>
+`;
+
+exports[`MultiTabView should render MultiTabView 1`] = `
+<div
+  className="multiTabView  mr-3"
+>
+  <InputWithLabel
+    className="input"
+    label="+"
+    onSubmit={[Function]}
+    placeholder="Add a starred to-do in Inbox..."
+  />
+  <NotFound />
+</div>
+`;
+
+exports[`MultiTabView should render NotFound 1`] = `
+<div
+  className="multiTabView  mr-3"
+>
+  <NotFound />
+</div>
+`;

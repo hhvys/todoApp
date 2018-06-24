@@ -63,8 +63,7 @@ describe('Header', () => {
 				pushDown: true
 			});
 			header().update();
-			const wrapperDiv = header().find('div').first();
-			expect(wrapperDiv.find('DropDown').length).toBe(1);
+			expect(header()).toMatchSnapshot();
 		});
 
 		it('should not render DropDown if state.pushDown is false', () => {
@@ -72,15 +71,13 @@ describe('Header', () => {
 				pushDown: false
 			});
 			header().update();
-			const wrapperDiv = header().find('div').first();
-			expect(wrapperDiv.find('DropDown').length).toBe(0);
+			expect(header()).toMatchSnapshot();
 		});
 	});
 
 	it('should render DropDown on click', () => {
 		const dropDownIcon = header().find('DropDownIcon');
-		let wrapperDiv = header().find('div').first();
-		expect(wrapperDiv.find('DropDown').length).toBe(0);
+		expect(header()).toMatchSnapshot();
 		dropDownIcon.simulate('click', {
 			preventDefault: () => {
 			},
@@ -88,14 +85,12 @@ describe('Header', () => {
 			}
 		});
 		header().update();
-		wrapperDiv = header().find('div').first();
-		expect(wrapperDiv.find('DropDown').length).toBe(1);
+		expect(header()).toMatchSnapshot();
 	});
 
 	it('should not render DropDown if clicked twice', () => {
 		const dropDownIcon = header().find('DropDownIcon');
-		let wrapperDiv = header().find('div').first();
-		expect(wrapperDiv.find('DropDown').length).toBe(0);
+		expect(header()).toMatchSnapshot();
 		const mockEvent = {
 			preventDefault: () => {
 			},
@@ -105,8 +100,7 @@ describe('Header', () => {
 		dropDownIcon.simulate('click', mockEvent);
 		dropDownIcon.simulate('click', mockEvent);
 		header().update();
-		wrapperDiv = header().find('div').first();
-		expect(wrapperDiv.find('DropDown').length).toBe(0);
+		expect(header()).toMatchSnapshot();
 	});
 
 	it('should pass onDropDownButtonClick as onClick to dropdownIcons', () => {

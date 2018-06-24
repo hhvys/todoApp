@@ -28,22 +28,41 @@ describe('MultiTabView', () => {
 		mountedMultiTab = undefined;
 	});
 
-	it('should render InputWithLabel if searchQuery is empty', () => {
-		props.searchQuery = '';
-		const InputWithLabel = multiTabView().find('InputWithLabel');
-		expect(InputWithLabel.length).toBe(1);
+	it('should render MultiTabView', () => {
+		expect(toJSON(multiTabView())).toMatchSnapshot();
 	});
 
-	it('should render NotFound if searchQuery is given and tabs length is 0', () => {
+	it('should render InputWithLabel', () => {
+		props.searchQuery = '';
+		expect(toJSON(multiTabView())).toMatchSnapshot();
+	});
+
+	it('should render NotFound', () => {
 		props.searchQuery = 'searchQuery';
-		const NotFound = multiTabView().find('NotFound');
-		expect(NotFound.length).toBe(1);
+		expect(toJSON(multiTabView())).toMatchSnapshot();
 	});
 
 	it('should have rendered number of Buttons = tabs.length', () => {
 		props.tabs = tabs;
-		const Buttons = multiTabView().find('Button');
-		expect(Buttons.length).toBe(tabs.length);
+		expect(toJSON(multiTabView())).toMatchSnapshot();
+	});
+
+	it('should pass onButtonClick to Button as onClick', () => {
+		props.tabs = tabs;
+		props.onButtonClick = jest.fn();
+		expect(toJSON(multiTabView())).toMatchSnapshot();
+	});
+
+	it('should pass onFooterSymbolClick to RowComponent', () => {
+		props.tabs = tabs;
+		props.onFooterSymbolClick = jest.fn();
+		expect(toJSON(multiTabView())).toMatchSnapshot();
+	});
+
+	it('should pass onHeaderSymbolClick to RowComponent', () => {
+		props.tabs = tabs;
+		props.onHeaderSymbolClick = jest.fn();
+		expect(toJSON(multiTabView())).toMatchSnapshot();
 	});
 
 });

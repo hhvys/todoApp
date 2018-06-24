@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components TodoView Button should render Button 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TodoView
+    activeTab={undefined}
+    className="className"
+    collapsed={false}
+    onButtonClick={[Function]}
+    onFooterSymbolClick={[Function]}
+    onHeaderSymbolClick={[Function]}
+    onInputSubmit={[Function]}
+    showCompleted={false}
+    todos={Array []}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <InputWithLabel
+          className="input"
+          label="+"
+          onSubmit={[Function]}
+          placeholder="Add a to-do..."
+/>,
+        <div
+          className="mt-3"
+>
+          
+</div>,
+        <Button
+          className="mt-3"
+          onClick={[Function]}
+          text="SHOW COMPLETED TO-DOS"
+/>,
+        <div
+          className="mt-3"
+/>,
+      ],
+      "className": "className  todoView full-height d-flex flex-column justify-content-start mr-3",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "className": "input",
+          "label": "+",
+          "onSubmit": [Function],
+          "placeholder": "Add a to-do...",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [],
+          "className": "mt-3",
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "className": "mt-3",
+          "onClick": [Function],
+          "text": "SHOW COMPLETED TO-DOS",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": false,
+          "className": "mt-3",
+        },
+        "ref": null,
+        "rendered": false,
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <InputWithLabel
+            className="input"
+            label="+"
+            onSubmit={[Function]}
+            placeholder="Add a to-do..."
+/>,
+          <div
+            className="mt-3"
+>
+            
+</div>,
+          <Button
+            className="mt-3"
+            onClick={[Function]}
+            text="SHOW COMPLETED TO-DOS"
+/>,
+          <div
+            className="mt-3"
+/>,
+        ],
+        "className": "className  todoView full-height d-flex flex-column justify-content-start mr-3",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "className": "input",
+            "label": "+",
+            "onSubmit": [Function],
+            "placeholder": "Add a to-do...",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [],
+            "className": "mt-3",
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "className": "mt-3",
+            "onClick": [Function],
+            "text": "SHOW COMPLETED TO-DOS",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": false,
+            "className": "mt-3",
+          },
+          "ref": null,
+          "rendered": false,
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

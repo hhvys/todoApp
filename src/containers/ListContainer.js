@@ -5,9 +5,9 @@ import {getTabs} from "../reducers/tabs/tabs";
 import {getActiveTab} from "../reducers/activeTab";
 import {STARRED_ID} from "../actions/actionTypes";
 
-const mapStateToProps = (state) => {
+const getTabsWithFooterContent = (state) => {
 	let tabs = getTabs(state);
-	tabs = tabs.map(tab => {
+	return tabs.map(tab => {
 		let footerContent = tab.todos
 			.filter(todo => !todo.completed)
 			.length;
@@ -25,8 +25,12 @@ const mapStateToProps = (state) => {
 			footerContent
 		}
 	});
+};
+
+const mapStateToProps = (state) => {
+
 	return {
-		tabs,
+		tabs: getTabsWithFooterContent(state),
 		activeTab: getActiveTab(state),
 	}
 };

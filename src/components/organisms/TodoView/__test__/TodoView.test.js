@@ -65,8 +65,7 @@ describe('components', () => {
 
 		describe('Button', () => {
 			it('should render Button', () => {
-				const Button = todoView().find('Button');
-				expect(Button.length).toBe(1);
+				expect(todoView()).toMatchSnapshot();
 			});
 		});
 
