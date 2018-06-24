@@ -3,11 +3,9 @@ import React from 'react';
 import configureStore from "./configureStore";
 import Root from './components/Root';
 
-(async () => {
-	const store = await configureStore();
+const store = configureStore();
 
-	render(
-		<Root store={store}/>,
-		document.getElementById('root')
-	);
-})();
+render(
+	<Root store={store}/>,
+	document.getElementById('root')
+);

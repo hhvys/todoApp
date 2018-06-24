@@ -1,13 +1,12 @@
 import {throttle} from 'lodash';
-import {loadState, saveState} from "./remoteStorage";
+import {loadState, saveState} from "./localStorage";
 import todoApp from "./reducers";
 import {createStore, applyMiddleware, compose} from 'redux'
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
-const configureStore = async() => {
-	const persistedState = await loadState();
-
+const configureStore = () => {
+	const persistedState = loadState();
 	const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 	const store = createStore(
 		todoApp,
