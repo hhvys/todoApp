@@ -21,7 +21,9 @@ const todos = (state = [], action, todoInfo) => {
 						return 0;
 
 					case SORT_BY.SORT_CREATION:
-						if (a.createdTime > b.createdTime)
+						a = Date.parse(a.createdTime);
+						b = Date.parse(b.createdTime);
+						if (a > b)
 							return -1;
 						return 1;
 
