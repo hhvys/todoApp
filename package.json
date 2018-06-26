@@ -7,7 +7,8 @@
     "start": "webpack-dev-server --mode development",
     "test": "jest",
     "build": "webpack --mode production",
-    "server": "babel-node --presets es2015 server/server.js"
+    "server": "babel-node --presets es2015 server/server.js",
+    "generate": "node --harmony starter.js"
   },
   "keywords": [],
   "license": "ISC",
@@ -47,6 +48,7 @@
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.1.1",
     "enzyme": "^3.3.0",

@@ -5,6 +5,7 @@ import {
 	STAR_TOGGLE_TODO,
 	TOGGLE_TODO
 } from "../../actions/actionTypes";
+import {getTabs} from "./tabs";
 
 const todo = (state = {}, action) => {
 	switch (action.type) {
@@ -45,10 +46,8 @@ function todoInfo(state = {}, action) {
 		case ADD_TODO:
 		case ADD_STARRED_TODO:
 		case TOGGLE_TODO:
-			return {
-				...state,
-				[action.todoId]: todo(state[action.todoId], action)
-			};
+			state[action.todoId] = todo(state[action.todoId], action)
+			return state;
 		case COPY_TAB:
 			return {...state, ...(action.todos)};
 		default:
@@ -59,6 +58,7 @@ function todoInfo(state = {}, action) {
 export default todoInfo;
 
 export function getTodoInfo(state, todos) {
+	state = getTabs(state);
 	if (Array.isArray(todos)) {
 		return todos.map(todo => (
 			state.todoInfo[todo]

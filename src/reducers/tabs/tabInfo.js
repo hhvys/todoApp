@@ -2,33 +2,58 @@ import {
 	ADD_TODO,
 	ADD_STARRED_TODO,
 	STAR_TOGGLE_TODO,
-	SORT_BY, CHANGE_SORT, ADD_TAB, INBOX_ID, STARRED_ID, COPY_TAB, CHANGE_TAB_NAME, TOGGLE_VISIBILITY_FILTER, DELETE_TAB
+	SORT_BY,
+	CHANGE_SORT,
+	ADD_TAB,
+	INBOX_ID,
+	STARRED_ID,
+	COPY_TAB,
+	CHANGE_TAB_NAME,
+	TOGGLE_VISIBILITY_FILTER,
+	DELETE_TAB,
+	TOGGLE_TODO
 } from "../../actions/actionTypes";
+import {getTabs} from "./tabs";
 
 const todos = (state = [], action, todoInfo) => {
 	switch (action.type) {
 		case CHANGE_SORT:
 			const newState = [...state];
-			return newState.sort((a, b) => {
-				a = todoInfo[a];
-				b = todoInfo[b];
+
+			//For stable sort
+			const indexOf = {};
+			newState.forEach((todo, index) => {
+				indexOf[todo] = index;
+			});
+			return newState.sort((todo1, todo2) => {
+				const a = todoInfo[todo1];
+				const b = todoInfo[todo2];
 				switch (action.sortBy) {
 					case SORT_BY.SORT_PRIORITY:
 						if (a.star && !b.star)
 							return -1;
 						if (!a.star && b.star)
 							return 1;
-						return 0;
+						if (indexOf[a.todoId] < indexOf[b.todoId])
+							return -1;
+						return 1;
 
 					case SORT_BY.SORT_CREATION:
-						a = Date.parse(a.createdTime);
-						b = Date.parse(b.createdTime);
-						if (a > b)
+
+						if (a.createdTime > b.createdTime)
+							return -1;
+						if (a.createdTime < b.createdTime)
+							return 1;
+						if (indexOf[a.todoId] < indexOf[b.todoId])
 							return -1;
 						return 1;
 
 					case SORT_BY.SORT_ALPHA:
 						if (a.text.toLowerCase() < b.text.toLowerCase())
+							return -1;
+						if (a.text.toLowerCase() > b.text.toLowerCase())
+							return 1;
+						if (indexOf[a.todoId] < indexOf[b.todoId])
 							return -1;
 						return 1;
 				}
@@ -68,24 +93,30 @@ export const initialState = [
 		tabId: INBOX_ID,
 		tabName: 'Inbox',
 		todos: [],
-		starredTodos: []
+		starredTodos: [],
+		inCompletedTodos: 0
 	},
 	{
 		tabId: STARRED_ID,
 		tabName: 'Starred',
 		todos: [],
-		starredTodos: []
+		starredTodos: [],
+		inCompletedTodos: 0
 	}
 ];
 
 function tabInfo(state = initialState, action, todoInfo) {
 	switch (action.type) {
 		case CHANGE_SORT:
-			return state.map(tab => ({
-				...tab,
-				todos: todos(tab.todos, action, todoInfo),
-				starredTodos: todos(tab.starredTodos, action, todoInfo)
-			}));
+			return state.map(tab => {
+				if (tab.tabId !== action.tabId)
+					return tab;
+				return ({
+					...tab,
+					todos: todos(tab.todos, action, todoInfo),
+					starredTodos: todos(tab.starredTodos, action, todoInfo)
+				})
+			});
 		case ADD_TAB:
 			return [
 				...state,
@@ -93,7 +124,8 @@ function tabInfo(state = initialState, action, todoInfo) {
 					tabId: action.tabId,
 					tabName: action.tabName,
 					todos: [],
-					starredTodos: []
+					starredTodos: [],
+					inCompletedTodos: 0
 				}
 			];
 		case CHANGE_TAB_NAME:
@@ -104,7 +136,7 @@ function tabInfo(state = initialState, action, todoInfo) {
 						tabId: tab.tabId,
 						tabName: action.tabName,
 					} :
-					{...tab}
+					tab
 			));
 		case COPY_TAB:
 			return (
@@ -116,7 +148,8 @@ function tabInfo(state = initialState, action, todoInfo) {
 						todos: Object
 							.keys(action.todos)
 							.map(key => action.todos[key].todoId),
-						starredTodos: [...action.starredTodos]
+						starredTodos: [...action.starredTodos],
+						inCompletedTodos: action.inCompletedTodos
 					}
 				]
 			);
@@ -130,25 +163,31 @@ function tabInfo(state = initialState, action, todoInfo) {
 						...tab,
 						showCompletedTodo: !tab.showCompletedTodo
 					} :
-					{...tab}
+					tab
 			));
 		case STAR_TOGGLE_TODO:
-			return state.map(tab => (
-				tab.tabId === action.tabId ?
-					{
+			return state.map(tab => {
+				if (tab.tabId === STARRED_ID) {
+					let change = action.star ? -1 : +1;
+					if(action.completed)
+						change = 0;
+					return {
 						...tab,
-						starredTodos: todos(tab.starredTodos, action)
-					} :
-					{...tab}
-			));
+						starredTodos: todos(tab.starredTodos, action),
+						inCompletedTodos: tab.inCompletedTodos + change
+					};
+				}
+				return tab;
+			});
 		case ADD_TODO:
 			return state.map(tab => (
 				tab.tabId === action.tabId ?
 					{
 						...tab,
-						todos: todos(tab.todos, action)
+						todos: todos(tab.todos, action),
+						inCompletedTodos: tab.inCompletedTodos + 1
 					} :
-					{...tab}
+					tab
 			));
 		case ADD_STARRED_TODO:
 			return state.map(tab => (
@@ -156,17 +195,32 @@ function tabInfo(state = initialState, action, todoInfo) {
 					{
 						...tab,
 						starredTodos: todos(tab.starredTodos, action),
-						todos: todos(tab.todos, action)
+						todos: todos(tab.todos, action),
+						inCompletedTodos: tab.inCompletedTodos + 1
 					} :
-					{...tab}
+					tab
 			));
+		case TOGGLE_TODO:
+			const changeStarredTab = action.star;
+
+			return state.map(tab => {
+				if (tab.tabId === action.tabId || (changeStarredTab && tab.tabId === STARRED_ID)) {
+					const change = !action.completed ? -1 : +1;
+					return {
+						...tab,
+						inCompletedTodos: tab.inCompletedTodos + change
+					};
+				}
+				return tab;
+			});
 		default:
 			return state;
 	}
 }
 
 export const getTabInfo = (state, tabId) => {
-	if(typeof tabId === 'undefined')
+	state = getTabs(state);
+	if (typeof tabId === 'undefined')
 		return state.tabInfo;
 	return state
 		.tabInfo

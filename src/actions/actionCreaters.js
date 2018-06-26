@@ -1,10 +1,11 @@
 import * as actionTypes from './actionTypes';
 import {v4} from 'node-uuid';
 import {COPY_TAB} from "./actionTypes";
-import {getTabs} from "../reducers/tabs/tabs";
 import {getTodoInfo} from "../reducers/tabs/todoInfo";
 import {INBOX_ID} from "./actionTypes";
 import {getSortBy} from "../reducers/sortBy";
+import {getActiveTab} from "../reducers/activeTab";
+import {getTabInfo} from "../reducers/tabs/tabInfo";
 
 export function searchQuery(query) {
 	return {
@@ -82,21 +83,26 @@ export function addStarredTodo(text) {
 }
 
 export function toggleTodo(tabId, todoId) {
-	return {
-		type: actionTypes.TOGGLE_TODO,
-		tabId,
-		todoId
-	}
+	return (dispatch, getState) => {
+		const todoInfo = getTodoInfo(getState(), todoId);
+		return dispatch({
+			type: actionTypes.TOGGLE_TODO,
+			tabId,
+			todoId,
+			completed: todoInfo.completed,
+			star: todoInfo.star
+		});
+	};
 }
 
 export function copyTab(fromId) {
 	return (dispatch, getState) => {
 		const state = getState();
-		const tabs = getTabs(state);
+		const tabs = getTabInfo(state);
 		const newTabId = v4();
 		const fromTab = tabs
 			.find(tab => tab.tabId === fromId);
-
+		const inCompletedTodos = fromTab.inCompletedTodos;
 		//Map of new_todoIds to todoInfo
 		const todos = {};
 		const starredTodos = [];
@@ -106,44 +112,56 @@ export function copyTab(fromId) {
 			.forEach(todo => {
 				const newTodoId = v4();
 				todos[newTodoId] = {
-					...getTodoInfo(state.tabs, todo.todoId),
+					...getTodoInfo(state, todo.todoId),
 					tabId: newTabId,
 					todoId: newTodoId
 				};
 				todos[newTodoId].star &&
-					starredTodos.push(newTodoId);
+				starredTodos.push(newTodoId);
 			});
 
-		const ret = {
+		return dispatch({
 			type: COPY_TAB,
 			starredTodos,
 			todos,
+			inCompletedTodos,
 			toId: newTabId,
 			tabName: fromTab.tabName + " Copy"
-		};
-		return dispatch(ret);
+		});
 	}
 }
 
 export function toggleStarTodo(tabId, todoId) {
-	return {
-		type: actionTypes.STAR_TOGGLE_TODO,
-		tabId,
-		todoId
-	}
+	return (dispatch, getState) => {
+		const todoInfo = getTodoInfo(getState(), todoId);
+		return dispatch({
+			type: actionTypes.STAR_TOGGLE_TODO,
+			tabId,
+			todoId,
+			completed: todoInfo.completed,
+			star: todoInfo.star
+		});
+	};
 }
 
-function dispatchWithCurrentSortBy() {
-	return (dispatch, getState) => (
-		dispatch(changeSorting(getSortBy(getState()))));
+
+function dispatchWithCurrentSortBy(sortBy, tabId) {
+	return (dispatch, getState) => {
+		const state = getState();
+		if (typeof tabId === 'undefined')
+			tabId = getActiveTab(state);
+		if (typeof sortBy === 'undefined')
+			sortBy = getSortBy(state);
+		dispatch(changeSorting(sortBy, tabId));
+	};
 }
 
-export function changeSorting(sortBy) {
-	if (!sortBy)
-		return dispatchWithCurrentSortBy();
-
+export function changeSorting(sortBy, tabId) {
+	if (typeof sortBy === 'undefined' || typeof tabId === 'undefined')
+		return dispatchWithCurrentSortBy(sortBy, tabId);
 	return {
 		type: actionTypes.CHANGE_SORT,
-		sortBy
+		sortBy,
+		tabId,
 	}
 }
