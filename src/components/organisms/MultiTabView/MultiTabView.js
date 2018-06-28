@@ -27,8 +27,8 @@ class MultiTabView extends React.Component {
 													className={styles.todo}
 													headerSymbol={todo.completed ? CHECKED_CHECK_BOX : CHECK_BOX}
 													footerSymbol={todo.star ? STARRED : STAR}
-													headerClass={styles.logo}
-													footerClass={styles.logo}
+													headerClass={styles.headerLogo}
+													footerClass={styles.footerLogo}
 													mainContent={todo.text}
 													onFooterSymbolClick={() => onFooterSymbolClick(tabId, todo.todoId)}
 													onHeaderSymbolClick={() => onHeaderSymbolClick(tabId, todo.todoId)}

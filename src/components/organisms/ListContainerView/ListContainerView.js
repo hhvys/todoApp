@@ -21,7 +21,7 @@ class ListContainerView extends React.Component {
 					return null;
 				return (
 					<RowComponent
-						className={styles.tab}
+						className={`${styles.tab} ${activeTab === tab.tabId ? styles.active : ''}`}
 						key={tab.tabId}
 						onClick={() => onClick(tab.tabId)}
 						onHeaderSymbolClick={onHeaderSymbolClick}
@@ -42,10 +42,9 @@ class ListContainerView extends React.Component {
 						}
 
 						footerContent={
-							tab.footerContent > 0 && tab.footerContent
+							tab.footerContent
 						}
 						mainContent={tab.tabName}
-						active={activeTab === tab.tabId}
 						headerClass={
 							`${styles.logo} ${
 								tab.tabId === INBOX_ID ?

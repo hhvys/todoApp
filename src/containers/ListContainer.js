@@ -4,12 +4,18 @@ import {changeActiveTab, changeSorting, searchQuery, toggleModal} from "../actio
 import {getActiveTab} from "../reducers/activeTab";
 import {getTabInfo} from "../reducers/tabs/tabInfo";
 
+const getFooterContent = (inCompletedTodos) => {
+	if(inCompletedTodos <= 0)
+		return '';
+	return inCompletedTodos > 99 ? '99+' : inCompletedTodos
+};
+
 const getTabsWithFooterContent = (state) => {
 	let tabs = getTabInfo(state);
 	return tabs.map(tab => {
 		return {
 			...tab,
-			footerContent: tab.inCompletedTodos
+			footerContent: getFooterContent(tab.inCompletedTodos)
 		}
 	});
 };

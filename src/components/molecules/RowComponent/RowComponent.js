@@ -8,64 +8,63 @@ function renderFooter(footerSymbol, onFooterSymbolClick, footerClass) {
 			<Icon className={`${footerClass ? footerClass : ''} ${styles.endSymbol}`}
 						onClick={onFooterSymbolClick}
 						symbolType={footerSymbol}
-				/>
-			</div>
-		) : null;
+			/>
+		</div>
+	) : null;
 }
 
 const RowComponent = ({
-			className,
-			headerClass,
+												className,
+												headerClass,
 												footerClass,
-			onClick,
+												onClick,
 												onFooterSymbolClick,
-			onHeaderSymbolClick,
-			headerSymbol,
+												onHeaderSymbolClick,
+												headerSymbol,
 												footerSymbol,
-			footerContent,
-			mainContent,
-			active,
+												footerContent,
+												mainContent,
 												extraContent,
 												...props
 											}) => (
-			<div
-				className={`${className ? className : ''} ${styles.verticalTab} full-width d-flex align-items-center justify-content-center ${active ? styles.active : ''}`}
+	<div
+		className={`${className ? className : ''} ${styles.verticalTab} full-width d-flex align-items-center justify-content-center`}
 		onClick={onClick} {...props}>
 
-				{/*headerDiv*/}
-				<div className={`${styles.verticalTab} full-height d-flex align-items-center justify-content-center`}>
-					<Icon className={`${headerClass ? headerClass : ''} `} onClick={onHeaderSymbolClick}
-								symbolType={headerSymbol}/>
-				</div>
+		{/*headerDiv*/}
+		<div className={`${styles.verticalTab} full-height d-flex align-items-center justify-content-center`}>
+			<Icon className={`${headerClass ? headerClass : ''} `} onClick={onHeaderSymbolClick}
+						symbolType={headerSymbol}/>
+		</div>
 
-				{/*contentDiv*/}
-				<div className={`${styles.content} d-flex flex-column justify-content-center `}>
-					<div className={`d-flex align-items-center txt-overflow ml-2`}>
-						{mainContent}
-					</div>
-					{
-						extraContent ?
-							(
-								<div className={`${styles.extraContent} d-flex align-items-center ml-2`}>
-									{extraContent}
-								</div>
-							) :
-							null
-					}
+		{/*contentDiv*/}
+		<div className={`${styles.content} d-flex flex-column justify-content-center `}>
+			<div className={`txt-overflow ml-2`}>
+				{mainContent}
+			</div>
+			{
+				extraContent ?
+					(
+						<div className={`${styles.extraContent} d-flex align-items-center ml-2`}>
+							{extraContent}
+						</div>
+					) :
+					null
+			}
 
-				</div>
+		</div>
 
-				{/*footerDiv*/}
-				<div className={`${styles.footer} full-height d-flex align-items-center justify-content-between`}>
+		{/*footerDiv*/}
+		<div className={`${styles.footer} full-height d-flex align-items-center justify-content-between`}>
 
-					<div className={`${styles.footerContent} full-height d-flex align-items-center justify-content-end`}>
-						{footerContent}
-					</div>
+			<div className={`${styles.footerContent} full-height d-flex align-items-center justify-content-end`}>
+				{footerContent}
+			</div>
 
 			{renderFooter(footerSymbol, onFooterSymbolClick, footerClass)}
-				</div>
+		</div>
 
-			</div>
-		);
+	</div>
+);
 
 export default RowComponent;
