@@ -52,6 +52,7 @@ class MultiTabView extends React.Component {
 			return (<NotFound/>);
 
 		return tabs.map(tab => (
+
 			<div key={tab.tabId}>
 				<Button text={tab.tabName.toLocaleUpperCase()}
 								className={"mt-4 mb-2"}

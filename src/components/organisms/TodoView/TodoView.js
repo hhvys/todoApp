@@ -38,14 +38,17 @@ class TodoView extends React.Component {
 		);
 	};
 
-	renderCompletedTodos = ({
-														todos,
-														activeTab,
-														onFooterSymbolClick,
-														onHeaderSymbolClick
-													}) => {
+	renderCompletedTodos = () => {
+
+		let {
+			todos,
+			activeTab,
+			onFooterSymbolClick,
+			onHeaderSymbolClick
+		} = this.props;
+		todos = todos.filter(todo => todo.completed)
 		return (
-			<ScrollViewport rowHeight={46}>
+			<ScrollViewport rowHeight={48}>
 				{
 					this.renderVerticalTab({
 						todos,
@@ -57,7 +60,6 @@ class TodoView extends React.Component {
 				}
 			</ScrollViewport>);
 	};
-
 
 	render() {
 		const {
@@ -86,7 +88,7 @@ class TodoView extends React.Component {
 
 
 				<div className={"mt-3"}>
-					<ScrollViewport rowHeight={46}>
+					<ScrollViewport rowHeight={48}>
 						{
 							this.renderVerticalTab({
 								todos: todos.filter(todo => !todo.completed),
@@ -104,18 +106,11 @@ class TodoView extends React.Component {
 								onClick={() => onButtonClick(activeTab)}/>
 
 				<div className={"mt-3"}>
-
 					{
 						showCompleted ?
-							this.renderCompletedTodos({
-								todos: todos.filter(todo => todo.completed),
-								activeTab,
-								onFooterSymbolClick,
-								onHeaderSymbolClick
-							}) :
+							this.renderCompletedTodos() :
 							null
 					}
-
 				</div>
 
 

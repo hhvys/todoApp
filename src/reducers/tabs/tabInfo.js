@@ -169,12 +169,17 @@ function tabInfo(state = initialState, action, todoInfo) {
 			return state.map(tab => {
 				if (tab.tabId === STARRED_ID) {
 					let change = action.star ? -1 : +1;
-					if(action.completed)
+					if (action.completed)
 						change = 0;
 					return {
 						...tab,
-						starredTodos: todos(tab.starredTodos, action),
 						inCompletedTodos: tab.inCompletedTodos + change
+					};
+				}
+				if (tab.tabId === action.tabId) {
+					return {
+						...tab,
+						starredTodos: todos(tab.starredTodos, action),
 					};
 				}
 				return tab;
@@ -190,16 +195,21 @@ function tabInfo(state = initialState, action, todoInfo) {
 					tab
 			));
 		case ADD_STARRED_TODO:
-			return state.map(tab => (
-				tab.tabId === action.tabId ?
-					{
+			return state.map(tab => {
+				if (tab.tabId === action.tabId)
+					return {
 						...tab,
 						starredTodos: todos(tab.starredTodos, action),
 						todos: todos(tab.todos, action),
 						inCompletedTodos: tab.inCompletedTodos + 1
-					} :
-					tab
-			));
+					};
+				if(tab.tabId === STARRED_ID)
+					return {
+						...tab,
+						inCompletedTodos: tab.inCompletedTodos + 1
+					};
+				return tab
+			});
 		case TOGGLE_TODO:
 			const changeStarredTab = action.star;
 

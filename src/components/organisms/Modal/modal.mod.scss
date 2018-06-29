@@ -3,7 +3,7 @@
 }
 
 .modal.active {
-  z-index: 1000;
+  z-index: 5000;
   display: flex;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.2);
