@@ -90,8 +90,8 @@ class AddForm extends React.Component {
 							styles.hide :
 							styles.delete
 					}>
-						<Icon symbolType={TRASH} onClick={this.handleDelete}/>
-						<Icon symbolType={DUPLICATE} onClick={this.handleDuplicate}/>
+						<Icon symbolType={TRASH} onClick={this.handleDelete} className={styles.icon}/>
+						<Icon symbolType={DUPLICATE} onClick={this.handleDuplicate} className={styles.icon}/>
 					</div>
 					<div>
 						<button className={`${styles.save} ${styles.button}`}

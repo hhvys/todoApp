@@ -4,8 +4,8 @@ const {v4} = require('node-uuid');
 const {INBOX_ID, SORT_BY} = require("../src/actions/actionTypes");
 
 const store = {};
-const NTABS = 10;
-const NTODOS = 100;
+const NTABS = 100;
+const NTODOS = 1000;
 
 store.activeTab = INBOX_ID;
 store.collapsedSideBar = false;
