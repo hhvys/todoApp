@@ -6,6 +6,7 @@ import {INBOX_ID} from "./actionTypes";
 import {getSortBy} from "../reducers/sortBy";
 import {getActiveTab} from "../reducers/activeTab";
 import {getTabInfo} from "../reducers/tabs/tabInfo";
+import {DELETE_TAB} from "./actionTypes";
 
 export function searchQuery(query) {
 	return {
@@ -49,11 +50,21 @@ export function addTab(tabName) {
 	}
 }
 
+const dispatchDeleteTab = (tabId) => {
+	return (dispatch, getState) => {
+		const tab = getTabInfo(getState(), tabId);
+		const todos = [...tab.todos];
+		console.log(todos);
+		dispatch({
+			type: DELETE_TAB,
+			tabId,
+			todos
+		});
+	};
+};
+
 export function deleteTab(tabId) {
-	return {
-		type: actionTypes.DELETE_TAB,
-		tabId
-	}
+	return dispatchDeleteTab(tabId);
 }
 
 export function changeTabName(tabId, tabName) {

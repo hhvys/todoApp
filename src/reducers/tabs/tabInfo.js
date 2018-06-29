@@ -16,9 +16,10 @@ import {
 import {getTabs} from "./tabs";
 
 const todos = (state = [], action, todoInfo) => {
+	let newState;
 	switch (action.type) {
 		case CHANGE_SORT:
-			const newState = [...state];
+			newState = [...state];
 
 			//For stable sort
 			const indexOf = {};
@@ -106,6 +107,7 @@ export const initialState = [
 ];
 
 function tabInfo(state = initialState, action, todoInfo) {
+	let newState;
 	switch (action.type) {
 		case CHANGE_SORT:
 			return state.map(tab => {
@@ -139,9 +141,31 @@ function tabInfo(state = initialState, action, todoInfo) {
 					tab
 			));
 		case COPY_TAB:
+			newState = state.map(tab => {
+				if (tab.tabId === STARRED_ID) {
+					let change = 0;
+					Object
+						.keys(action.todos)
+						.forEach(todo => {
+							if (!todo.completed && todo.star)
+								change += 1;
+						});
+					return {
+						// action
+						// 	.todos
+						// 	.forEach(todo => {
+						// 		if (!todoInfo[todo].completed && todoInfo[todo].star)
+						// 			change += 1;
+						// 	});
+						...tab,
+						inCompletedTodos: tab.inCompletedTodos + change
+					}
+				}
+				return tab;
+			});
 			return (
 				[
-					...state,
+					...newState,
 					{
 						tabId: action.toId,
 						tabName: action.tabName,
@@ -154,7 +178,30 @@ function tabInfo(state = initialState, action, todoInfo) {
 				]
 			);
 		case DELETE_TAB:
-			return state.filter(tab =>
+			newState = state.map(tab => {
+				if (tab.tabId === STARRED_ID) {
+					let change = 0;
+					action
+						.todos
+						.forEach(todo => {
+							console.log({
+								todo,
+								completed: todoInfo[todo].completed,
+								star: todoInfo[todo].star,
+							});
+							console.log(!todoInfo[todo].completed);
+							console.log(todoInfo.star);
+							if (!todoInfo[todo].completed && todoInfo[todo].star)
+								change += 1;
+						});
+					return {
+						...tab,
+						inCompletedTodos: tab.inCompletedTodos - change
+					}
+				}
+				return tab;
+			});
+			return newState.filter(tab =>
 				tab.tabId !== action.tabId);
 		case TOGGLE_VISIBILITY_FILTER:
 			return state.map(tab => (
@@ -203,7 +250,7 @@ function tabInfo(state = initialState, action, todoInfo) {
 						todos: todos(tab.todos, action),
 						inCompletedTodos: tab.inCompletedTodos + 1
 					};
-				if(tab.tabId === STARRED_ID)
+				if (tab.tabId === STARRED_ID)
 					return {
 						...tab,
 						inCompletedTodos: tab.inCompletedTodos + 1

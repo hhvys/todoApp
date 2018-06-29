@@ -1,7 +1,7 @@
 import {
 	ADD_STARRED_TODO,
 	ADD_TODO,
-	COPY_TAB,
+	COPY_TAB, DELETE_TAB,
 	STAR_TOGGLE_TODO,
 	TOGGLE_TODO
 } from "../../actions/actionTypes";
@@ -50,6 +50,10 @@ function todoInfo(state = {}, action) {
 			return state;
 		case COPY_TAB:
 			return {...state, ...(action.todos)};
+		case DELETE_TAB:
+			const newState = {...state};
+			action.todos.forEach(todo => delete newState[todo]);
+			return newState;
 		default:
 			return state;
 	}

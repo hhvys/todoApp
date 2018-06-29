@@ -1,18 +1,24 @@
 import generatedState from '../performance/stateGenerator';
+import {getTodoInfo} from "./reducers/tabs/todoInfo";
 
 export const parseStringifiedDate = (state) => {
-	state
-		.tabs
-		.todoInfo
-		.forEach(todo => {
-			todo.createdTime = Date.parse(todo.createdTime);
-			if(todo.completedTime)
-				todo.completedTime = Date.parse(todo.completedTime);
+	const todoInfo = {};
+	Object
+		.keys(state.tabs.todoInfo)
+		.forEach(todoId => {
+			const info = state.tabs.todoInfo[todoId];
+			todoInfo[todoId] = {
+				...info,
+				createdTime: Date.parse(info.createdTime),
+				completedTime: info.completedTime ? Date.parse(info.completedTime) : undefined
+			};
 		});
+	state.tabs.todoInfo = todoInfo;
+	return state;
 };
 
 export const loadState = () => {
-	return generatedState;
+	// return generatedState;
 
 	try {
 		const serializedState = localStorage.getItem('FinalTodo');
@@ -22,16 +28,17 @@ export const loadState = () => {
 		return parseStringifiedDate(parsedState);
 	}
 	catch (err) {
+		console.log(err);
 		return undefined;
 	}
 };
 
 export const saveState = (state) => {
-	// try {
-	// 	const serializedState = JSON.stringify(state);
-	// 	localStorage.setItem('FinalTodo', serializedState);
-	// }
-	// catch (err) {
-	// 	console.log("State is not serializable");
-	// }
+	try {
+		const serializedState = JSON.stringify(state);
+		localStorage.setItem('FinalTodo', serializedState);
+	}
+	catch (err) {
+		console.log("State is not serializable");
+	}
 };
