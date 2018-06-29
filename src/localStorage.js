@@ -9,8 +9,8 @@ export const parseStringifiedDate = (state) => {
 			const info = state.tabs.todoInfo[todoId];
 			todoInfo[todoId] = {
 				...info,
-				createdTime: Date.parse(info.createdTime),
-				completedTime: info.completedTime ? Date.parse(info.completedTime) : undefined
+				createdTime: new Date(info.createdTime),
+				completedTime: info.completedTime ? new Date(info.completedTime) : undefined
 			};
 		});
 	state.tabs.todoInfo = todoInfo;
