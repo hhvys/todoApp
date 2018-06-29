@@ -178,13 +178,6 @@ function tabInfo(state = initialState, action, todoInfo) {
 					action
 						.todos
 						.forEach(todo => {
-							console.log({
-								todo,
-								completed: todoInfo[todo].completed,
-								star: todoInfo[todo].star,
-							});
-							console.log(!todoInfo[todo].completed);
-							console.log(todoInfo.star);
 							if (!todoInfo[todo].completed && todoInfo[todo].star)
 								change += 1;
 						});

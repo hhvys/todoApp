@@ -46,11 +46,11 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 
 	return {
-		onFooterSymbolClick: (tabId, todoId) => {
+		onFooterIconClick: (tabId, todoId) => {
 			dispatch(toggleStarTodo(tabId, todoId));
 			dispatch(changeSorting(undefined, tabId));
 		},
-		onHeaderSymbolClick: (tabId, todoId) => {
+		onHeaderIconClick: (tabId, todoId) => {
 			dispatch(toggleTodo(tabId, todoId));
 			dispatch(changeSorting(undefined, tabId));
 		},

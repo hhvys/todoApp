@@ -10,7 +10,7 @@ exports[`component CollapsedSideBar should pass collapseSideBar as onClick prop 
     <Icon
       height={20}
       onClick={[Function]}
-      symbolType="LIST_TOGGLE"
+      iconType="LIST_TOGGLE"
       width={20}
     />
   </div>
@@ -24,7 +24,7 @@ exports[`component CollapsedSideBar should pass collapseSideBar as onClick prop 
         className="logo"
         height={20}
         onClick={[Function]}
-        symbolType="INBOX"
+        iconType="INBOX"
         width={20}
       />
     </div>
@@ -35,7 +35,7 @@ exports[`component CollapsedSideBar should pass collapseSideBar as onClick prop 
         className="logo"
         height={20}
         onClick={[Function]}
-        symbolType="THREE_DOTS"
+        iconType="THREE_DOTS"
         width={20}
       />
     </div>
@@ -47,7 +47,7 @@ exports[`component CollapsedSideBar should pass collapseSideBar as onClick prop 
       className="logo"
       height={20}
       onClick={[Function]}
-      symbolType="PLUS"
+      iconType="PLUS"
       width={20}
     />
   </div>
@@ -63,7 +63,7 @@ exports[`component CollapsedSideBar should render 1`] = `
   >
     <Icon
       height={20}
-      symbolType="LIST_TOGGLE"
+      iconType="LIST_TOGGLE"
       width={20}
     />
   </div>
@@ -76,7 +76,7 @@ exports[`component CollapsedSideBar should render 1`] = `
       <Icon
         className="logo"
         height={20}
-        symbolType="INBOX"
+        iconType="INBOX"
         width={20}
       />
     </div>
@@ -86,7 +86,7 @@ exports[`component CollapsedSideBar should render 1`] = `
       <Icon
         className="logo"
         height={20}
-        symbolType="THREE_DOTS"
+        iconType="THREE_DOTS"
         width={20}
       />
     </div>
@@ -97,7 +97,7 @@ exports[`component CollapsedSideBar should render 1`] = `
     <Icon
       className="logo"
       height={20}
-      symbolType="PLUS"
+      iconType="PLUS"
       width={20}
     />
   </div>

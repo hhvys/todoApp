@@ -12,8 +12,8 @@ class TodoView extends React.Component {
 	renderVerticalTab = ({
 												 todos,
 												 activeTab,
-												 onFooterSymbolClick,
-												 onHeaderSymbolClick,
+												 onFooterIconClick,
+												 onHeaderIconClick,
 												 completed
 											 }) => {
 
@@ -24,13 +24,15 @@ class TodoView extends React.Component {
 						<RowComponent
 							className={completed ? styles.completedTodo : styles.todo}
 							key={todo.todoId}
-							headerSymbol={todo.completed ? CHECKED_CHECK_BOX : CHECK_BOX}
-							footerSymbol={todo.star ? STARRED : STAR}
+							headerIcon={todo.completed ? CHECKED_CHECK_BOX : CHECK_BOX}
+							footerIcon={todo.star ? STARRED : STAR}
 							headerClass={styles.headerLogo}
 							footerClass={styles.footerLogo}
 							mainContent={todo.text}
-							onFooterSymbolClick={() => onFooterSymbolClick(activeTab, todo.todoId)}
-							onHeaderSymbolClick={() => onHeaderSymbolClick(activeTab, todo.todoId)}
+							onFooterIconClick={onFooterIconClick}
+							onHeaderIconClick={onHeaderIconClick}
+							footerClickArgs={[activeTab, todo.todoId]}
+							headerClickArgs={[activeTab, todo.todoId]}
 							extraContent={completed ? todo.completionTime : null}
 						/>
 					);
@@ -43,8 +45,8 @@ class TodoView extends React.Component {
 		let {
 			todos,
 			activeTab,
-			onFooterSymbolClick,
-			onHeaderSymbolClick
+			onFooterIconClick,
+			onHeaderIconClick
 		} = this.props;
 		todos = todos.filter(todo => todo.completed)
 		return (
@@ -53,8 +55,8 @@ class TodoView extends React.Component {
 					this.renderVerticalTab({
 						todos,
 						activeTab,
-						onFooterSymbolClick,
-						onHeaderSymbolClick,
+						onFooterIconClick,
+						onHeaderIconClick,
 						completed: true
 					})
 				}
@@ -67,8 +69,8 @@ class TodoView extends React.Component {
 			className,
 			todos,
 			activeTab,
-			onFooterSymbolClick,
-			onHeaderSymbolClick,
+			onFooterIconClick,
+			onHeaderIconClick,
 			onButtonClick,
 			showCompleted,
 			onInputSubmit,
@@ -93,8 +95,8 @@ class TodoView extends React.Component {
 							this.renderVerticalTab({
 								todos: todos.filter(todo => !todo.completed),
 								activeTab,
-								onFooterSymbolClick,
-								onHeaderSymbolClick,
+								onFooterIconClick,
+								onHeaderIconClick,
 								completed: false
 							})
 						}

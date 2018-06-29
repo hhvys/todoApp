@@ -1,6 +1,6 @@
 import React from 'react';
 import * as svgPaths from './svgPaths';
-import * as defaultStyles from './defaultSymbolStyles';
+import * as defaultStyles from './defaultIconStyles';
 import {STARRED} from "./constants";
 import './Icons.css';
 
@@ -15,30 +15,30 @@ class Icon extends React.Component {
 		super(props);
 	}
 
-	getSymbol = (symbolType) => {
-		return svgPaths[symbolType];
+	getIcon = (iconType) => {
+		return svgPaths[iconType];
 	};
 
-	getDefaultStyles = (symbolType) => {
-		return defaultStyles[symbolType];
+	getDefaultStyles = (iconType) => {
+		return defaultStyles[iconType];
 	};
 
 	render() {
 		let {
 			className,
 			style,
-			symbolType,
+			iconType,
 			height,
 			width,
 			...restProps
 		} = this.props;
-		if (symbolType === STARRED)
+		if (iconType === STARRED)
 			[height, width] = [44, 22];
 		return (
 			<svg className={`${className ? className : ''} d-flex justify-content-center`}
-					 style={{...this.getDefaultStyles(symbolType), ...style}} viewBox={`0 0 ${width} ${height}`} height={height}
+					 style={{...this.getDefaultStyles(iconType), ...style}} viewBox={`0 0 ${width} ${height}`} height={height}
 					 width={width} {...restProps}>
-				{this.getSymbol(symbolType)}
+				{this.getIcon(iconType)}
 			</svg>
 
 		);

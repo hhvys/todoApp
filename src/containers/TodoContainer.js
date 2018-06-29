@@ -25,11 +25,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
 	return ({
-		onHeaderSymbolClick: (tabId, todoId) => {
+		onHeaderIconClick: (tabId, todoId) => {
 			dispatch(toggleTodo(tabId, todoId));
 			dispatch(changeSorting());
 		},
-		onFooterSymbolClick: (tabId, todoId) => {
+		onFooterIconClick: (tabId, todoId) => {
 			dispatch(toggleStarTodo(tabId, todoId));
 			dispatch(changeSorting());
 		},

@@ -28,7 +28,7 @@ exports[`RowComponent footerDiv should render footerIconDiv if footerSymbol is d
       className="footerClass endSymbol"
       height={20}
       onClick={[Function]}
-      symbolType="footerLogo"
+      iconType="footerLogo"
       width={20}
     />
   </div>
@@ -43,7 +43,7 @@ exports[`RowComponent headerDiv should pass header props to headerDiv 1`] = `
     className="headerClass "
     height={20}
     onClick={[Function]}
-    symbolType="headerLogo"
+    iconType="headerLogo"
     width={20}
   />
 </div>

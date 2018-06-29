@@ -7,35 +7,33 @@ import {DUPLICATE, TRASH} from "../../../atoms/Icons/constants";
 
 class AddForm extends React.Component {
 
-	updateSaveButton = () => (
-		this.input.value.trim() ?
-			this.save.classList.add(styles.active) :
-			this.save.classList.remove(styles.active)
-	);
 	handleChange = () => {
 		this.setState({
 			input: this.input.value.trim()
 		});
-		this.updateSaveButton();
 	};
+
 	handleDelete = (e) => {
 		this.cancel(e);
 		this.props.onDelete(this.props.tabId);
 	};
+
 	handleDuplicate = (e) => {
 		this.cancel(e);
 		this.props.onDuplicate(this.props.tabId)
 	};
+
 	onPressEnter = (e) => {
 		if (e.nativeEvent.keyCode === 13)
 			this.saveTab(e);
 	};
+
 	cancel = (e) => {
 		e.preventDefault();
 		this.props.onCancel(this.props.tabId);
 		this.input.value = '';
-		this.save.classList.remove(styles.active);
 	};
+
 	saveTab = (e) => {
 		e.preventDefault();
 		if (this.input.value.trim()) {
@@ -46,7 +44,6 @@ class AddForm extends React.Component {
 			this.props.onCancel();
 		}
 		this.input.value = '';
-		this.save.classList.remove(styles.active);
 	};
 
 	constructor(props) {
@@ -55,8 +52,10 @@ class AddForm extends React.Component {
 	}
 
 	componentWillReceiveProps(newProps) {
+		const input = newProps.tabId ? newProps.tabName : '';
 		this.setState({
-			input: newProps.tabId ? newProps.tabName : ''
+			input,
+			prevInput: input
 		});
 	}
 
@@ -65,6 +64,7 @@ class AddForm extends React.Component {
 	}
 
 	render() {
+		const isDisabled = !this.state.input || this.state.input === this.state.prevInput;
 		return (
 			<div className="full-size">
 				<div className="inputName">
@@ -90,15 +90,14 @@ class AddForm extends React.Component {
 							styles.hide :
 							styles.delete
 					}>
-						<Icon symbolType={TRASH} onClick={this.handleDelete} className={styles.icon}/>
-						<Icon symbolType={DUPLICATE} onClick={this.handleDuplicate} className={styles.icon}/>
+						<Icon iconType={TRASH} onClick={this.handleDelete} className={styles.icon}/>
+						<Icon iconType={DUPLICATE} onClick={this.handleDuplicate} className={styles.icon}/>
 					</div>
 					<div>
-						<button className={`${styles.save} ${styles.button}`}
+						<button className={`${styles.save} ${styles.button} ${isDisabled ? '' : styles.active}`}
 										onClick={this.saveTab}
 										type="submit"
-										ref={node => this.save = node}
-										disabled={!this.state.input}
+										disabled={isDisabled}
 						>
 							Save
 						</button>
@@ -118,7 +117,7 @@ class AddForm extends React.Component {
 		this.input.focus();
 	}
 
-};
+}
 
 AddForm.propTypes = {
 	onCancel: PropTypes.func.isRequired,

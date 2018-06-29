@@ -26,7 +26,7 @@ const InputWithLabel = ({
 			label ?
 				(
 					<label
-						className={`${styles.addSymbol} full-height d-flex align-items-center justify-content-center`}
+						className={`${styles.addIcon} full-height d-flex align-items-center justify-content-center`}
 					>
 						{label}
 					</label>

@@ -19,21 +19,21 @@ class DropDown extends React.Component {
 				<RowComponent
 					className={styles.tab}
 					onClick={() => onTabClick(SORT_BY.SORT_ALPHA)}
-					headerSymbol={SORT}
+					headerIcon={SORT}
 					mainContent={"Sort Alphabetically"}
 					headerClass={styles.headerLogo}
 				/>
 				<RowComponent
 					className={styles.tab}
 					onClick={() => onTabClick(SORT_BY.SORT_CREATION)}
-					headerSymbol={SORT_CREATION}
+					headerIcon={SORT_CREATION}
 					mainContent={"Sort by Creation Date"}
 					headerClass={styles.headerLogo}
 				/>
 				<RowComponent
 					className={styles.tab}
 					onClick={() => onTabClick(SORT_BY.SORT_PRIORITY)}
-					headerSymbol={STAR}
+					headerIcon={STAR}
 					mainContent={"Sort by Priority"}
 					headerClass={styles.headerLogo}
 				/>

@@ -3,18 +3,20 @@ import RowComponent from "../../molecules/RowComponent/RowComponent";
 import {INBOX_ID, STARRED_ID} from "../../../actions/actionTypes";
 import {INBOX, STAR} from "../../atoms/Icons/constants";
 import styles from './ListContainerView.mod.scss';
+import ScrollViewPort from 'react-scroll-viewport';
 
 class ListContainerView extends React.Component {
 
-	renderTabs = ({
-												 activeTab,
-												 tabs,
-												 onClick,
-												 onHeaderSymbolClick,
-												 onFooterSymbolClick,
-												 headerSymbol,
-												 footerSymbol
-											 }) => {
+	renderTabs = () => {
+		const {
+			activeTab,
+			tabs,
+			onClick,
+			onHeaderIconClick,
+			onFooterIconClick,
+			headerIcon,
+			footerIcon
+		} = this.props;
 		return (
 			tabs.map(tab => {
 				if (!tab.footerContent && tab.tabId === STARRED_ID)
@@ -24,21 +26,22 @@ class ListContainerView extends React.Component {
 						className={`${styles.tab} ${activeTab === tab.tabId ? styles.active : ''}`}
 						key={tab.tabId}
 						onClick={() => onClick(tab.tabId)}
-						onHeaderSymbolClick={onHeaderSymbolClick}
-						onFooterSymbolClick={() => onFooterSymbolClick(tab.tabId)}
-						headerSymbol={
+						onHeaderIconClick={onHeaderIconClick}
+						onFooterIconClick={onFooterIconClick}
+						footerClickArgs={[tab.tabId]}
+						headerIcon={
 							tab.tabId === INBOX_ID ?
 								INBOX :
 								tab.tabId === STARRED_ID ?
 									STAR :
-									headerSymbol
+									headerIcon
 						}
 
-						footerSymbol={
+						footerIcon={
 							activeTab === tab.tabId &&
 							activeTab !== INBOX_ID &&
 							activeTab !== STARRED_ID &&
-							footerSymbol
+							footerIcon
 						}
 
 						footerContent={
@@ -46,7 +49,7 @@ class ListContainerView extends React.Component {
 						}
 						mainContent={tab.tabName}
 						headerClass={
-							`${styles.logo} ${
+							`${styles.icon} ${
 								tab.tabId === INBOX_ID ?
 									styles.inboxLogo :
 									tab.tabId === STARRED_ID ?
@@ -65,9 +68,9 @@ class ListContainerView extends React.Component {
 		const {className} = this.props;
 		return (
 			<div className={`${className ? className : ''} flex-column justify-content-start align-items-center`}>
-				{
-					this.renderTabs(this.props)
-				}
+				<ScrollViewPort rowHeight={35} sync={true}>
+					{this.renderTabs()}
+				</ScrollViewPort>
 			</div>
 		);
 	}

@@ -10,19 +10,19 @@ class DropDownIcon extends React.Component {
 
 	render() {
 		const {
-			iconSymbol,
+			iconType,
 			onClick,
 			iconText,
 			...props
 		} = this.props;
 		return (
-			<div className={`${styles.icon} full-height d-flex align-items-center justify-content-center flex-column`}
+			<div className={`${styles.iconDiv} full-height d-flex align-items-center justify-content-center flex-column`}
 					 onClick={onClick} {...props}>
 
 				<div className={`full-height d-flex align-items-center justify-content-center`}>
 					<Icon
-						className={styles.logo}
-						symbolType={iconSymbol}
+						className={styles.icon}
+						iconType={iconType}
 					/>
 				</div>
 

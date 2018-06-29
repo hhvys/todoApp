@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './SearchBar.mod.scss';
 import Icon from '../../atoms/Icons/Icon';
 import Input from '../../atoms/Input/Input';
-import {LIST_TOGGLE, SEARCH_SYMBOL} from "../../atoms/Icons/constants";
+import {LIST_TOGGLE, SEARCH_LOGO} from "../../atoms/Icons/constants";
 
 const SearchBar = ({
 										 className,
@@ -17,7 +17,7 @@ const SearchBar = ({
 	>
 		<div className={`${styles.collapse} d-flex align-items-center justify-content-center pl-2`}
 				 onClick={collapseSideBar}>
-			<Icon symbolType={LIST_TOGGLE}/>
+			<Icon iconType={LIST_TOGGLE}/>
 		</div>
 		<Input className={"pl-3"}
 					 placeholder={'Search'}
@@ -28,7 +28,7 @@ const SearchBar = ({
 		<div className={"d-flex align-items-center justify-content-center pr-2"}>
 			<Icon
 				className={styles.white}
-				symbolType={SEARCH_SYMBOL}
+				iconType={SEARCH_LOGO}
 			/>
 		</div>
 	</div>

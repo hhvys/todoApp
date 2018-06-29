@@ -36,7 +36,7 @@ const mapDispatchToProps = (dispatch) => {
 			dispatch(searchQuery(''));
 			dispatch(changeSorting());
 		},
-		onFooterSymbolClick: (tabId) => {
+		onFooterIconClick: (tabId) => {
 			dispatch(toggleModal(tabId));
 		}
 	}

@@ -50,7 +50,7 @@ class Header extends React.Component {
 					>
 						<DropDownIcon
 							onClick={this.dropDownHandler}
-							iconSymbol={SORT}
+							iconType={SORT}
 							iconText={"Sort"}
 						/>
 					</div>

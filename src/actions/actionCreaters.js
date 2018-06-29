@@ -54,7 +54,6 @@ const dispatchDeleteTab = (tabId) => {
 	return (dispatch, getState) => {
 		const tab = getTabInfo(getState(), tabId);
 		const todos = [...tab.todos];
-		console.log(todos);
 		dispatch({
 			type: DELETE_TAB,
 			tabId,

@@ -13,20 +13,20 @@ class CollapsedSideBar extends React.Component {
 				className={`${styles.collapsedSidebar} ${className ? className : ''} fixed d-flex flex-column align-items-center justify-content-start`}
 				{...props}>
 				<div className={`${styles.listToggle} full-width d-flex align-items-center justify-content-center`}>
-					<Icon symbolType={LIST_TOGGLE} onClick={collapseSideBar} />
+					<Icon iconType={LIST_TOGGLE} onClick={collapseSideBar} />
 				</div>
 
 				<div className={`${styles.tabList} full-width d-flex flex-column align-items-center justify-content-start`}>
 					<div className={"full-width d-flex align-items-center justify-content-center"}>
-						<Icon className={styles.logo} symbolType={INBOX} onClick={collapseSideBar}/>
+						<Icon className={styles.icon} iconType={INBOX} onClick={collapseSideBar}/>
 					</div>
 					<div className={"full-width d-flex align-items-center justify-content-center"}>
-						<Icon className={styles.logo} symbolType={THREE_DOTS} onClick={collapseSideBar}/>
+						<Icon className={styles.icon} iconType={THREE_DOTS} onClick={collapseSideBar}/>
 					</div>
 				</div>
 
 				<div className={`${styles.createList} full-width d-flex align-items-center justify-content-center`}>
-					<Icon className={styles.logo} symbolType={PLUS} onClick={collapseSideBar}/>
+					<Icon className={styles.icon} iconType={PLUS} onClick={collapseSideBar}/>
 				</div>
 			</div>
 		);
