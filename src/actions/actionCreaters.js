@@ -123,14 +123,13 @@ export function copyTab(fromId) {
 			.forEach(todo => {
 				const newTodoId = v4();
 				todos[newTodoId] = {
-					...getTodoInfo(state, todo.todoId),
+					...getTodoInfo(state, todo),
 					tabId: newTabId,
 					todoId: newTodoId
 				};
 				todos[newTodoId].star &&
 				starredTodos.push(newTodoId);
 			});
-
 		return dispatch({
 			type: COPY_TAB,
 			starredTodos,

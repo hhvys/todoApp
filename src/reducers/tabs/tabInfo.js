@@ -147,16 +147,10 @@ function tabInfo(state = initialState, action, todoInfo) {
 					Object
 						.keys(action.todos)
 						.forEach(todo => {
-							if (!todo.completed && todo.star)
+							if (!action.todos[todo].completed && action.todos[todo].star)
 								change += 1;
 						});
 					return {
-						// action
-						// 	.todos
-						// 	.forEach(todo => {
-						// 		if (!todoInfo[todo].completed && todoInfo[todo].star)
-						// 			change += 1;
-						// 	});
 						...tab,
 						inCompletedTodos: tab.inCompletedTodos + change
 					}
