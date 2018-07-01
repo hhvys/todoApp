@@ -1,7 +1,8 @@
+@import "../../../constants.mod";
 .iconDiv {
   background-color: inherit;
   cursor: pointer;
-  height: 44px;
+  height: $header-height+px;
   width: 52px;
 }
 

@@ -1,11 +1,12 @@
+@import '../../../constants.mod';
 .multiTabView {
-    margin-left: 300px;
-    margin-top: 70px;
+    margin-left: ($side-bar-width + 20) + px;
+    margin-top: ($header-height + 25)+px;
     height: 100%;
 }
 
 .collapsed {
-    margin-left: 62px;
+    margin-left: ($collpased-side-bar-width + 20) + px;
 }
 
 .headerLogo {
@@ -18,9 +19,9 @@
 
 .todo {
     margin-top: 2px;
-    background-color: #F7F7F7;
+    background-color: $white-background;
     border-radius: 5px;
-    height: 46px;
+    height: $todo-height+px;
 }
 
 .input {

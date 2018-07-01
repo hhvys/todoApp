@@ -1,3 +1,4 @@
+@import "../../../constants.mod";
 .tab {
   height: 38px;
 }
@@ -19,7 +20,7 @@
 }
 
 .footerLogo {
-  fill: #262626;
+  fill: $icon-primary-color;
   opacity: 0.6;
   margin-right: 5px;
 }

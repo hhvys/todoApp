@@ -6,7 +6,7 @@ import RowComponent from '../../molecules/RowComponent/RowComponent';
 import {INBOX_ID} from "../../../actions/actionTypes"
 import {STARRED, STAR} from "../../atoms/Icons/constants";
 import InputWithLabel from '../../molecules/InputWithLabel/InputWithLabel';
-import NotFound from '../../molecules/NotFound/NotFound';
+import BackgroundMessage from '../../molecules/NotFound/BackgroundMessage';
 
 class MultiTabView extends React.Component {
 
@@ -51,7 +51,7 @@ class MultiTabView extends React.Component {
 			onButtonClick(INBOX_ID);
 
 		if (tabs.length === 0)
-			return (<NotFound/>);
+			return (<BackgroundMessage message={"No Search Results"}/>);
 
 		return tabs.map(tab => (
 

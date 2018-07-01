@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import ListContainerView from '../components/organisms/ListContainerView/ListContainerView';
-import {changeActiveTab, changeSorting, searchQuery, toggleModal} from "../actions/actionCreaters";
+import {changeActiveTab, changeSorting, searchQuery, toggleModal} from "../actions/actionCreators";
 import {getActiveTab} from "../reducers/activeTab";
 import {getTabInfo} from "../reducers/tabs/tabInfo";
 

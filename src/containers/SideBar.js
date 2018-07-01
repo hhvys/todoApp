@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import SideBarView from '../components/organisms/SideBar/SideBarView';
-import {searchQuery, toggleModal, toggleSideBar} from "../actions/actionCreaters";
+import {searchQuery, toggleModal, toggleSideBar} from "../actions/actionCreators";
 import {getCollapsedSideBar} from "../reducers/collapsedSideBar";
 import {getSearchQuery} from "../reducers/searchQuery";
 

@@ -6,7 +6,7 @@ import {
 	toggleModal,
 	toggleSideBar, toggleStarTodo, toggleTodo,
 	toggleVisibilityFilter
-} from "../actionCreaters";
+} from "../actionCreators";
 import {
 	ADD_STARRED_TODO,
 	ADD_TAB, ADD_TODO,

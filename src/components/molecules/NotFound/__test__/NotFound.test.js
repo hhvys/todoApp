@@ -1,10 +1,10 @@
 import React from 'react';
-import NotFound from '../NotFound';
+import BackgroundMessage from '../BackgroundMessage';
 
 describe('component', () => {
 	describe('NotFound', () => {
 		it('should render', () => {
-			expect(toJSON(shallow(<NotFound/>))).toMatchSnapshot();
+			expect(toJSON(shallow(<BackgroundMessage/>))).toMatchSnapshot();
 		});
 	});
 });

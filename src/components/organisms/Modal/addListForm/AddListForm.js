@@ -5,7 +5,7 @@ import {
 	changeActiveTab,
 	deleteTab,
 	copyTab, searchQuery, changeSorting
-} from '../../../../actions/actionCreaters';
+} from '../../../../actions/actionCreators';
 import {connect} from 'react-redux';
 import AddForm from './AddForm';
 import {INBOX_ID} from "../../../../actions/actionTypes";

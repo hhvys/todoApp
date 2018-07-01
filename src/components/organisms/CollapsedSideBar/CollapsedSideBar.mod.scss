@@ -1,19 +1,19 @@
 @import "../../../constants.mod";
 
 .collapsedSidebar {
-  width: 42px;
+  width: $collpased-side-bar-width+px;
   height: 100vh;
 }
 
 .listToggle {
-  min-height: 45px;
-  height: 45px;
+  min-height: $header-height+px;
+  height: $header-height+px;
   background-color: #5B795A;
   cursor: pointer;
 }
 
 .tabList {
-  background-color: #F7F7F7;
+  background-color: $white-background;
   flex: 1;
 }
 
@@ -22,9 +22,9 @@
 }
 
 .createList {
-  background-color: #F7F7F7;
-  height: 42px;
-  border-top: 1px solid #e0e0df;
+  background-color: $white-background;
+  height: $tab-height+px;
+  border-top: 1px solid $border-color;
 }
 
 .icon {

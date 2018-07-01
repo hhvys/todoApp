@@ -1,3 +1,4 @@
+@import "../../../constants.mod";
 .modal {
   display: none;
 }
@@ -112,5 +113,5 @@
 }
 
 .icon:hover {
-  fill: #262626;
+  fill: $icon-primary-color;
 }

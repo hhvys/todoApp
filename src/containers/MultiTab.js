@@ -7,7 +7,7 @@ import {
 	searchQuery,
 	toggleStarTodo,
 	toggleTodo
-} from "../actions/actionCreaters";
+} from "../actions/actionCreators";
 import {getTabsWithInfo} from "../reducers/tabs/tabs";
 import {getSearchQuery} from "../reducers/searchQuery";
 import {getActiveTab} from "../reducers/activeTab";

@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {addTodo, changeSorting, toggleStarTodo, toggleTodo, toggleVisibilityFilter} from "../actions/actionCreaters";
+import {addTodo, changeSorting, toggleStarTodo, toggleTodo, toggleVisibilityFilter} from "../actions/actionCreators";
 import {getActiveTab} from "../reducers/activeTab";
 import {getCollapsedSideBar} from "../reducers/collapsedSideBar";
 import TodosContainer from '../components/organisms/TodoView/TodoContainer';

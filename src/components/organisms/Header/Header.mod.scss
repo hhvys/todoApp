@@ -1,18 +1,19 @@
+@import "../../../constants.mod";
 .header {
-    left: 280px;
+    left: $side-bar-width+px;
     z-index: 1;
 }
 
 .collapsed {
-    left: 42px;
+    left: $collpased-side-bar-width+px;
 }
 
 .collapsed .dropdownIcons{
-    margin-right: 42px;
+    margin-right: $collpased-side-bar-width+px;
 }
 
 .dropdownIcons {
-    margin-right: 280px;
+    margin-right: $side-bar-width+px;
 }
 
 .headerContent {

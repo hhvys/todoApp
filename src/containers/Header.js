@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import HeaderView from '../components/organisms/Header/Header';
-import {changeSorting} from "../actions/actionCreaters";
+import {changeSorting} from "../actions/actionCreators";
 import {getSearchQuery} from "../reducers/searchQuery";
 import {getActiveTab} from "../reducers/activeTab";
 import {getCollapsedSideBar} from "../reducers/collapsedSideBar";

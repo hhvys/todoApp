@@ -2,12 +2,12 @@
 
 .todoView {
   margin-left: ($side-bar-width + 20px);
-  margin-top: 70px;
+  margin-top: ($header-height+25)+px;
   height: 100%;
 }
 
 .collapsed {
-  margin-left: 62px;
+  margin-left: ($collpased-side-bar-width + 20px);
 }
 
 .headerLogo {
@@ -23,7 +23,7 @@
   margin-top: 2px;
   background-color: #F7F7F7;
   border-radius: 5px;
-  height: 46px;
+  height: $todo-height+px;
 }
 
 .completedTodo {
