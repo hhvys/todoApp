@@ -12,9 +12,13 @@ const tabs = (state = {}, action) => {
 export default tabs;
 
 export function getTabs(state) {
-	return getTabInfo(state.tabs).map(tab => {
-		const todos = getTodoInfo(state.tabs, tab.todos);
-		const starredTodos = getTodoInfo(state.tabs, tab.starredTodos);
+	return state.tabs;
+}
+
+export function getTabsWithInfo(state) {
+	return getTabInfo(state).map(tab => {
+		const todos = getTodoInfo(state, tab.todos);
+		const starredTodos = getTodoInfo(state, tab.starredTodos);
 		return {
 			...tab,
 			todos,

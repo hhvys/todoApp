@@ -9,13 +9,6 @@ describe('DropDown', () => {
 		expect(toJSON(shallow(<DropDown {...props}/>))).toMatchSnapshot();
 	});
 
-	it('should pass onTabClick as onClick prop to RowComponents', () => {
-		const props = {
-			onTabClick: jest.fn()
-		};
-		expect(props.onTabClick.mock.calls.length).toBe(1);
-	});
-
 	it('should pass onClick', () => {
 		const props = {
 			onClick: jest.fn()

@@ -8,13 +8,13 @@ import {
 	toggleStarTodo,
 	toggleTodo
 } from "../actions/actionCreaters";
-import {getTabs} from "../reducers/tabs/tabs";
+import {getTabsWithInfo} from "../reducers/tabs/tabs";
 import {getSearchQuery} from "../reducers/searchQuery";
 import {getActiveTab} from "../reducers/activeTab";
 import {getCollapsedSideBar} from "../reducers/collapsedSideBar";
 
 export const getFilteredTabs = (state) => {
-	let tabs = getTabs(state);
+	let tabs = getTabsWithInfo(state);
 	tabs = state.searchQuery.length ?
 		tabs
 			.map(tab => ({
@@ -46,15 +46,22 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 
 	return {
-		onFooterSymbolClick: (tabId, todoId) => dispatch(toggleStarTodo(tabId, todoId)),
-		onHeaderSymbolClick: (tabId, todoId) => dispatch(toggleTodo(tabId, todoId)),
+		onFooterIconClick: (tabId, todoId) => {
+			dispatch(toggleStarTodo(tabId, todoId));
+			dispatch(changeSorting(undefined, tabId));
+		},
+		onHeaderIconClick: (tabId, todoId) => {
+			dispatch(toggleTodo(tabId, todoId));
+			dispatch(changeSorting(undefined, tabId));
+		},
 		onButtonClick: (tabId) => {
 			dispatch(changeActiveTab(tabId));
 			dispatch(searchQuery(''));
+			dispatch(changeSorting());
 		},
 		onInputSubmit: (value) => {
 			dispatch(addStarredTodo(value));
-			dispatch(changeSorting());
+			// dispatch(changeSorting());
 		}
 	};
 };

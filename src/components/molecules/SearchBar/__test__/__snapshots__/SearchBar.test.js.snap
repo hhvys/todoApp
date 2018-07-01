@@ -7,7 +7,7 @@ exports[`SearchBar should pass collapseSideBar prop to startLogo 1`] = `
 >
   <Icon
     height={20}
-    symbolType="LIST_TOGGLE"
+    iconType="LIST_TOGGLE"
     width={20}
   />
 </div>
@@ -31,7 +31,7 @@ exports[`SearchBar should render 1`] = `
   >
     <Icon
       height={20}
-      symbolType="LIST_TOGGLE"
+      iconType="LIST_TOGGLE"
       width={20}
     />
   </div>
@@ -45,7 +45,7 @@ exports[`SearchBar should render 1`] = `
     <Icon
       className="white"
       height={20}
-      symbolType="SEARCH_SYMBOL"
+      iconType="SEARCH_SYMBOL"
       width={20}
     />
   </div>

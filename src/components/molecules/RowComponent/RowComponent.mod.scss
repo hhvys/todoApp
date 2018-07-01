@@ -3,24 +3,6 @@
     cursor: pointer;
 }
 
-//.dropdown {
-//    height: 31px;
-//    width: 246px;
-//    color: white;
-//}
-//
-//    .dropdown .startSymbol {
-//        fill: white;
-//    }
-//
-//.dropdown:hover {
-//    background-color: #769475;
-//}
-
-.active {
-    background-color: #E1EEFA;
-}
-
 .header {
     width: 30px;
 }
@@ -28,6 +10,7 @@
 .content {
     flex: 1;
     height: 100%;
+    width: 70%;
 }
 
 .extraContent {
@@ -36,15 +19,16 @@
 }
 
 .footer {
-    width: 35px;
+    width: 40px;
 }
 
 .footerContent {
     font-size: 12px;
     font-weight: 500;
     color: #bdbcbb;
+    width: 28px;
 }
 
-.endSymbol:hover {
+.endIcon:hover {
     font-weight: bold;
 }

@@ -42,7 +42,7 @@ class Header extends React.Component {
 				<div
 					className={`${className ? className : ''} ${collapsed ? styles.collapsed : ''} ${styles.header} fixed full-width d-flex align-items-center justify-content-between`}
 					{...props}>
-					<div className={`${styles.headerContent} pl-4`}>
+					<div className={`${styles.headerContent} txt-overflow pl-4`}>
 						{headerContent}
 					</div>
 					<div className={`${styles.dropdownIcons} d-flex align-items-center justify-content-between`}
@@ -50,7 +50,7 @@ class Header extends React.Component {
 					>
 						<DropDownIcon
 							onClick={this.dropDownHandler}
-							iconSymbol={SORT}
+							iconType={SORT}
 							iconText={"Sort"}
 						/>
 					</div>

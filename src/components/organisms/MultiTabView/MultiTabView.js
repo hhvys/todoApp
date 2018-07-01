@@ -14,8 +14,8 @@ class MultiTabView extends React.Component {
 	renderVerticalTab = ({
 												 todos,
 												 tabId,
-												 onFooterSymbolClick,
-												 onHeaderSymbolClick,
+												 onFooterIconClick,
+												 onHeaderIconClick,
 											 }) => {
 
 		return (
@@ -25,13 +25,15 @@ class MultiTabView extends React.Component {
 					return (
 						<RowComponent key={todo.todoId}
 													className={styles.todo}
-													headerSymbol={todo.completed ? CHECKED_CHECK_BOX : CHECK_BOX}
-													footerSymbol={todo.star ? STARRED : STAR}
-													headerClass={styles.logo}
-													footerClass={styles.logo}
+													headerIcon={todo.completed ? CHECKED_CHECK_BOX : CHECK_BOX}
+													footerIcon={todo.star ? STARRED : STAR}
+													headerClass={styles.headerLogo}
+													footerClass={styles.footerLogo}
 													mainContent={todo.text}
-													onFooterSymbolClick={() => onFooterSymbolClick(tabId, todo.todoId)}
-													onHeaderSymbolClick={() => onHeaderSymbolClick(tabId, todo.todoId)}
+													onFooterIconClick={onFooterIconClick}
+													headerClickArgs={[tabId, todo.todoId]}
+													footerClickArgs={[tabId, todo.todoId]}
+													onHeaderIconClick={onHeaderIconClick}
 						/>
 					);
 				})
@@ -40,8 +42,8 @@ class MultiTabView extends React.Component {
 
 	renderTabs({
 							 tabs,
-							 onFooterSymbolClick,
-							 onHeaderSymbolClick,
+							 onFooterIconClick,
+							 onHeaderIconClick,
 							 onButtonClick,
 							 searchQuery
 						 }) {
@@ -52,6 +54,7 @@ class MultiTabView extends React.Component {
 			return (<NotFound/>);
 
 		return tabs.map(tab => (
+
 			<div key={tab.tabId}>
 				<Button text={tab.tabName.toLocaleUpperCase()}
 								className={"mt-4 mb-2"}
@@ -61,8 +64,8 @@ class MultiTabView extends React.Component {
 					this.renderVerticalTab({
 						todos: tab.todos,
 						tabId: tab.tabId,
-						onFooterSymbolClick,
-						onHeaderSymbolClick
+						onFooterIconClick,
+						onHeaderIconClick
 					})
 				}
 			</div>
@@ -72,8 +75,8 @@ class MultiTabView extends React.Component {
 	render() {
 		const {
 			tabs,
-			onHeaderSymbolClick,
-			onFooterSymbolClick,
+			onHeaderIconClick,
+			onFooterIconClick,
 			searchQuery,
 			onButtonClick,
 			collapsed,
@@ -94,8 +97,8 @@ class MultiTabView extends React.Component {
 				{
 					this.renderTabs({
 						tabs,
-						onHeaderSymbolClick,
-						onFooterSymbolClick,
+						onHeaderIconClick,
+						onFooterIconClick,
 						searchQuery,
 						onButtonClick
 					})

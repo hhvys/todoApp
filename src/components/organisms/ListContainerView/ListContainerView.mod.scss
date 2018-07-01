@@ -2,7 +2,7 @@
   height: 38px;
 }
 
-.logo {
+.icon {
   width: 30px;
 }
 
@@ -26,4 +26,8 @@
 
 .footerLogo:hover {
   opacity: 1;
+}
+
+.active {
+  background-color: #E1EEFA;
 }

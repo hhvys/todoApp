@@ -10,7 +10,7 @@ exports[`component DropDownIcon should pass iconSymbol 1`] = `
     <Icon
       className="logo"
       height={20}
-      symbolType="iconLogo"
+      iconType="iconLogo"
       width={20}
     />
   </div>

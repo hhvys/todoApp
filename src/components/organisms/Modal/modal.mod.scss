@@ -3,7 +3,7 @@
 }
 
 .modal.active {
-  z-index: 1000;
+  z-index: 5000;
   display: flex;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.2);
@@ -105,4 +105,12 @@
   margin: 10px auto;
   display: flex;
   justify-content: center;
+}
+
+.icon {
+  margin: 5px;
+}
+
+.icon:hover {
+  fill: #262626;
 }

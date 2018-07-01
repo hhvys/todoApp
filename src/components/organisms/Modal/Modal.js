@@ -1,12 +1,12 @@
 import ModalView from './ModalView';
 import {connect} from 'react-redux';
-import {getTabs} from "../../../reducers/tabs/tabs";
 import {getModalActive} from "../../../reducers/modalActive";
+import {getTabInfo} from "../../../reducers/tabs/tabInfo";
 
 const mapStateToProps = (state) => {
 	const modalActive = getModalActive(state);
 	const tabId = modalActive.tabId;
-	const tabs = getTabs(state);
+	const tabs = getTabInfo(state);
 	const editTab = tabs
 		.find(tab => tab.tabId === tabId);
 

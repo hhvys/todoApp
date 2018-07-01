@@ -53,7 +53,7 @@ export const INBOX = (
 	</g>
 );
 
-export const LIST_SYMBOL = (
+export const LIST_ICON = (
 	<g id="Web-svgs" stroke="none" strokeWidth="1" fillRule="evenodd">
 		<g id="list">
 			<path
@@ -75,7 +75,7 @@ export const PENCIL = (
 	</g>
 );
 
-export const SEARCH_SYMBOL = (
+export const SEARCH_ICON = (
 	<g stroke="none" strokeWidth="1" fillRule="evenodd">
 		<g>
 			<path

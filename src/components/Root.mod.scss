@@ -1,6 +1,6 @@
 html, body, *, *:before, *:after {
   box-sizing: border-box;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-weight: lighter;
   font-size: 15px;
 }
@@ -13,9 +13,7 @@ html, body {
 }
 
 body {
-  background-image: url('../resources/background.jpg');
-  background-repeat: no-repeat;
-  background-position: center top;
+  background: white url('../resources/background.jpg') no-repeat center top;
   background-size: cover;
   position: fixed;
   z-index: -100;
@@ -91,4 +89,18 @@ input[type=checkbox] {
   .hide {
     display: none;
   }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 5px;
 }

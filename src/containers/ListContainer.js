@@ -1,31 +1,25 @@
 import {connect} from 'react-redux';
 import ListContainerView from '../components/organisms/ListContainerView/ListContainerView';
-import {changeActiveTab, searchQuery, toggleModal} from "../actions/actionCreaters";
-import {getTabs} from "../reducers/tabs/tabs";
+import {changeActiveTab, changeSorting, searchQuery, toggleModal} from "../actions/actionCreaters";
 import {getActiveTab} from "../reducers/activeTab";
-import {STARRED_ID} from "../actions/actionTypes";
+import {getTabInfo} from "../reducers/tabs/tabInfo";
+
+const getFooterContent = (inCompletedTodos) => {
+	if(inCompletedTodos <= 0)
+		return '';
+	return inCompletedTodos > 99 ? '99+' : inCompletedTodos
+};
 
 const getTabsWithFooterContent = (state) => {
-	let tabs = getTabs(state);
+	let tabs = getTabInfo(state);
 	return tabs.map(tab => {
-		let footerContent = tab.todos
-			.filter(todo => !todo.completed)
-			.length;
-
-		if (tab.tabId === STARRED_ID) {
-			footerContent = tabs.reduce((totalStarred, tab) => {
-				const tabStarred = tab
-					.starredTodos
-					.reduce((count, todo) => count + !todo.completed, 0);
-				return totalStarred + tabStarred;
-			}, 0);
-		}
 		return {
 			...tab,
-			footerContent
+			footerContent: getFooterContent(tab.inCompletedTodos)
 		}
 	});
 };
+
 
 const mapStateToProps = (state) => {
 
@@ -40,8 +34,9 @@ const mapDispatchToProps = (dispatch) => {
 		onClick: (tabId) => {
 			dispatch(changeActiveTab(tabId));
 			dispatch(searchQuery(''));
+			dispatch(changeSorting());
 		},
-		onFooterSymbolClick: (tabId) => {
+		onFooterIconClick: (tabId) => {
 			dispatch(toggleModal(tabId));
 		}
 	}

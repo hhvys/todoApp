@@ -4,10 +4,11 @@ import {
 	changeTabName,
 	changeActiveTab,
 	deleteTab,
-	copyTab, searchQuery
+	copyTab, searchQuery, changeSorting
 } from '../../../../actions/actionCreaters';
 import {connect} from 'react-redux';
 import AddForm from './AddForm';
+import {INBOX_ID} from "../../../../actions/actionTypes";
 
 const mapStateToProps = () => ({});
 
@@ -23,12 +24,14 @@ const mapDispatchToProps = (dispatch) => {
 				const addTabAction = addTab(tabName);
 				dispatch(addTabAction);
 				dispatch(changeActiveTab(addTabAction.tabId));
+				dispatch(changeSorting());
 			}
 		},
 		onDelete: (tabId) => {
-			dispatch(changeActiveTab(0));
+			dispatch(changeActiveTab(INBOX_ID));
 			dispatch(searchQuery(''));
 			dispatch(deleteTab(tabId));
+			dispatch(changeSorting());
 		},
 		onDuplicate: (tabId) => {
 			dispatch(copyTab(tabId));
