@@ -31,17 +31,13 @@ const stableSortTodos = (todos, sortBy, todoById) => {
 	});
 
 	const compareByIndex = (a, b) => {
-		console.log(indexOf);
-		console.log(a);
 		if (indexOf[a.todoId] < indexOf[b.todoId])
 			return -1;
 		return 1;
 	};
-	// console.log(indexOf);
 	return todos.sort((todo1, todo2) => {
 		const a = todoById[todo1];
 		const b = todoById[todo2];
-		// console.log(!a.star);
 		switch (sortBy) {
 			case SORT_BY.SORT_PRIORITY:
 				if (a.star && !b.star)

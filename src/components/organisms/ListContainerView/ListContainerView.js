@@ -68,9 +68,9 @@ class ListContainerView extends React.Component {
 		const {className} = this.props;
 		return (
 			<div className={`${className ? className : ''} flex-column justify-content-start align-items-center`}>
-				<ScrollViewPort rowHeight={35} sync={true}>
-					{this.renderTabs()}
-				</ScrollViewPort>
+				{/*<ScrollViewPort rowHeight={35} sync={true}>*/}
+				{this.renderTabs()}
+				{/*</ScrollViewPort>*/}
 			</div>
 		);
 	}

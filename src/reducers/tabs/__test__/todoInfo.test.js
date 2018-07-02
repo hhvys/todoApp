@@ -1,5 +1,4 @@
 import * as _ from 'lodash';
-import tabs from "../tabs";
 import {
 	ADD_STARRED_TODO,
 	ADD_TAB,
@@ -10,21 +9,20 @@ import {
 	STARRED_ID,
 } from "../../../actions/actionTypes";
 import {
-	COPIED_TAB_STATE, COPY_TAB_ACTION,
 	TABS_INITIAL_STATE,
-	TABS_SORTBY_ALPHA,
+	TABS_SORTBY_CREATION,
 	TABS_STATE, TOGGLE_STAR_TODO_STATE
 } from "./__fixtures__/tabsReducers.fixtures";
 import * as actionTypes from "../../../actions/actionTypes";
-import {getTabInfo} from "../tabInfo";
 import {getTodoById} from "../todoById";
 import todoById from '../todoById';
+import {STATE_WITH_TABS} from "../../__test__/__fixtures__/reducers.fixtures";
 
 describe('todoApp tabs todoInfo', () => {
 	describe('reducer', () => {
 
 		it('should have initial state', () => {
-			expect(todoById(undefined, {})).toEqual(TABS_INITIAL_STATE.todoInfo);
+			expect(todoById(undefined, {})).toEqual(TABS_INITIAL_STATE.todoById);
 		});
 
 		describe('action STAR_TOGGLE_TODO', () => {
@@ -33,18 +31,20 @@ describe('todoApp tabs todoInfo', () => {
 				const action = {
 					type: actionTypes.STAR_TOGGLE_TODO,
 					tabId: INBOX_ID,
-					todoId: 'a383d653-0fc9-4873-bf88-e4ee57885632'
+					todoId: 'c00a197e-1083-4064-aeb4-765654c5c9f6'
 				};
-				expect(todoById(TABS_STATE.todoInfo, action)).toEqual(TOGGLE_STAR_TODO_STATE.todoInfo);
+				const input = _.cloneDeep(TABS_STATE.todoById);
+				expect(todoById(input, action)).toEqual(TOGGLE_STAR_TODO_STATE.todoById);
 			});
 
 			it('should remove todo from starred todos', () => {
 				const action = {
 					type: actionTypes.STAR_TOGGLE_TODO,
 					tabId: INBOX_ID,
-					todoId: 'a383d653-0fc9-4873-bf88-e4ee57885632'
+					todoId: 'c00a197e-1083-4064-aeb4-765654c5c9f6'
 				};
-				expect(todoById(TOGGLE_STAR_TODO_STATE.todoInfo, action)).toEqual(TABS_STATE.todoInfo);
+				const input = _.cloneDeep(TOGGLE_STAR_TODO_STATE.todoById);
+				expect(todoById(input, action)).toEqual(TABS_STATE.todoById);
 			});
 
 		});
@@ -67,11 +67,12 @@ describe('todoApp tabs todoInfo', () => {
 						starredTodos: []
 					}
 				],
-				todoInfo: {
-					...TABS_STATE.todoInfo
+				todoById: {
+					...TABS_STATE.todoById
 				}
 			};
-			expect(todoById(TABS_STATE.todoInfo, action)).toEqual(nextState.todoInfo);
+			const input = _.cloneDeep(TABS_STATE.todoById);
+			expect(todoById(input, action)).toEqual(nextState.todoById);
 		});
 
 		it('should handle ADD_STARRED_TODO', () => {
@@ -109,7 +110,7 @@ describe('todoApp tabs todoInfo', () => {
 						starredTodos: []
 					}
 				],
-				todoInfo: {
+				todoById: {
 					[newTodoId]: {
 						tabId: INBOX_ID,
 						todoId: newTodoId,
@@ -119,8 +120,8 @@ describe('todoApp tabs todoInfo', () => {
 					}
 				}
 			};
-
-			expect(todoById(TABS_INITIAL_STATE.todoInfo, action)).toEqual(nextState.todoInfo);
+			const input = _.cloneDeep(TABS_INITIAL_STATE.todoById);
+			expect(todoById(input, action)).toEqual(nextState.todoById);
 		});
 
 		it('should handle ADD_TODO', () => {
@@ -158,7 +159,7 @@ describe('todoApp tabs todoInfo', () => {
 						starredTodos: []
 					}
 				],
-				todoInfo: {
+				todoById: {
 					[newTodoId]: {
 						tabId: INBOX_ID,
 						todoId: newTodoId,
@@ -167,8 +168,8 @@ describe('todoApp tabs todoInfo', () => {
 					}
 				}
 			};
-
-			expect(todoById(TABS_INITIAL_STATE.todoInfo, action)).toEqual(nextState.todoInfo);
+			const input = _.cloneDeep(TABS_INITIAL_STATE.todoById);
+			expect(todoById(input, action)).toEqual(nextState.todoById);
 		});
 
 		it('should handle CHANGE_SORT', () => {
@@ -176,19 +177,16 @@ describe('todoApp tabs todoInfo', () => {
 				type: CHANGE_SORT,
 				sortBy: SORT_BY.SORT_ALPHA
 			};
-			const nextState = TABS_SORTBY_ALPHA;
-			expect(todoById(TABS_STATE.todoInfo, action)).toEqual(nextState.todoInfo);
+			const nextState = _.cloneDeep(TABS_SORTBY_CREATION);
+			const input = _.cloneDeep(TABS_STATE.todoById);
+			expect(todoById(input, action)).toEqual(nextState.todoById);
 
 			action = {
 				type: CHANGE_SORT,
 				sortBy: SORT_BY.SORT_CREATION
 			};
 
-			expect(todoById(nextState.todoInfo, action)).toEqual(TABS_STATE.todoInfo);
-		});
-
-		it('should handle COPY_TAB', () => {
-			expect(todoById(TABS_STATE.todoInfo, COPY_TAB_ACTION)).toEqual(COPIED_TAB_STATE.todoInfo);
+			expect(todoById(nextState.todoById, action)).toEqual(TABS_STATE.todoById);
 		});
 
 		it('should handle CHANGE_TAB_NAME', () => {
@@ -200,15 +198,16 @@ describe('todoApp tabs todoInfo', () => {
 
 			const nextState = _.cloneDeep(TABS_INITIAL_STATE);
 			nextState.tabInfo[0].tabName = action.tabName;
-
-			expect(todoById(TABS_INITIAL_STATE.todoInfo, action)).toEqual(nextState.todoInfo);
+			const input = _.cloneDeep(TABS_INITIAL_STATE.todoById);
+			expect(todoById(input, action)).toEqual(nextState.todoById);
 		});
 
 		it('should handle DELETE_TAB', () => {
 
 			const action = {
 				type: actionTypes.DELETE_TAB,
-				tabId: INBOX_ID
+				tabId: INBOX_ID,
+				todos: []
 			};
 			const nextState = {
 				tabInfo: [
@@ -219,9 +218,10 @@ describe('todoApp tabs todoInfo', () => {
 						starredTodos: []
 					}
 				],
-				todoInfo: {}
+				todoById: {}
 			};
-			expect(todoById(TABS_INITIAL_STATE.todoInfo, action)).toEqual(nextState.todoInfo);
+			const input = _.cloneDeep(TABS_INITIAL_STATE.todoById);
+			expect(todoById(input, action)).toEqual(nextState.todoById);
 
 		});
 
@@ -231,50 +231,51 @@ describe('todoApp tabs todoInfo', () => {
 				tabId: INBOX_ID
 			};
 			const nextState = _.cloneDeep(TABS_INITIAL_STATE);
+			const input = _.cloneDeep(TABS_INITIAL_STATE.todoById);
 			nextState.tabInfo[0].showCompletedTodo = true;
-			expect(todoById(TABS_INITIAL_STATE.todoInfo, action)).toEqual(nextState.todoInfo);
+			expect(todoById(input, action)).toEqual(nextState.todoById);
 		});
 
 	});
 
 	describe('selectors', () => {
 
-		describe('todoInfo', () => {
+		describe('todoById', () => {
 
 			it('should get todoInfo of all todoIds', () => {
 				const todoIds = [
-					'6d0db783-1bcb-40ab-ab48-12a0ae8aa773',
-					'a383d653-0fc9-4873-bf88-e4ee57885632'
+					"f9f47212-02ee-4a95-91a5-cabe979a83e0",
+					"e0d7d769-07fd-4aee-9e23-284ab3d44712"
 				];
-				const todoInfo = [
-					{
-						tabId: 0,
-						todoId: '6d0db783-1bcb-40ab-ab48-12a0ae8aa773',
-						text: '2',
-						createdTime: '2018-06-18T04:52:28.679Z',
-						star: true
-					},
-					{
-						tabId: 0,
-						todoId: 'a383d653-0fc9-4873-bf88-e4ee57885632',
-						text: '1',
-						createdTime: '2018-06-18T04:52:28.353Z',
-						star:false
-					}
-				];
-				expect(getTodoById(TABS_STATE, todoIds)).toEqual(todoInfo);
+				const todoById = [{
+					"completed": false,
+					"completedTime": "2018-07-02T09:23:38.901Z",
+					"createdTime": "2018-07-02T09:19:29.288Z",
+					"tabId": 0,
+					"text": "4",
+					"todoId": "f9f47212-02ee-4a95-91a5-cabe979a83e0"
+				}, {
+					"completed": true,
+					"completedTime": "2018-07-02T09:39:39.317Z",
+					"createdTime": "2018-07-02T09:20:17.928Z",
+					"tabId": "18f4a48f-10c5-4208-9553-4874b52d8cfa",
+					"text": "4",
+					"todoId": "e0d7d769-07fd-4aee-9e23-284ab3d44712"
+				}];
+				expect(getTodoById(STATE_WITH_TABS, todoIds)).toEqual(todoById);
 			});
 
 			it('should get todoInfo of todoId', () => {
-				const todoId = '6d0db783-1bcb-40ab-ab48-12a0ae8aa773';
-				const todoInfo = {
-					tabId: 0,
-					todoId: '6d0db783-1bcb-40ab-ab48-12a0ae8aa773',
-					text: '2',
-					createdTime: '2018-06-18T04:52:28.679Z',
-					star: true
+				const todoId = "f9f47212-02ee-4a95-91a5-cabe979a83e0";
+				const todoById = {
+					"completed": false,
+					"completedTime": "2018-07-02T09:23:38.901Z",
+					"createdTime": "2018-07-02T09:19:29.288Z",
+					"tabId": 0,
+					"text": "4",
+					"todoId": "f9f47212-02ee-4a95-91a5-cabe979a83e0"
 				};
-				expect(getTodoById(TABS_STATE, todoId)).toEqual(todoInfo);
+				expect(getTodoById(STATE_WITH_TABS, todoId)).toEqual(todoById);
 			})
 
 		});
