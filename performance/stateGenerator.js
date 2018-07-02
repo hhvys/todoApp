@@ -4,8 +4,8 @@ const {v4} = require('node-uuid');
 const {INBOX_ID, SORT_BY} = require("../src/actions/actionTypes");
 
 const store = {};
-const NTABS = 100;
-const NTODOS = 1000;
+const NTABS = 10;
+const NTODOS = 100;
 
 store.activeTab = INBOX_ID;
 store.collapsedSideBar = false;
@@ -18,7 +18,7 @@ store.sortBy = SORT_BY.SORT_CREATION;
 
 const generateTabs = () => {
 	const tabs = {
-		todoInfo: {},
+		todoById: {},
 		tabInfo: [
 			{
 				tabId: INBOX_ID,
@@ -50,7 +50,7 @@ const generateTabs = () => {
 		for (let j = 0; j < NTODOS; j++) {
 			const todoId = v4();
 			tabToAdd.todos.push(todoId);
-			tabs.todoInfo[todoId] = {
+			tabs.todoById[todoId] = {
 				tabId,
 				todoId,
 				text: `Todo ${j}`,

@@ -5,7 +5,7 @@ export const STATE = {
 		isOpened: false
 	},
 	tabs: {
-		todoInfo: {
+		todoById: {
 			'a383d653-0fc9-4873-bf88-e4ee57885632': {
 				tabId: 0,
 				todoId: 'a383d653-0fc9-4873-bf88-e4ee57885632',

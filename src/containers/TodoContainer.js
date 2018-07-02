@@ -3,7 +3,7 @@ import {addTodo, changeSorting, toggleStarTodo, toggleTodo, toggleVisibilityFilt
 import {getActiveTab} from "../reducers/activeTab";
 import {getCollapsedSideBar} from "../reducers/collapsedSideBar";
 import TodosContainer from '../components/organisms/TodoView/TodoContainer';
-import {getTodoInfo} from "../reducers/tabs/todoInfo";
+import {getTodoById} from "../reducers/tabs/todoById";
 import {getTabInfo} from "../reducers/tabs/tabInfo";
 
 const mapStateToProps = (state) => {
@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
 	let todos = tabs
 		.find(tab => tab.tabId === activeTab)
 		.todos;
-	todos = getTodoInfo(state, todos);
+	todos = getTodoById(state, todos);
 	return ({
 		todos,
 		activeTab,

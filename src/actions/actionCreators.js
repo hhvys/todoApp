@@ -1,7 +1,7 @@
 import * as actionTypes from './actionTypes';
 import {v4} from 'node-uuid';
 import {COPY_TAB} from "./actionTypes";
-import {getTodoInfo} from "../reducers/tabs/todoInfo";
+import {getTodoById} from "../reducers/tabs/todoById";
 import {INBOX_ID} from "./actionTypes";
 import {getSortBy} from "../reducers/sortBy";
 import {getActiveTab} from "../reducers/activeTab";
@@ -94,13 +94,13 @@ export function addStarredTodo(text) {
 
 export function toggleTodo(tabId, todoId) {
 	return (dispatch, getState) => {
-		const todoInfo = getTodoInfo(getState(), todoId);
+		const todoById = getTodoById(getState(), todoId);
 		return dispatch({
 			type: actionTypes.TOGGLE_TODO,
 			tabId,
 			todoId,
-			completed: todoInfo.completed,
-			star: todoInfo.star
+			completed: todoById.completed,
+			star: todoById.star
 		});
 	};
 }
@@ -113,7 +113,7 @@ export function copyTab(fromId) {
 		const fromTab = tabs
 			.find(tab => tab.tabId === fromId);
 		const inCompletedTodos = fromTab.inCompletedTodos;
-		//Map of new_todoIds to todoInfo
+		//Map of new_todoIds to todoById
 		const todos = {};
 		const starredTodos = [];
 
@@ -122,7 +122,7 @@ export function copyTab(fromId) {
 			.forEach(todo => {
 				const newTodoId = v4();
 				todos[newTodoId] = {
-					...getTodoInfo(state, todo),
+					...getTodoById(state, todo),
 					tabId: newTabId,
 					todoId: newTodoId
 				};
@@ -142,13 +142,13 @@ export function copyTab(fromId) {
 
 export function toggleStarTodo(tabId, todoId) {
 	return (dispatch, getState) => {
-		const todoInfo = getTodoInfo(getState(), todoId);
+		const todoById = getTodoById(getState(), todoId);
 		return dispatch({
 			type: actionTypes.STAR_TOGGLE_TODO,
 			tabId,
 			todoId,
-			completed: todoInfo.completed,
-			star: todoInfo.star
+			completed: todoById.completed,
+			star: todoById.star
 		});
 	};
 }

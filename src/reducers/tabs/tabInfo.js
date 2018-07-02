@@ -15,63 +15,80 @@ import {
 } from "../../actions/actionTypes";
 import {getTabs} from "./tabs";
 
-const todos = (state = [], action, todoInfo) => {
-	let newState;
+/**
+ *
+ * @param todos - array of to-do ids.
+ * @param sortBy
+ * @param todoById
+ * @returns {*} - sorted array of to-do ids.
+ */
+
+const stableSortTodos = (todos, sortBy, todoById) => {
+	//For stable sort
+	const indexOf = {};
+	todos.forEach((todo, index) => {
+		indexOf[todo] = index;
+	});
+
+	const compareByIndex = (a, b) => {
+		console.log(indexOf);
+		console.log(a);
+		if (indexOf[a.todoId] < indexOf[b.todoId])
+			return -1;
+		return 1;
+	};
+	// console.log(indexOf);
+	return todos.sort((todo1, todo2) => {
+		const a = todoById[todo1];
+		const b = todoById[todo2];
+		// console.log(!a.star);
+		switch (sortBy) {
+			case SORT_BY.SORT_PRIORITY:
+				if (a.star && !b.star)
+					return -1;
+				if (!a.star && b.star)
+					return 1;
+				return compareByIndex(a, b);
+
+			case SORT_BY.SORT_CREATION:
+
+				if (a.createdTime > b.createdTime)
+					return -1;
+				if (a.createdTime < b.createdTime)
+					return 1;
+				return compareByIndex(a, b);
+
+			case SORT_BY.SORT_ALPHA:
+				if (a.text.toLowerCase() < b.text.toLowerCase())
+					return -1;
+				if (a.text.toLowerCase() > b.text.toLowerCase())
+					return 1;
+				return compareByIndex(a, b);
+		}
+	});
+};
+
+const todos = (state = [], action, todoById) => {
 	switch (action.type) {
+
 		case CHANGE_SORT:
-			newState = [...state];
+			const newState = [...state];
+			return stableSortTodos(newState, action.sortBy, todoById);
 
-			//For stable sort
-			const indexOf = {};
-			newState.forEach((todo, index) => {
-				indexOf[todo] = index;
-			});
-			return newState.sort((todo1, todo2) => {
-				const a = todoInfo[todo1];
-				const b = todoInfo[todo2];
-				switch (action.sortBy) {
-					case SORT_BY.SORT_PRIORITY:
-						if (a.star && !b.star)
-							return -1;
-						if (!a.star && b.star)
-							return 1;
-						if (indexOf[a.todoId] < indexOf[b.todoId])
-							return -1;
-						return 1;
-
-					case SORT_BY.SORT_CREATION:
-
-						if (a.createdTime > b.createdTime)
-							return -1;
-						if (a.createdTime < b.createdTime)
-							return 1;
-						if (indexOf[a.todoId] < indexOf[b.todoId])
-							return -1;
-						return 1;
-
-					case SORT_BY.SORT_ALPHA:
-						if (a.text.toLowerCase() < b.text.toLowerCase())
-							return -1;
-						if (a.text.toLowerCase() > b.text.toLowerCase())
-							return 1;
-						if (indexOf[a.todoId] < indexOf[b.todoId])
-							return -1;
-						return 1;
-				}
-			});
 		case ADD_TODO:
-			return (
-				[
-					...state,
-					action.todoId
-				]);
 		case ADD_STARRED_TODO:
 			return (
 				[
 					...state,
 					action.todoId
 				]);
+
 		case STAR_TOGGLE_TODO:
+
+			/*
+				Add to-do id to state array if to-do id is not present and remove if present.
+			 */
+
 			const index = state.findIndex(todoId => action.todoId === todoId);
 			if (index === -1) {
 				return [
@@ -79,11 +96,10 @@ const todos = (state = [], action, todoInfo) => {
 					action.todoId
 				];
 			}
-			else {
-				const updatedState = state;
-				updatedState.splice(index, 1);
-				return updatedState;
-			}
+			const updatedState = state;
+			updatedState.splice(index, 1);
+			return updatedState;
+
 		default:
 			return state;
 	}
@@ -106,7 +122,7 @@ export const initialState = [
 	}
 ];
 
-function tabInfo(state = initialState, action, todoInfo) {
+function tabInfo(state = initialState, action, todoById) {
 	let newState;
 	switch (action.type) {
 		case CHANGE_SORT:
@@ -115,10 +131,11 @@ function tabInfo(state = initialState, action, todoInfo) {
 					return tab;
 				return ({
 					...tab,
-					todos: todos(tab.todos, action, todoInfo),
-					starredTodos: todos(tab.starredTodos, action, todoInfo)
+					todos: todos(tab.todos, action, todoById),
+					starredTodos: todos(tab.starredTodos, action, todoById)
 				})
 			});
+
 		case ADD_TAB:
 			return [
 				...state,
@@ -130,6 +147,7 @@ function tabInfo(state = initialState, action, todoInfo) {
 					inCompletedTodos: 0
 				}
 			];
+
 		case CHANGE_TAB_NAME:
 			return state.map(tab => (
 				tab.tabId === action.tabId ?
@@ -140,7 +158,9 @@ function tabInfo(state = initialState, action, todoInfo) {
 					} :
 					tab
 			));
+
 		case COPY_TAB:
+
 			newState = state.map(tab => {
 				if (tab.tabId === STARRED_ID) {
 					let change = 0;
@@ -157,6 +177,7 @@ function tabInfo(state = initialState, action, todoInfo) {
 				}
 				return tab;
 			});
+
 			return (
 				[
 					...newState,
@@ -178,7 +199,7 @@ function tabInfo(state = initialState, action, todoInfo) {
 					action
 						.todos
 						.forEach(todo => {
-							if (!todoInfo[todo].completed && todoInfo[todo].star)
+							if (!todoById[todo].completed && todoById[todo].star)
 								change += 1;
 						});
 					return {

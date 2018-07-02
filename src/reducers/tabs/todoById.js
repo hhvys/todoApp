@@ -7,7 +7,14 @@ import {
 } from "../../actions/actionTypes";
 import {getTabs} from "./tabs";
 
-const todo = (state = {}, action) => {
+/**
+ *
+ * @param state - Object containing information for particular todo
+ * @param action
+ * @returns {*} - Updated object containing information for todo
+ */
+
+const updateTodoInfo = (state = {}, action) => {
 	switch (action.type) {
 		case ADD_TODO:
 			return {
@@ -40,13 +47,13 @@ const todo = (state = {}, action) => {
 	}
 };
 
-function todoInfo(state = {}, action) {
+function todoById(state = {}, action) {
 	switch (action.type) {
 		case STAR_TOGGLE_TODO:
 		case ADD_TODO:
 		case ADD_STARRED_TODO:
 		case TOGGLE_TODO:
-			state[action.todoId] = todo(state[action.todoId], action)
+			state[action.todoId] = updateTodoInfo(state[action.todoId], action);
 			return state;
 		case COPY_TAB:
 			return {...state, ...(action.todos)};
@@ -59,14 +66,23 @@ function todoInfo(state = {}, action) {
 	}
 }
 
-export default todoInfo;
+export default todoById;
 
-export function getTodoInfo(state, todos) {
+
+
+/**
+ * Selector from todoById
+ * @param state - full state
+ * @param todos - single todoId or array of todoIds
+ * @returns {*} - object or array of object with full todoInfo
+ */
+
+export function getTodoById(state, todos) {
 	state = getTabs(state);
 	if (Array.isArray(todos)) {
 		return todos.map(todo => (
-			state.todoInfo[todo]
+			state.todoById[todo]
 		))
 	}
-	return state.todoInfo[todos];
+	return state.todoById[todos];
 }

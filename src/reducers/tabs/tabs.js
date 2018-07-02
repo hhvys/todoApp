@@ -1,11 +1,11 @@
-import todoInfo, {getTodoInfo} from "./todoInfo";
+import todoById, {getTodoById} from "./todoById";
 import tabInfo, {getTabInfo} from "./tabInfo";
 
 
 const tabs = (state = {}, action) => {
 	return {
-		todoInfo: todoInfo(state.todoInfo, action),
-		tabInfo: tabInfo(state.tabInfo, action, state.todoInfo)
+		todoById: todoById(state.todoById, action),
+		tabInfo: tabInfo(state.tabInfo, action, state.todoById)
 	}
 };
 
@@ -15,10 +15,16 @@ export function getTabs(state) {
 	return state.tabs;
 }
 
+/**
+ *
+ * @param state
+ * @returns {*} array of tabs. to-do info will also be available along with to-do id.
+ */
+
 export function getTabsWithInfo(state) {
 	return getTabInfo(state).map(tab => {
-		const todos = getTodoInfo(state, tab.todos);
-		const starredTodos = getTodoInfo(state, tab.starredTodos);
+		const todos = getTodoById(state, tab.todos);
+		const starredTodos = getTodoById(state, tab.starredTodos);
 		return {
 			...tab,
 			todos,

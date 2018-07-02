@@ -1,19 +1,19 @@
 import generatedState from '../performance/stateGenerator';
-import {getTodoInfo} from "./reducers/tabs/todoInfo";
+import {getTodoById} from "./reducers/tabs/todoById";
 
 export const parseStringifiedDate = (state) => {
-	const todoInfo = {};
+	const todoById = {};
 	Object
-		.keys(state.tabs.todoInfo)
+		.keys(state.tabs.todoById)
 		.forEach(todoId => {
-			const info = state.tabs.todoInfo[todoId];
-			todoInfo[todoId] = {
+			const info = state.tabs.todoById[todoId];
+			todoById[todoId] = {
 				...info,
 				createdTime: new Date(info.createdTime),
 				completedTime: info.completedTime ? new Date(info.completedTime) : undefined
 			};
 		});
-	state.tabs.todoInfo = todoInfo;
+	state.tabs.todoById = todoById;
 	return state;
 };
 
