@@ -37,7 +37,11 @@ ShallowWrapper {
         <div
           className="mt-3"
 >
-          
+          <ScrollViewport
+                    rowHeight={48}
+          >
+                    
+          </ScrollViewport>
 </div>,
         <Button
           className="mt-3"
@@ -49,6 +53,8 @@ ShallowWrapper {
 />,
       ],
       "className": "className  todoView full-height d-flex flex-column justify-content-start mr-3",
+      "onFooterSymbolClick": [Function],
+      "onHeaderSymbolClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -71,11 +77,26 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [],
+          "children": <ScrollViewport
+            rowHeight={48}
+>
+            
+</ScrollViewport>,
           "className": "mt-3",
         },
         "ref": null,
-        "rendered": Array [],
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [],
+            "rowHeight": 48,
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": [Function],
+        },
         "type": "div",
       },
       Object {
@@ -96,11 +117,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": false,
+          "children": null,
           "className": "mt-3",
         },
         "ref": null,
-        "rendered": false,
+        "rendered": null,
         "type": "div",
       },
     ],
@@ -122,7 +143,11 @@ ShallowWrapper {
           <div
             className="mt-3"
 >
-            
+            <ScrollViewport
+                        rowHeight={48}
+            >
+                        
+            </ScrollViewport>
 </div>,
           <Button
             className="mt-3"
@@ -134,6 +159,8 @@ ShallowWrapper {
 />,
         ],
         "className": "className  todoView full-height d-flex flex-column justify-content-start mr-3",
+        "onFooterSymbolClick": [Function],
+        "onHeaderSymbolClick": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -156,11 +183,26 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [],
+            "children": <ScrollViewport
+              rowHeight={48}
+>
+              
+</ScrollViewport>,
             "className": "mt-3",
           },
           "ref": null,
-          "rendered": Array [],
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [],
+              "rowHeight": 48,
+            },
+            "ref": null,
+            "rendered": Array [],
+            "type": [Function],
+          },
           "type": "div",
         },
         Object {
@@ -181,11 +223,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": false,
+            "children": null,
             "className": "mt-3",
           },
           "ref": null,
-          "rendered": false,
+          "rendered": null,
           "type": "div",
         },
       ],

@@ -99,7 +99,7 @@ describe('components', () => {
 				todoContainer.state = {
 					currentTime: new Date(completedTime.getTime() + 15 * 60000)
 				};
-				expect(todoContainer.getCompletionTime(completedTime)).toBe('15 minutes ago');
+				expect(todoContainer.getCompletionTime(completedTime)).toBe('14 minutes ago');
 			});
 
 			it('should return "An hour ago" ', () => {

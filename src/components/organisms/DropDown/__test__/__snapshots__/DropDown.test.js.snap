@@ -7,21 +7,21 @@ exports[`DropDown should pass onClick 1`] = `
   <RowComponent
     className="tab"
     headerClass="headerLogo"
-    headerSymbol="SORT"
+    headerIcon="SORT"
     mainContent="Sort Alphabetically"
     onClick={[Function]}
   />
   <RowComponent
     className="tab"
     headerClass="headerLogo"
-    headerSymbol="SORT_CREATION"
+    headerIcon="SORT_CREATION"
     mainContent="Sort by Creation Date"
     onClick={[Function]}
   />
   <RowComponent
     className="tab"
     headerClass="headerLogo"
-    headerSymbol="STAR"
+    headerIcon="STAR"
     mainContent="Sort by Priority"
     onClick={[Function]}
   />
@@ -35,21 +35,21 @@ exports[`DropDown should render 1`] = `
   <RowComponent
     className="tab"
     headerClass="headerLogo"
-    headerSymbol="SORT"
+    headerIcon="SORT"
     mainContent="Sort Alphabetically"
     onClick={[Function]}
   />
   <RowComponent
     className="tab"
     headerClass="headerLogo"
-    headerSymbol="SORT_CREATION"
+    headerIcon="SORT_CREATION"
     mainContent="Sort by Creation Date"
     onClick={[Function]}
   />
   <RowComponent
     className="tab"
     headerClass="headerLogo"
-    headerSymbol="STAR"
+    headerIcon="STAR"
     mainContent="Sort by Priority"
     onClick={[Function]}
   />

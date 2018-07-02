@@ -140,25 +140,6 @@ describe('actionCreaters', () => {
 		});
 	});
 
-	describe('deleteTab', () => {
-
-		it('should return DELETE_TAB action', () => {
-			const tabId = 'a383d653-0fc9-4873-bf88-e4ee57885632';
-			const action = {
-				type: DELETE_TAB,
-				tabId
-			};
-			expect(deleteTab(tabId)).toEqual(action);
-		});
-
-		it('should handle undefined arguments', () => {
-			const action = {
-				type: DELETE_TAB
-			};
-			expect(deleteTab()).toEqual(action);
-		});
-	});
-
 	describe('changeTabName', () => {
 
 		it('should return CHANGE_TAB_NAME action', () => {
@@ -227,53 +208,14 @@ describe('actionCreaters', () => {
 		});
 	});
 
-	describe('toggleTodo', () => {
-		it('should return TOGGLE_TODO action', () => {
-			const tabId = 'a383d653-0fc9-4873-bf88-e4ee57885632';
-			const todoId = 'a383d653-0fc9-4873-bf88-e4ee57885633';
-			const action = {
-				type: TOGGLE_TODO,
-				tabId,
-				todoId
-			};
-			expect(toggleTodo(tabId, todoId)).toEqual(action);
-		});
-
-		it('should handle undefined arguments', () => {
-			const action = {
-				type: TOGGLE_TODO,
-			};
-			expect(toggleTodo()).toEqual(action);
-		});
-	});
-
-	describe('toggleStarTodo', () => {
-		it('should return STAR_TOGGLE_TODO action', () => {
-			const tabId = 'a383d653-0fc9-4873-bf88-e4ee57885632';
-			const todoId = 'a383d653-0fc9-4873-bf88-e4ee57885633';
-			const action = {
-				type: STAR_TOGGLE_TODO,
-				tabId,
-				todoId
-			};
-			expect(toggleStarTodo(tabId, todoId)).toEqual(action);
-		});
-
-		it('should handle undefined arguments', () => {
-			const action = {
-				type: STAR_TOGGLE_TODO,
-			};
-			expect(toggleStarTodo()).toEqual(action);
-		});
-	});
-
 	describe('changeSorting', () => {
 
 		it('should dispatch action with current state of sortBy', () => {
 			const initialState = todoApp({}, {});
 			const expectedActions = [{
 				type: CHANGE_SORT,
-				sortBy: initialState.sortBy
+				sortBy: initialState.sortBy,
+				tabId: INBOX_ID
 			}];
 			const store = mockStore(initialState);
 			store.dispatch(changeSorting());
@@ -284,7 +226,8 @@ describe('actionCreaters', () => {
 			const initialState = todoApp({}, {});
 			const expectedActions = [{
 				type: CHANGE_SORT,
-				sortBy: SORT_BY.SORT_ALPHA
+				sortBy: SORT_BY.SORT_ALPHA,
+				tabId: INBOX_ID
 			}];
 			const store = mockStore(initialState);
 			store.dispatch(changeSorting(SORT_BY.SORT_ALPHA));

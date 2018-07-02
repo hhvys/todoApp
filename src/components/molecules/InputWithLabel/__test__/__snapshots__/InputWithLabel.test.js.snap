@@ -35,7 +35,7 @@ exports[`InputWithLabel should render label if label prop is defined 1`] = `
   className=" inputLabel full-width d-flex align-items-center justify-content-center"
 >
   <label
-    className="addSymbol full-height d-flex align-items-center justify-content-center"
+    className="addIcon full-height d-flex align-items-center justify-content-center"
   >
     anyLabel
   </label>

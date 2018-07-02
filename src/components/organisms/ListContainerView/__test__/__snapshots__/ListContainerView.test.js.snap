@@ -5,17 +5,19 @@ exports[`ListContainerView should render on initalState 1`] = `
   className="className flex-column justify-content-start align-items-center"
 >
   <RowComponent
-    active={false}
-    className="tab"
+    className="tab "
     footerClass="footerLogo"
-    footerContent={false}
-    footerSymbol={false}
-    headerClass="logo inboxLogo"
-    headerSymbol="INBOX"
+    footerClickArgs={
+      Array [
+        0,
+      ]
+    }
+    footerIcon={false}
+    headerClass="icon inboxLogo"
+    headerIcon="INBOX"
     key="0"
     mainContent="Inbox"
     onClick={[Function]}
-    onFooterSymbolClick={[Function]}
   />
 </div>
 `;

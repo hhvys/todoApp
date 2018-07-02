@@ -28,15 +28,15 @@ ShallowWrapper {
           className="ClassName  header fixed full-width d-flex align-items-center justify-content-between"
 >
           <div
-                    className="headerContent pl-4"
+                    className="headerContent txt-overflow pl-4"
           />
           <div
                     className="dropdownIcons d-flex align-items-center justify-content-between"
                     onClick={[Function]}
           >
                     <DropDownIcon
-                              iconSymbol="SORT"
                               iconText="Sort"
+                              iconType="SORT"
                               onClick={[Function]}
                     />
           </div>
@@ -53,15 +53,15 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="headerContent pl-4"
+              className="headerContent txt-overflow pl-4"
 />,
             <div
               className="dropdownIcons d-flex align-items-center justify-content-between"
               onClick={[Function]}
 >
               <DropDownIcon
-                            iconSymbol="SORT"
                             iconText="Sort"
+                            iconType="SORT"
                             onClick={[Function]}
               />
 </div>,
@@ -76,7 +76,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": undefined,
-              "className": "headerContent pl-4",
+              "className": "headerContent txt-overflow pl-4",
             },
             "ref": null,
             "rendered": null,
@@ -88,8 +88,8 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <DropDownIcon
-                iconSymbol="SORT"
                 iconText="Sort"
+                iconType="SORT"
                 onClick={[Function]}
 />,
               "className": "dropdownIcons d-flex align-items-center justify-content-between",
@@ -101,8 +101,8 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "iconSymbol": "SORT",
                 "iconText": "Sort",
+                "iconType": "SORT",
                 "onClick": [Function],
               },
               "ref": null,
@@ -129,15 +129,15 @@ ShallowWrapper {
             className="ClassName  header fixed full-width d-flex align-items-center justify-content-between"
 >
             <div
-                        className="headerContent pl-4"
+                        className="headerContent txt-overflow pl-4"
             />
             <div
                         className="dropdownIcons d-flex align-items-center justify-content-between"
                         onClick={[Function]}
             >
                         <DropDownIcon
-                                    iconSymbol="SORT"
                                     iconText="Sort"
+                                    iconType="SORT"
                                     onClick={[Function]}
                         />
             </div>
@@ -154,15 +154,15 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="headerContent pl-4"
+                className="headerContent txt-overflow pl-4"
 />,
               <div
                 className="dropdownIcons d-flex align-items-center justify-content-between"
                 onClick={[Function]}
 >
                 <DropDownIcon
-                                iconSymbol="SORT"
                                 iconText="Sort"
+                                iconType="SORT"
                                 onClick={[Function]}
                 />
 </div>,
@@ -177,7 +177,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": undefined,
-                "className": "headerContent pl-4",
+                "className": "headerContent txt-overflow pl-4",
               },
               "ref": null,
               "rendered": null,
@@ -189,8 +189,8 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <DropDownIcon
-                  iconSymbol="SORT"
                   iconText="Sort"
+                  iconType="SORT"
                   onClick={[Function]}
 />,
                 "className": "dropdownIcons d-flex align-items-center justify-content-between",
@@ -202,8 +202,8 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "iconSymbol": "SORT",
                   "iconText": "Sort",
+                  "iconType": "SORT",
                   "onClick": [Function],
                 },
                 "ref": null,
@@ -258,15 +258,15 @@ ShallowWrapper {
           className="ClassName  header fixed full-width d-flex align-items-center justify-content-between"
 >
           <div
-                    className="headerContent pl-4"
+                    className="headerContent txt-overflow pl-4"
           />
           <div
                     className="dropdownIcons d-flex align-items-center justify-content-between"
                     onClick={[Function]}
           >
                     <DropDownIcon
-                              iconSymbol="SORT"
                               iconText="Sort"
+                              iconType="SORT"
                               onClick={[Function]}
                     />
           </div>
@@ -286,15 +286,15 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="headerContent pl-4"
+              className="headerContent txt-overflow pl-4"
 />,
             <div
               className="dropdownIcons d-flex align-items-center justify-content-between"
               onClick={[Function]}
 >
               <DropDownIcon
-                            iconSymbol="SORT"
                             iconText="Sort"
+                            iconType="SORT"
                             onClick={[Function]}
               />
 </div>,
@@ -309,7 +309,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": undefined,
-              "className": "headerContent pl-4",
+              "className": "headerContent txt-overflow pl-4",
             },
             "ref": null,
             "rendered": null,
@@ -321,8 +321,8 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <DropDownIcon
-                iconSymbol="SORT"
                 iconText="Sort"
+                iconType="SORT"
                 onClick={[Function]}
 />,
               "className": "dropdownIcons d-flex align-items-center justify-content-between",
@@ -334,8 +334,8 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "iconSymbol": "SORT",
                 "iconText": "Sort",
+                "iconType": "SORT",
                 "onClick": [Function],
               },
               "ref": null,
@@ -373,15 +373,15 @@ ShallowWrapper {
             className="ClassName  header fixed full-width d-flex align-items-center justify-content-between"
 >
             <div
-                        className="headerContent pl-4"
+                        className="headerContent txt-overflow pl-4"
             />
             <div
                         className="dropdownIcons d-flex align-items-center justify-content-between"
                         onClick={[Function]}
             >
                         <DropDownIcon
-                                    iconSymbol="SORT"
                                     iconText="Sort"
+                                    iconType="SORT"
                                     onClick={[Function]}
                         />
             </div>
@@ -401,15 +401,15 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="headerContent pl-4"
+                className="headerContent txt-overflow pl-4"
 />,
               <div
                 className="dropdownIcons d-flex align-items-center justify-content-between"
                 onClick={[Function]}
 >
                 <DropDownIcon
-                                iconSymbol="SORT"
                                 iconText="Sort"
+                                iconType="SORT"
                                 onClick={[Function]}
                 />
 </div>,
@@ -424,7 +424,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": undefined,
-                "className": "headerContent pl-4",
+                "className": "headerContent txt-overflow pl-4",
               },
               "ref": null,
               "rendered": null,
@@ -436,8 +436,8 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <DropDownIcon
-                  iconSymbol="SORT"
                   iconText="Sort"
+                  iconType="SORT"
                   onClick={[Function]}
 />,
                 "className": "dropdownIcons d-flex align-items-center justify-content-between",
@@ -449,8 +449,8 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "iconSymbol": "SORT",
                   "iconText": "Sort",
+                  "iconType": "SORT",
                   "onClick": [Function],
                 },
                 "ref": null,
@@ -516,15 +516,15 @@ ShallowWrapper {
           className="ClassName  header fixed full-width d-flex align-items-center justify-content-between"
 >
           <div
-                    className="headerContent pl-4"
+                    className="headerContent txt-overflow pl-4"
           />
           <div
                     className="dropdownIcons d-flex align-items-center justify-content-between"
                     onClick={[Function]}
           >
                     <DropDownIcon
-                              iconSymbol="SORT"
                               iconText="Sort"
+                              iconType="SORT"
                               onClick={[Function]}
                     />
           </div>
@@ -541,15 +541,15 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="headerContent pl-4"
+              className="headerContent txt-overflow pl-4"
 />,
             <div
               className="dropdownIcons d-flex align-items-center justify-content-between"
               onClick={[Function]}
 >
               <DropDownIcon
-                            iconSymbol="SORT"
                             iconText="Sort"
+                            iconType="SORT"
                             onClick={[Function]}
               />
 </div>,
@@ -564,7 +564,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": undefined,
-              "className": "headerContent pl-4",
+              "className": "headerContent txt-overflow pl-4",
             },
             "ref": null,
             "rendered": null,
@@ -576,8 +576,8 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <DropDownIcon
-                iconSymbol="SORT"
                 iconText="Sort"
+                iconType="SORT"
                 onClick={[Function]}
 />,
               "className": "dropdownIcons d-flex align-items-center justify-content-between",
@@ -589,8 +589,8 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "iconSymbol": "SORT",
                 "iconText": "Sort",
+                "iconType": "SORT",
                 "onClick": [Function],
               },
               "ref": null,
@@ -617,15 +617,15 @@ ShallowWrapper {
             className="ClassName  header fixed full-width d-flex align-items-center justify-content-between"
 >
             <div
-                        className="headerContent pl-4"
+                        className="headerContent txt-overflow pl-4"
             />
             <div
                         className="dropdownIcons d-flex align-items-center justify-content-between"
                         onClick={[Function]}
             >
                         <DropDownIcon
-                                    iconSymbol="SORT"
                                     iconText="Sort"
+                                    iconType="SORT"
                                     onClick={[Function]}
                         />
             </div>
@@ -642,15 +642,15 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="headerContent pl-4"
+                className="headerContent txt-overflow pl-4"
 />,
               <div
                 className="dropdownIcons d-flex align-items-center justify-content-between"
                 onClick={[Function]}
 >
                 <DropDownIcon
-                                iconSymbol="SORT"
                                 iconText="Sort"
+                                iconType="SORT"
                                 onClick={[Function]}
                 />
 </div>,
@@ -665,7 +665,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": undefined,
-                "className": "headerContent pl-4",
+                "className": "headerContent txt-overflow pl-4",
               },
               "ref": null,
               "rendered": null,
@@ -677,8 +677,8 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <DropDownIcon
-                  iconSymbol="SORT"
                   iconText="Sort"
+                  iconType="SORT"
                   onClick={[Function]}
 />,
                 "className": "dropdownIcons d-flex align-items-center justify-content-between",
@@ -690,8 +690,8 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "iconSymbol": "SORT",
                   "iconText": "Sort",
+                  "iconType": "SORT",
                   "onClick": [Function],
                 },
                 "ref": null,
@@ -746,15 +746,15 @@ ShallowWrapper {
           className="ClassName  header fixed full-width d-flex align-items-center justify-content-between"
 >
           <div
-                    className="headerContent pl-4"
+                    className="headerContent txt-overflow pl-4"
           />
           <div
                     className="dropdownIcons d-flex align-items-center justify-content-between"
                     onClick={[Function]}
           >
                     <DropDownIcon
-                              iconSymbol="SORT"
                               iconText="Sort"
+                              iconType="SORT"
                               onClick={[Function]}
                     />
           </div>
@@ -771,15 +771,15 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="headerContent pl-4"
+              className="headerContent txt-overflow pl-4"
 />,
             <div
               className="dropdownIcons d-flex align-items-center justify-content-between"
               onClick={[Function]}
 >
               <DropDownIcon
-                            iconSymbol="SORT"
                             iconText="Sort"
+                            iconType="SORT"
                             onClick={[Function]}
               />
 </div>,
@@ -794,7 +794,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": undefined,
-              "className": "headerContent pl-4",
+              "className": "headerContent txt-overflow pl-4",
             },
             "ref": null,
             "rendered": null,
@@ -806,8 +806,8 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <DropDownIcon
-                iconSymbol="SORT"
                 iconText="Sort"
+                iconType="SORT"
                 onClick={[Function]}
 />,
               "className": "dropdownIcons d-flex align-items-center justify-content-between",
@@ -819,8 +819,8 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "iconSymbol": "SORT",
                 "iconText": "Sort",
+                "iconType": "SORT",
                 "onClick": [Function],
               },
               "ref": null,
@@ -847,15 +847,15 @@ ShallowWrapper {
             className="ClassName  header fixed full-width d-flex align-items-center justify-content-between"
 >
             <div
-                        className="headerContent pl-4"
+                        className="headerContent txt-overflow pl-4"
             />
             <div
                         className="dropdownIcons d-flex align-items-center justify-content-between"
                         onClick={[Function]}
             >
                         <DropDownIcon
-                                    iconSymbol="SORT"
                                     iconText="Sort"
+                                    iconType="SORT"
                                     onClick={[Function]}
                         />
             </div>
@@ -872,15 +872,15 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="headerContent pl-4"
+                className="headerContent txt-overflow pl-4"
 />,
               <div
                 className="dropdownIcons d-flex align-items-center justify-content-between"
                 onClick={[Function]}
 >
                 <DropDownIcon
-                                iconSymbol="SORT"
                                 iconText="Sort"
+                                iconType="SORT"
                                 onClick={[Function]}
                 />
 </div>,
@@ -895,7 +895,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": undefined,
-                "className": "headerContent pl-4",
+                "className": "headerContent txt-overflow pl-4",
               },
               "ref": null,
               "rendered": null,
@@ -907,8 +907,8 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <DropDownIcon
-                  iconSymbol="SORT"
                   iconText="Sort"
+                  iconType="SORT"
                   onClick={[Function]}
 />,
                 "className": "dropdownIcons d-flex align-items-center justify-content-between",
@@ -920,8 +920,8 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "iconSymbol": "SORT",
                   "iconText": "Sort",
+                  "iconType": "SORT",
                   "onClick": [Function],
                 },
                 "ref": null,
@@ -954,15 +954,15 @@ exports[`Header should render 1`] = `
     className="ClassName  header fixed full-width d-flex align-items-center justify-content-between"
   >
     <div
-      className="headerContent pl-4"
+      className="headerContent txt-overflow pl-4"
     />
     <div
       className="dropdownIcons d-flex align-items-center justify-content-between"
       onClick={[Function]}
     >
       <DropDownIcon
-        iconSymbol="SORT"
         iconText="Sort"
+        iconType="SORT"
         onClick={[Function]}
       />
     </div>
@@ -998,15 +998,15 @@ ShallowWrapper {
           className="ClassName  header fixed full-width d-flex align-items-center justify-content-between"
 >
           <div
-                    className="headerContent pl-4"
+                    className="headerContent txt-overflow pl-4"
           />
           <div
                     className="dropdownIcons d-flex align-items-center justify-content-between"
                     onClick={[Function]}
           >
                     <DropDownIcon
-                              iconSymbol="SORT"
                               iconText="Sort"
+                              iconType="SORT"
                               onClick={[Function]}
                     />
           </div>
@@ -1023,15 +1023,15 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="headerContent pl-4"
+              className="headerContent txt-overflow pl-4"
 />,
             <div
               className="dropdownIcons d-flex align-items-center justify-content-between"
               onClick={[Function]}
 >
               <DropDownIcon
-                            iconSymbol="SORT"
                             iconText="Sort"
+                            iconType="SORT"
                             onClick={[Function]}
               />
 </div>,
@@ -1046,7 +1046,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": undefined,
-              "className": "headerContent pl-4",
+              "className": "headerContent txt-overflow pl-4",
             },
             "ref": null,
             "rendered": null,
@@ -1058,8 +1058,8 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <DropDownIcon
-                iconSymbol="SORT"
                 iconText="Sort"
+                iconType="SORT"
                 onClick={[Function]}
 />,
               "className": "dropdownIcons d-flex align-items-center justify-content-between",
@@ -1071,8 +1071,8 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "iconSymbol": "SORT",
                 "iconText": "Sort",
+                "iconType": "SORT",
                 "onClick": [Function],
               },
               "ref": null,
@@ -1099,15 +1099,15 @@ ShallowWrapper {
             className="ClassName  header fixed full-width d-flex align-items-center justify-content-between"
 >
             <div
-                        className="headerContent pl-4"
+                        className="headerContent txt-overflow pl-4"
             />
             <div
                         className="dropdownIcons d-flex align-items-center justify-content-between"
                         onClick={[Function]}
             >
                         <DropDownIcon
-                                    iconSymbol="SORT"
                                     iconText="Sort"
+                                    iconType="SORT"
                                     onClick={[Function]}
                         />
             </div>
@@ -1124,15 +1124,15 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="headerContent pl-4"
+                className="headerContent txt-overflow pl-4"
 />,
               <div
                 className="dropdownIcons d-flex align-items-center justify-content-between"
                 onClick={[Function]}
 >
                 <DropDownIcon
-                                iconSymbol="SORT"
                                 iconText="Sort"
+                                iconType="SORT"
                                 onClick={[Function]}
                 />
 </div>,
@@ -1147,7 +1147,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": undefined,
-                "className": "headerContent pl-4",
+                "className": "headerContent txt-overflow pl-4",
               },
               "ref": null,
               "rendered": null,
@@ -1159,8 +1159,8 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <DropDownIcon
-                  iconSymbol="SORT"
                   iconText="Sort"
+                  iconType="SORT"
                   onClick={[Function]}
 />,
                 "className": "dropdownIcons d-flex align-items-center justify-content-between",
@@ -1172,8 +1172,8 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "iconSymbol": "SORT",
                   "iconText": "Sort",
+                  "iconType": "SORT",
                   "onClick": [Function],
                 },
                 "ref": null,
@@ -1228,15 +1228,15 @@ ShallowWrapper {
           className="ClassName  header fixed full-width d-flex align-items-center justify-content-between"
 >
           <div
-                    className="headerContent pl-4"
+                    className="headerContent txt-overflow pl-4"
           />
           <div
                     className="dropdownIcons d-flex align-items-center justify-content-between"
                     onClick={[Function]}
           >
                     <DropDownIcon
-                              iconSymbol="SORT"
                               iconText="Sort"
+                              iconType="SORT"
                               onClick={[Function]}
                     />
           </div>
@@ -1256,15 +1256,15 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="headerContent pl-4"
+              className="headerContent txt-overflow pl-4"
 />,
             <div
               className="dropdownIcons d-flex align-items-center justify-content-between"
               onClick={[Function]}
 >
               <DropDownIcon
-                            iconSymbol="SORT"
                             iconText="Sort"
+                            iconType="SORT"
                             onClick={[Function]}
               />
 </div>,
@@ -1279,7 +1279,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": undefined,
-              "className": "headerContent pl-4",
+              "className": "headerContent txt-overflow pl-4",
             },
             "ref": null,
             "rendered": null,
@@ -1291,8 +1291,8 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <DropDownIcon
-                iconSymbol="SORT"
                 iconText="Sort"
+                iconType="SORT"
                 onClick={[Function]}
 />,
               "className": "dropdownIcons d-flex align-items-center justify-content-between",
@@ -1304,8 +1304,8 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "iconSymbol": "SORT",
                 "iconText": "Sort",
+                "iconType": "SORT",
                 "onClick": [Function],
               },
               "ref": null,
@@ -1343,15 +1343,15 @@ ShallowWrapper {
             className="ClassName  header fixed full-width d-flex align-items-center justify-content-between"
 >
             <div
-                        className="headerContent pl-4"
+                        className="headerContent txt-overflow pl-4"
             />
             <div
                         className="dropdownIcons d-flex align-items-center justify-content-between"
                         onClick={[Function]}
             >
                         <DropDownIcon
-                                    iconSymbol="SORT"
                                     iconText="Sort"
+                                    iconType="SORT"
                                     onClick={[Function]}
                         />
             </div>
@@ -1371,15 +1371,15 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="headerContent pl-4"
+                className="headerContent txt-overflow pl-4"
 />,
               <div
                 className="dropdownIcons d-flex align-items-center justify-content-between"
                 onClick={[Function]}
 >
                 <DropDownIcon
-                                iconSymbol="SORT"
                                 iconText="Sort"
+                                iconType="SORT"
                                 onClick={[Function]}
                 />
 </div>,
@@ -1394,7 +1394,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": undefined,
-                "className": "headerContent pl-4",
+                "className": "headerContent txt-overflow pl-4",
               },
               "ref": null,
               "rendered": null,
@@ -1406,8 +1406,8 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <DropDownIcon
-                  iconSymbol="SORT"
                   iconText="Sort"
+                  iconType="SORT"
                   onClick={[Function]}
 />,
                 "className": "dropdownIcons d-flex align-items-center justify-content-between",
@@ -1419,8 +1419,8 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "iconSymbol": "SORT",
                   "iconText": "Sort",
+                  "iconType": "SORT",
                   "onClick": [Function],
                 },
                 "ref": null,

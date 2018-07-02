@@ -20,14 +20,24 @@ exports[`MultiTabView should have rendered number of Buttons = tabs.length 1`] =
     />
     <RowComponent
       className="todo"
-      footerClass="logo"
-      footerSymbol="STAR"
-      headerClass="logo"
-      headerSymbol="CHECK_BOX"
+      footerClass="footerLogo"
+      footerClickArgs={
+        Array [
+          "9ad18f5c-d3b8-46ff-a54e-69bba97f1aa1",
+          "9c60c2e7-291c-4e30-9dfe-9cfbb2295476",
+        ]
+      }
+      footerIcon="STAR"
+      headerClass="headerLogo"
+      headerClickArgs={
+        Array [
+          "9ad18f5c-d3b8-46ff-a54e-69bba97f1aa1",
+          "9c60c2e7-291c-4e30-9dfe-9cfbb2295476",
+        ]
+      }
+      headerIcon="CHECK_BOX"
       key="9c60c2e7-291c-4e30-9dfe-9cfbb2295476"
       mainContent="tab 1 1"
-      onFooterSymbolClick={[Function]}
-      onHeaderSymbolClick={[Function]}
     />
   </div>
   <div
@@ -40,14 +50,24 @@ exports[`MultiTabView should have rendered number of Buttons = tabs.length 1`] =
     />
     <RowComponent
       className="todo"
-      footerClass="logo"
-      footerSymbol="STAR"
-      headerClass="logo"
-      headerSymbol="CHECK_BOX"
+      footerClass="footerLogo"
+      footerClickArgs={
+        Array [
+          "e26ee1de-944d-4b3a-88cc-1464fe53f32b",
+          "899cda93-66bd-483c-a7aa-3852b900013f",
+        ]
+      }
+      footerIcon="STAR"
+      headerClass="headerLogo"
+      headerClickArgs={
+        Array [
+          "e26ee1de-944d-4b3a-88cc-1464fe53f32b",
+          "899cda93-66bd-483c-a7aa-3852b900013f",
+        ]
+      }
+      headerIcon="CHECK_BOX"
       key="899cda93-66bd-483c-a7aa-3852b900013f"
       mainContent="tab 2 3"
-      onFooterSymbolClick={[Function]}
-      onHeaderSymbolClick={[Function]}
     />
   </div>
 </div>
@@ -73,14 +93,24 @@ exports[`MultiTabView should pass onButtonClick to Button as onClick 1`] = `
     />
     <RowComponent
       className="todo"
-      footerClass="logo"
-      footerSymbol="STAR"
-      headerClass="logo"
-      headerSymbol="CHECK_BOX"
+      footerClass="footerLogo"
+      footerClickArgs={
+        Array [
+          "9ad18f5c-d3b8-46ff-a54e-69bba97f1aa1",
+          "9c60c2e7-291c-4e30-9dfe-9cfbb2295476",
+        ]
+      }
+      footerIcon="STAR"
+      headerClass="headerLogo"
+      headerClickArgs={
+        Array [
+          "9ad18f5c-d3b8-46ff-a54e-69bba97f1aa1",
+          "9c60c2e7-291c-4e30-9dfe-9cfbb2295476",
+        ]
+      }
+      headerIcon="CHECK_BOX"
       key="9c60c2e7-291c-4e30-9dfe-9cfbb2295476"
       mainContent="tab 1 1"
-      onFooterSymbolClick={[Function]}
-      onHeaderSymbolClick={[Function]}
     />
   </div>
   <div
@@ -93,14 +123,24 @@ exports[`MultiTabView should pass onButtonClick to Button as onClick 1`] = `
     />
     <RowComponent
       className="todo"
-      footerClass="logo"
-      footerSymbol="STAR"
-      headerClass="logo"
-      headerSymbol="CHECK_BOX"
+      footerClass="footerLogo"
+      footerClickArgs={
+        Array [
+          "e26ee1de-944d-4b3a-88cc-1464fe53f32b",
+          "899cda93-66bd-483c-a7aa-3852b900013f",
+        ]
+      }
+      footerIcon="STAR"
+      headerClass="headerLogo"
+      headerClickArgs={
+        Array [
+          "e26ee1de-944d-4b3a-88cc-1464fe53f32b",
+          "899cda93-66bd-483c-a7aa-3852b900013f",
+        ]
+      }
+      headerIcon="CHECK_BOX"
       key="899cda93-66bd-483c-a7aa-3852b900013f"
       mainContent="tab 2 3"
-      onFooterSymbolClick={[Function]}
-      onHeaderSymbolClick={[Function]}
     />
   </div>
 </div>
@@ -126,14 +166,24 @@ exports[`MultiTabView should pass onFooterSymbolClick to RowComponent 1`] = `
     />
     <RowComponent
       className="todo"
-      footerClass="logo"
-      footerSymbol="STAR"
-      headerClass="logo"
-      headerSymbol="CHECK_BOX"
+      footerClass="footerLogo"
+      footerClickArgs={
+        Array [
+          "9ad18f5c-d3b8-46ff-a54e-69bba97f1aa1",
+          "9c60c2e7-291c-4e30-9dfe-9cfbb2295476",
+        ]
+      }
+      footerIcon="STAR"
+      headerClass="headerLogo"
+      headerClickArgs={
+        Array [
+          "9ad18f5c-d3b8-46ff-a54e-69bba97f1aa1",
+          "9c60c2e7-291c-4e30-9dfe-9cfbb2295476",
+        ]
+      }
+      headerIcon="CHECK_BOX"
       key="9c60c2e7-291c-4e30-9dfe-9cfbb2295476"
       mainContent="tab 1 1"
-      onFooterSymbolClick={[Function]}
-      onHeaderSymbolClick={[Function]}
     />
   </div>
   <div
@@ -146,14 +196,24 @@ exports[`MultiTabView should pass onFooterSymbolClick to RowComponent 1`] = `
     />
     <RowComponent
       className="todo"
-      footerClass="logo"
-      footerSymbol="STAR"
-      headerClass="logo"
-      headerSymbol="CHECK_BOX"
+      footerClass="footerLogo"
+      footerClickArgs={
+        Array [
+          "e26ee1de-944d-4b3a-88cc-1464fe53f32b",
+          "899cda93-66bd-483c-a7aa-3852b900013f",
+        ]
+      }
+      footerIcon="STAR"
+      headerClass="headerLogo"
+      headerClickArgs={
+        Array [
+          "e26ee1de-944d-4b3a-88cc-1464fe53f32b",
+          "899cda93-66bd-483c-a7aa-3852b900013f",
+        ]
+      }
+      headerIcon="CHECK_BOX"
       key="899cda93-66bd-483c-a7aa-3852b900013f"
       mainContent="tab 2 3"
-      onFooterSymbolClick={[Function]}
-      onHeaderSymbolClick={[Function]}
     />
   </div>
 </div>
@@ -179,14 +239,24 @@ exports[`MultiTabView should pass onHeaderSymbolClick to RowComponent 1`] = `
     />
     <RowComponent
       className="todo"
-      footerClass="logo"
-      footerSymbol="STAR"
-      headerClass="logo"
-      headerSymbol="CHECK_BOX"
+      footerClass="footerLogo"
+      footerClickArgs={
+        Array [
+          "9ad18f5c-d3b8-46ff-a54e-69bba97f1aa1",
+          "9c60c2e7-291c-4e30-9dfe-9cfbb2295476",
+        ]
+      }
+      footerIcon="STAR"
+      headerClass="headerLogo"
+      headerClickArgs={
+        Array [
+          "9ad18f5c-d3b8-46ff-a54e-69bba97f1aa1",
+          "9c60c2e7-291c-4e30-9dfe-9cfbb2295476",
+        ]
+      }
+      headerIcon="CHECK_BOX"
       key="9c60c2e7-291c-4e30-9dfe-9cfbb2295476"
       mainContent="tab 1 1"
-      onFooterSymbolClick={[Function]}
-      onHeaderSymbolClick={[Function]}
     />
   </div>
   <div
@@ -199,14 +269,24 @@ exports[`MultiTabView should pass onHeaderSymbolClick to RowComponent 1`] = `
     />
     <RowComponent
       className="todo"
-      footerClass="logo"
-      footerSymbol="STAR"
-      headerClass="logo"
-      headerSymbol="CHECK_BOX"
+      footerClass="footerLogo"
+      footerClickArgs={
+        Array [
+          "e26ee1de-944d-4b3a-88cc-1464fe53f32b",
+          "899cda93-66bd-483c-a7aa-3852b900013f",
+        ]
+      }
+      footerIcon="STAR"
+      headerClass="headerLogo"
+      headerClickArgs={
+        Array [
+          "e26ee1de-944d-4b3a-88cc-1464fe53f32b",
+          "899cda93-66bd-483c-a7aa-3852b900013f",
+        ]
+      }
+      headerIcon="CHECK_BOX"
       key="899cda93-66bd-483c-a7aa-3852b900013f"
       mainContent="tab 2 3"
-      onFooterSymbolClick={[Function]}
-      onHeaderSymbolClick={[Function]}
     />
   </div>
 </div>
@@ -222,7 +302,9 @@ exports[`MultiTabView should render InputWithLabel 1`] = `
     onSubmit={[Function]}
     placeholder="Add a starred to-do in Inbox..."
   />
-  <NotFound />
+  <BackgroundMessage
+    message="No Search Results"
+  />
 </div>
 `;
 
@@ -236,7 +318,9 @@ exports[`MultiTabView should render MultiTabView 1`] = `
     onSubmit={[Function]}
     placeholder="Add a starred to-do in Inbox..."
   />
-  <NotFound />
+  <BackgroundMessage
+    message="No Search Results"
+  />
 </div>
 `;
 
@@ -244,6 +328,8 @@ exports[`MultiTabView should render NotFound 1`] = `
 <div
   className="multiTabView  mr-3"
 >
-  <NotFound />
+  <BackgroundMessage
+    message="No Search Results"
+  />
 </div>
 `;

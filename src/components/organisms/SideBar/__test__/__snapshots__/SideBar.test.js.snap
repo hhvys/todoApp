@@ -86,13 +86,13 @@ ShallowWrapper {
 />,
         <Connect(ListContainerView)
           className="verticalTabContainer"
-          footerSymbol="PENCIL"
-          headerSymbol="LIST_SYMBOL"
+          footerIcon="PENCIL"
+          headerIcon="LIST_ICON"
 />,
         <RowComponent
           className="footer"
           headerClass="footerLogo"
-          headerSymbol="PLUS"
+          headerIcon="PLUS"
           mainContent="Create List"
           onClick={undefined}
 />,
@@ -122,8 +122,8 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "className": "verticalTabContainer",
-          "footerSymbol": "PENCIL",
-          "headerSymbol": "LIST_SYMBOL",
+          "footerIcon": "PENCIL",
+          "headerIcon": "LIST_ICON",
         },
         "ref": null,
         "rendered": null,
@@ -132,11 +132,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "className": "footer",
           "headerClass": "footerLogo",
-          "headerSymbol": "PLUS",
+          "headerIcon": "PLUS",
           "mainContent": "Create List",
           "onClick": undefined,
         },
@@ -162,13 +162,13 @@ ShallowWrapper {
 />,
           <Connect(ListContainerView)
             className="verticalTabContainer"
-            footerSymbol="PENCIL"
-            headerSymbol="LIST_SYMBOL"
+            footerIcon="PENCIL"
+            headerIcon="LIST_ICON"
 />,
           <RowComponent
             className="footer"
             headerClass="footerLogo"
-            headerSymbol="PLUS"
+            headerIcon="PLUS"
             mainContent="Create List"
             onClick={undefined}
 />,
@@ -198,8 +198,8 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "className": "verticalTabContainer",
-            "footerSymbol": "PENCIL",
-            "headerSymbol": "LIST_SYMBOL",
+            "footerIcon": "PENCIL",
+            "headerIcon": "LIST_ICON",
           },
           "ref": null,
           "rendered": null,
@@ -208,11 +208,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "className": "footer",
             "headerClass": "footerLogo",
-            "headerSymbol": "PLUS",
+            "headerIcon": "PLUS",
             "mainContent": "Create List",
             "onClick": undefined,
           },
@@ -267,13 +267,13 @@ ShallowWrapper {
 />,
         <Connect(ListContainerView)
           className="verticalTabContainer"
-          footerSymbol="PENCIL"
-          headerSymbol="LIST_SYMBOL"
+          footerIcon="PENCIL"
+          headerIcon="LIST_ICON"
 />,
         <RowComponent
           className="footer"
           headerClass="footerLogo"
-          headerSymbol="PLUS"
+          headerIcon="PLUS"
           mainContent="Create List"
           onClick={undefined}
 />,
@@ -303,8 +303,8 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "className": "verticalTabContainer",
-          "footerSymbol": "PENCIL",
-          "headerSymbol": "LIST_SYMBOL",
+          "footerIcon": "PENCIL",
+          "headerIcon": "LIST_ICON",
         },
         "ref": null,
         "rendered": null,
@@ -313,11 +313,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "className": "footer",
           "headerClass": "footerLogo",
-          "headerSymbol": "PLUS",
+          "headerIcon": "PLUS",
           "mainContent": "Create List",
           "onClick": undefined,
         },
@@ -343,13 +343,13 @@ ShallowWrapper {
 />,
           <Connect(ListContainerView)
             className="verticalTabContainer"
-            footerSymbol="PENCIL"
-            headerSymbol="LIST_SYMBOL"
+            footerIcon="PENCIL"
+            headerIcon="LIST_ICON"
 />,
           <RowComponent
             className="footer"
             headerClass="footerLogo"
-            headerSymbol="PLUS"
+            headerIcon="PLUS"
             mainContent="Create List"
             onClick={undefined}
 />,
@@ -379,8 +379,8 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "className": "verticalTabContainer",
-            "footerSymbol": "PENCIL",
-            "headerSymbol": "LIST_SYMBOL",
+            "footerIcon": "PENCIL",
+            "headerIcon": "LIST_ICON",
           },
           "ref": null,
           "rendered": null,
@@ -389,11 +389,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "className": "footer",
             "headerClass": "footerLogo",
-            "headerSymbol": "PLUS",
+            "headerIcon": "PLUS",
             "mainContent": "Create List",
             "onClick": undefined,
           },
@@ -448,13 +448,13 @@ ShallowWrapper {
 />,
         <Connect(ListContainerView)
           className="verticalTabContainer"
-          footerSymbol="PENCIL"
-          headerSymbol="LIST_SYMBOL"
+          footerIcon="PENCIL"
+          headerIcon="LIST_ICON"
 />,
         <RowComponent
           className="footer"
           headerClass="footerLogo"
-          headerSymbol="PLUS"
+          headerIcon="PLUS"
           mainContent="Create List"
           onClick={undefined}
 />,
@@ -484,8 +484,8 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "className": "verticalTabContainer",
-          "footerSymbol": "PENCIL",
-          "headerSymbol": "LIST_SYMBOL",
+          "footerIcon": "PENCIL",
+          "headerIcon": "LIST_ICON",
         },
         "ref": null,
         "rendered": null,
@@ -494,11 +494,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "className": "footer",
           "headerClass": "footerLogo",
-          "headerSymbol": "PLUS",
+          "headerIcon": "PLUS",
           "mainContent": "Create List",
           "onClick": undefined,
         },
@@ -524,13 +524,13 @@ ShallowWrapper {
 />,
           <Connect(ListContainerView)
             className="verticalTabContainer"
-            footerSymbol="PENCIL"
-            headerSymbol="LIST_SYMBOL"
+            footerIcon="PENCIL"
+            headerIcon="LIST_ICON"
 />,
           <RowComponent
             className="footer"
             headerClass="footerLogo"
-            headerSymbol="PLUS"
+            headerIcon="PLUS"
             mainContent="Create List"
             onClick={undefined}
 />,
@@ -560,8 +560,8 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "className": "verticalTabContainer",
-            "footerSymbol": "PENCIL",
-            "headerSymbol": "LIST_SYMBOL",
+            "footerIcon": "PENCIL",
+            "headerIcon": "LIST_ICON",
           },
           "ref": null,
           "rendered": null,
@@ -570,11 +570,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "className": "footer",
             "headerClass": "footerLogo",
-            "headerSymbol": "PLUS",
+            "headerIcon": "PLUS",
             "mainContent": "Create List",
             "onClick": undefined,
           },

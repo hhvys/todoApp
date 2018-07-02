@@ -6,8 +6,6 @@ exports[`component NotFound should render 1`] = `
 >
   <h3
     className="h3 mt-3"
-  >
-    No Search Results
-  </h3>
+  />
 </div>
 `;

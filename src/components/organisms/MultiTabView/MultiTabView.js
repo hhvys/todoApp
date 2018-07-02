@@ -6,7 +6,7 @@ import RowComponent from '../../molecules/RowComponent/RowComponent';
 import {INBOX_ID} from "../../../actions/actionTypes"
 import {STARRED, STAR} from "../../atoms/Icons/constants";
 import InputWithLabel from '../../molecules/InputWithLabel/InputWithLabel';
-import BackgroundMessage from '../../molecules/NotFound/BackgroundMessage';
+import BackgroundMessage from '../../molecules/BackgroundMessage/BackgroundMessage';
 
 class MultiTabView extends React.Component {
 

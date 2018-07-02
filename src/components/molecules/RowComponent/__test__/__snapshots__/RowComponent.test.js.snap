@@ -21,17 +21,6 @@ exports[`RowComponent footerDiv should render footerIconDiv if footerSymbol is d
   >
     footerContent
   </div>
-  <div
-    className="full-height d-flex align-items-center justify-content-center"
-  >
-    <Icon
-      className="footerClass endSymbol"
-      height={20}
-      onClick={[Function]}
-      iconType="footerLogo"
-      width={20}
-    />
-  </div>
 </div>
 `;
 
@@ -43,7 +32,6 @@ exports[`RowComponent headerDiv should pass header props to headerDiv 1`] = `
     className="headerClass "
     height={20}
     onClick={[Function]}
-    iconType="headerLogo"
     width={20}
   />
 </div>
@@ -54,7 +42,7 @@ exports[`RowComponent mainDiv should pass mainContent to contentDiv 1`] = `
   className="content d-flex flex-column justify-content-center "
 >
   <div
-    className="d-flex align-items-center txt-overflow ml-2"
+    className="txt-overflow ml-2"
   >
     mainContent
   </div>
@@ -66,7 +54,7 @@ exports[`RowComponent mainDiv should render extraContent div if extraContent is 
   className="content d-flex flex-column justify-content-center "
 >
   <div
-    className="d-flex align-items-center txt-overflow ml-2"
+    className="txt-overflow ml-2"
   >
     mainContent
   </div>
@@ -80,7 +68,7 @@ exports[`RowComponent mainDiv should render extraContent div if extraContent is 
 
 exports[`RowComponent should render 1`] = `
 <div
-  className=" verticalTab full-width d-flex align-items-center justify-content-center "
+  className=" verticalTab full-width d-flex align-items-center justify-content-center"
 >
   <div
     className="verticalTab full-height d-flex align-items-center justify-content-center"
@@ -88,6 +76,7 @@ exports[`RowComponent should render 1`] = `
     <Icon
       className=" "
       height={20}
+      onClick={[Function]}
       width={20}
     />
   </div>
@@ -95,7 +84,7 @@ exports[`RowComponent should render 1`] = `
     className="content d-flex flex-column justify-content-center "
   >
     <div
-      className="d-flex align-items-center txt-overflow ml-2"
+      className="txt-overflow ml-2"
     />
   </div>
   <div

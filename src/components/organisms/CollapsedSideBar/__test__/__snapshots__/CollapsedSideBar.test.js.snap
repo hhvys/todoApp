@@ -9,8 +9,8 @@ exports[`component CollapsedSideBar should pass collapseSideBar as onClick prop 
   >
     <Icon
       height={20}
-      onClick={[Function]}
       iconType="LIST_TOGGLE"
+      onClick={[Function]}
       width={20}
     />
   </div>
@@ -21,10 +21,10 @@ exports[`component CollapsedSideBar should pass collapseSideBar as onClick prop 
       className="full-width d-flex align-items-center justify-content-center"
     >
       <Icon
-        className="logo"
+        className="icon"
         height={20}
-        onClick={[Function]}
         iconType="INBOX"
+        onClick={[Function]}
         width={20}
       />
     </div>
@@ -32,10 +32,10 @@ exports[`component CollapsedSideBar should pass collapseSideBar as onClick prop 
       className="full-width d-flex align-items-center justify-content-center"
     >
       <Icon
-        className="logo"
+        className="icon"
         height={20}
-        onClick={[Function]}
         iconType="THREE_DOTS"
+        onClick={[Function]}
         width={20}
       />
     </div>
@@ -44,10 +44,10 @@ exports[`component CollapsedSideBar should pass collapseSideBar as onClick prop 
     className="createList full-width d-flex align-items-center justify-content-center"
   >
     <Icon
-      className="logo"
+      className="icon"
       height={20}
-      onClick={[Function]}
       iconType="PLUS"
+      onClick={[Function]}
       width={20}
     />
   </div>
@@ -74,7 +74,7 @@ exports[`component CollapsedSideBar should render 1`] = `
       className="full-width d-flex align-items-center justify-content-center"
     >
       <Icon
-        className="logo"
+        className="icon"
         height={20}
         iconType="INBOX"
         width={20}
@@ -84,7 +84,7 @@ exports[`component CollapsedSideBar should render 1`] = `
       className="full-width d-flex align-items-center justify-content-center"
     >
       <Icon
-        className="logo"
+        className="icon"
         height={20}
         iconType="THREE_DOTS"
         width={20}
@@ -95,7 +95,7 @@ exports[`component CollapsedSideBar should render 1`] = `
     className="createList full-width d-flex align-items-center justify-content-center"
   >
     <Icon
-      className="logo"
+      className="icon"
       height={20}
       iconType="PLUS"
       width={20}
